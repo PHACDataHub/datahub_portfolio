@@ -1,0 +1,102 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: rgb(55, 53, 47);
+    margin-bottom: 50px;
+
+}
+.page-cover-image {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 30vh;
+}
+.page-header-icon-with-cover {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-top: -0.72em;
+    margin-left: 0.5em;
+}
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.75em;
+}
+.column-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+a {
+    color: inherit;
+    opacity: 1;
+    transition: 0.2s;
+}
+a:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.block-color-gray_background {
+    background: rgb(235, 236, 237);
+}
+table,
+th,
+td {
+    border: 1px solid rgba(55, 53, 47, 0.09);
+    border-collapse: collapse;
+}
+table {
+    border-left: none;
+    border-right: none;
+}
+th,
+td {
+    font-weight: normal;
+    padding: 0.25em 0.5em;
+    line-height: 1.5;
+    min-height: 1.5em;
+    text-align: left;
+}
+th {
+    color: rgba(55, 53, 47, 0.6);
+}
+
+.tag {
+    display: inline-block;
+    padding: 0 0.5em;
+    background: rgba(206, 205, 202, 0.5);
+    border-radius: 3px;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    white-space: nowrap;
+}
+.pink-background {
+    background-color: rgba(221, 0, 129, 0.2);
+}
+.gray-background {
+    background-color: rgba(155, 154, 151, 0.4);
+}
+.brown-background {
+    background-color: rgba(140, 46, 0, 0.2);
+}
+.orange-background {
+    background-color: rgba(245, 93, 0, 0.2);
+}
+.yellow-background {
+    background-color: rgba(233, 168, 0, 0.2);
+}
+.green-background {
+    background-color: rgba(0, 135, 107, 0.2);
+}
+.blue-background {
+    background-color: rgba(0, 120, 223, 0.2);
+}
+.purple-background {
+    background-color: rgba(103, 36, 222, 0.2);
+}
+.red-background {
+    background-color: rgba(255, 0, 26, 0.2);
+}
