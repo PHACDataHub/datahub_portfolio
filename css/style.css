@@ -100,3 +100,35 @@ th {
 .red-background {
     background-color: rgba(255, 0, 26, 0.2);
 }
+/* .navigation-bar {
+    position: fixed;
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+.navigation-bar li {
+    float: left;
+    padding: 0.75em 1em;
+    left: 0;
+    top: 0;
+    background-color: rgb(235, 236, 237);
+} */
+.navigation-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.navigation-bar li {
+    font-weight: 500;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 0.75em 1em;
+    margin: 0 0 10px 0;
+    background-color: rgb(235, 236, 237);
+}
+.navigation-bar li:hover {
+    background-color: rgba(235, 236, 237, 0.3);
+    transition: 0.3s;
+}
