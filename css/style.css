@@ -5,7 +5,6 @@ body {
     line-height: 1.5;
     color: rgb(55, 53, 47);
     margin-bottom: 50px;
-
 }
 .page-cover-image {
     display: block;
@@ -38,7 +37,7 @@ a:hover {
     opacity: 0.7;
     transition: 0.2s;
 }
-.block-color-gray_background {
+.block-color-gray {
     background: rgb(235, 236, 237);
 }
 table,
@@ -68,9 +67,7 @@ th {
     padding: 0 0.5em;
     background: rgba(206, 205, 202, 0.5);
     border-radius: 3px;
-    margin-right: 0.5em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin: 0.3em 0;
     white-space: nowrap;
 }
 .pink-background {
@@ -131,4 +128,19 @@ th {
 .navigation-bar li:hover {
     background-color: rgba(235, 236, 237, 0.3);
     transition: 0.3s;
+}
+.project-title {
+    text-align: center;
+}
+.extra-padding {
+    padding: 1rem;
+}
+.project-picture {
+    /* width: auto;
+    height: 300px;*/
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    /* margin: 5px; */
+    object-fit: contain;
 }
