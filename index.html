@@ -5,516 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>PHAC Inventory</title>
+
+    <!-- Adding Tabulator library for interactive table -->
+    <link rel="stylesheet" href="libraries/tabulator-master/dist/css/tabulator.min.css">
+    <script type="text/javascript" src="libraries/tabulator-master/dist/js/tabulator.min.js"></script>
+
+    <title>Data Analytics Portfolio</title>
 </head>
 <body>
-    <header>
-        <img class="page-cover-image" src="images/cover.jpeg" style="object-position: center 50%;">
-        <div class="page-header-icon-with-cover">
-            <span></span>
-        </div>
-        <ul class="navigation-bar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#tool-inventory">Tool Inventory</a></li>
-            <li><a href="#other-useful-tools">Other Useful Tools</a></li>
-            <li><a href="#project-portfolio">Project Portfolio</a></li>
-        </ul>
-        <h1 class="page-title">PHAC Inventory</h1>
-    </header>
 
-    <p>The <em>PHAC Inventory</em> consists of a page containing resources and tools used in various projects within the Public Health Agency of Canada (PHAC).</p>
-
-    <h2 id="project-portfolio" class="block-color-gray">Project Portfolio</h2>
-    <div class="column-list" style="flex-wrap: wrap;">
-        <div class="column">
-            <a class="tag green-background" href="border_measure_analytics_project_page.html" style="text-decoration: none; font-size: 1.75rem;">Border Measure Analytics</a>
-        </div>
-        <div class="column">
-            <a class="tag red-background" href="epi_trend_report_project_page.html" style="text-decoration: none; font-size: 1.75rem;">Daily Epi Trend Report Automation</a>
-        </div>
-        <div class="column">
-            <a class="tag blue-background" href="dird_project_page.html" style="text-decoration: none; font-size: 1.75rem; max-width: 100%;">Dashboard on Immunization Related Diseases (DIRD)</a>
-        </div>
+    <div class="light-gray-background">
+        <section>
+            <img src="images/phac-logo.png" alt="" style="object-fit: contain; width: 100%; max-width: 400px;">
+            <p class="centered" style="font-size: 1.75rem;">The Data Analytics team partners with program areas to develop innovative solutions for some of the most pressing common data challenges across the Agency.</p>
+        </section>
     </div>
 
-    <h2 class="block-color-gray">Main Resources</h2>
+    <section>
+        <h2 id="project-portfolio" class="section-title">Project Portfolio</h2>
+        <p class="centered" style="font-size: 1.25rem;">Collection of projects worked on at PHAC. Click on any of them to get more information.</p>
 
-    <div class="column-list">
-        <div class="column">
-            <h2><a href="https://dev.azure.com/HCPHAC">Azure DevOps HCPHAC Organization</a></h2>
+        <div class="project-card-list">
+            <a class="project-card" href="border_measure_analytics_project_page.html">
+                <img src="images/border_measures_stock.jpg" alt="" class="project-card-image">
+                <div class="project-card-information">
+                    <span class="project-card-title">Border Measure Analytics</span>
+                    <p class="project-card-description">Power BI dashboard for analyzing data related to the Canadian border.</p>
+                </div>
+            </a>
+            <a class="project-card" href="epi_trend_report_project_page.html">
+                <img src="images/epi_trend_stock.jpg" alt="" class="project-card-image">
+                <div class="project-card-information">
+                    <span class="project-card-title">Daily Epitrend Report Automation</span>
+                    <p class="project-card-description">R Script to automatically generate daily trend reports.</p>
+                </div>
+            </a>
+            <a class="project-card" href="dird_project_page.html">
+                <img src="images/dird_stock.jpg" alt="" class="project-card-image">
+                <div class="project-card-information">
+                    <span class="project-card-title">Dashboard for Immunization Related Diseases (DIRD)</span>
+                    <p class="project-card-description">Power BI dashboard for encompassing information on vaccines using natural language processing on various sources.</p>
+                </div>
+            </a>
         </div>
-        <div class="column">
-            <h2><a href="https://github.com/PHACDataHub">GitHub Project Repository</a></h2>
-        </div>
-        <div class="column">
-            <h2><a href="https://phacdatahub.github.io/datahub/">PHAC Data Strategy</a></h2>
-        </div>
+
+    </section>
+
+    <div class="light-gray-background">
+        <section>
+            <h2 id="tool-inventory" class="section-title">Tool Inventory</h2>
+            <p class="centered" style="font-size: 1.25rem;">The table below is a collection of tools used by our team for projects within the Agency.</p>
+    
+            <div id="tool-inventory-table"></div>
+            <script type="text/javascript" src="js/create_table.js"></script>
+        </section>
     </div>
 
-    <h2 id="tool-inventory" class="block-color-gray">Tool Inventory</h2>
+    <section>
+        <h2 id="other-useful-tools" class="section-title">Other Useful Tools</h2>
+        <p class="centered">Besides the main tools listed on the table, the data science team finds useful the following tools:</p>
 
-    <!-- The table includes the following headers:
-        Category
-        Tool
-        Cost
-        Protected B Data
-        Link
-        Self-hosted Version
-        Teams using it
-        Projects software is used on
-        
-    These are the colors for the categories:
-    Mapping - pink
-    Data Analysis - green
-    Data Cleaning - blue
-    Data Visualization - yellow
-    Data Collection - orange
-    Code Repository - purple
-    Project Management - orange
-    Data Transfer - brown
-    Containerization - green
-    Reproducibility - red
-    Diagram Creation - gray
-
-    These are the team colors:
-    NML Geomatics - pink
-    CIRID - yellow
-    Data Hub - orange
-    Compliance Enforcement - blue
-    CCDIC - green
-
-    These are the project colors:
-    CIRID Epitrend Reports - gray
-    Border Measures - green
-    Dashboard for Immunization Related Diseases (DIRD) - purple
-    Wastewater Project - blue
-    National Surveillance Project - red
-    DISCOVER - yellow -->
-
-    <div style="overflow-x: auto;">
-        <table style="font-size: 0.875rem;">
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Tool</th>
-                    <th>Cost</th>
-                    <th>Protected B Data</th>
-                    <th>Link</th>
-                    <th>Self-hosted Version</th>
-                    <th>Teams using it</th>
-                    <th>Projects software is used on</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <!-- Category -->
-                    <td><span class="tag pink-background">Mapping</span></td>
-                    <!-- Tool -->
-                    <td>ArcGIS</td>
-                    <!-- Cost -->
-                    <td>Per user fee</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.arcgis.com/index.html">https://www.arcgis.com/index.html</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td><span class="tag blue-background">NML Geomatics</span></td>
-                    <!-- Projects software is used on -->
-                    <td></td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td><span class="tag pink-background">Mapping</span></td>
-                    <!-- Tool -->
-                    <td>QGIS</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.qgis.org/en/site/">https://www.qgis.org/en/site/</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td></td>
-                    <!-- Projects software is used on -->
-                    <td></td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag green-background">Data Analysis</span>
-                        <span class="tag blue-background">Data Cleaning</span>
-                        <span class="tag yellow-background">Data Visualization</span>
-                        <span class="tag pink-background">Mapping</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>R</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.r-project.org/">https://www.r-project.org/</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                        <span class="tag yellow-background">CIRID</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag gray-background">CIRID Epitrend Reports</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag orange-background">Data Collection</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>LimeSurvey</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.limesurvey.org">https://www.limesurvey.org</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                        <span class="tag blue-background">Compliance Enforcement</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag yellow-background">Data Visualization</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Power BI</td>
-                    <!-- Cost -->
-                    <td>USD$ 9.99 per user/month</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://powerbi.microsoft.com/en-us/">https://powerbi.microsoft.com/en-us/</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                        <span class="tag blue-background">Compliance Enforcement</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                        <span class="tag purple-background">Dashboard for Immunization Related Diseases (DIRD)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag green-background">Data Analysis</span>
-                        <span class="tag blue-background">Data Cleaning</span>
-                        <span class="tag yellow-background">Data Visualization</span>
-                        <span class="tag pink-background">Mapping</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Python</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.python.org">https://www.python.org</a></td>
-                    <!-- Self-hosted Version -->
-                    <td></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                        <span class="tag purple-background">Dashboard for Immunization Related Diseases (DIRD)</span>
-                        <span class="tag blue-background">Wastewater Project</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag orange-background">Project Management</span>
-                        <span class="tag purple-background">Code Repository</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Azure DevOps</td>
-                    <!-- Cost -->
-                    <td>Depends on usage case</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://azure.microsoft.com/en-ca/services/devops/">https://azure.microsoft.com/en-ca/services/devops/</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                        <span class="tag red-background">National Surveillance Project</span>
-                        <span class="tag purple-background">Dashboard for Immunization Related Diseases (DIRD)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag brown-background">Data Transfer</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>LiquidFiles</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.liquidfiles.com">https://www.liquidfiles.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                        <span class="tag blue-background">Compliance Enforcement</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag orange-background">Project Management</span>
-                        <span class="tag purple-background">Code Repository</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>GitHub</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Link -->
-                    <td><a href="https://github.com">https://github.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                        <span class="tag yellow-background">CIRID</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag gray-background">CIRID Epitrend Reports</span>
-                        <span class="tag blue-background">Wastewater Project</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag green-background">Containerization</span>
-                        <span class="tag red-background">Reproducibility</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Docker</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.docker.com">https://www.docker.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag red-background">National Surveillance Project</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag yellow-background">Data Visualization</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Tableau</td>
-                    <!-- Cost -->
-                    <td>$12 to $70 per user/month conditionally on additional features</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.tableau.com">https://www.tableau.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td></td>
-                    <!-- Projects software is used on -->
-                    <td></td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag orange-background">Data Collection</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>SurveyMonkey</td>
-                    <!-- Cost -->
-                    <td>$27 to $75 per user/month conditionally on additional features</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.surveymonkey.com">https://www.surveymonkey.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td></td>
-                    <!-- Projects software is used on -->
-                    <td></td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag orange-background">Data Collection</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>VoxCo</td>
-                    <!-- Cost -->
-                    <td>Per user fee</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.voxco.com">https://www.voxco.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag green-background">CCDIC</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td></td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag green-background">Data Analysis</span>
-                        <span class="tag yellow-background">Data Visualization</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Metabase</td>
-                    <!-- Cost -->
-                    <td>Free if self-hosted and paid for metabase cloud/enterprise versions</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://www.metabase.com">https://www.metabase.com</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag yellow-background">CIRID</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag yellow-background">DISCOVER</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag green-background">Data Analysis</span>
-                        <span class="tag blue-background">Data Cleaning</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Databricks</td>
-                    <!-- Cost -->
-                    <td>Per user fee</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Link -->
-                    <td><a href="https://databricks.com/">https://databricks.com/</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag green-background">Yes</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag green-background">Border Measures</span>
-                        <span class="tag purple-background">Dashboard for Immunization Related Diseases (DIRD)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- Category -->
-                    <td>
-                        <span class="tag gray-background">Diagram Creation</span>
-                    </td>
-                    <!-- Tool -->
-                    <td>Draw.io</td>
-                    <!-- Cost -->
-                    <td>Free</td>
-                    <!-- Protected B Data -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Link -->
-                    <td><a href="https://app.diagrams.net">https://app.diagrams.net</a></td>
-                    <!-- Self-hosted Version -->
-                    <td><span class="tag red-background">No</span></td>
-                    <!-- Teams using it -->
-                    <td>
-                        <span class="tag orange-background">Data Hub</span>
-                    </td>
-                    <!-- Projects software is used on -->
-                    <td>
-                        <span class="tag red-background">National Surveillance Project</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <h2 id="other-useful-tools" class="block-color-gray">Other Useful Tools</h2>
-    <p>Besides the main tools listed on the table, the data science team finds useful the following tools:</p>
-
-    <div class="column-list" style="justify-content: space-around;">
-        <div class="column">
-            <h3>RStudio</h3>
-            <h3>VS Code</h3>
-            <h3>Anaconda</h3>
-            <h3>Firefox</h3>
+        <div class="column-list" style="justify-content: space-around;">
+            <div class="column">
+                <h3>RStudio</h3>
+                <h3>VS Code</h3>
+                <h3>Anaconda</h3>
+                <h3>Firefox</h3>
+            </div>
+            <div class="column">
+                <h3>SourceTree</h3>
+                <h3>Git</h3>
+                <h3>Notepad ++</h3>
+            </div>
+            <div class="column">
+                <h3>Pgadmin</h3>
+                <h3>7-zip</h3>
+                <h3>Rocket Chat</h3>
+            </div>
         </div>
-        <div class="column">
-            <h3>SourceTree</h3>
-            <h3>Git</h3>
-            <h3>Notepad ++</h3>
-        </div>
-        <div class="column">
-            <h3>Pgadmin</h3>
-            <h3>7-zip</h3>
-            <h3>Rocket Chat</h3>
-        </div>
+    </section>
+
+    <div class="light-gray-background">
+        <section>
+            <p class="centered" style="font-size: 1.25rem;">Please contact the Data Analytics team if you have questions about any of the projects and tools, or if you are interested in partnering on a new project</p>
+            <div class="column-list">
+                <div class="column">
+                    <h3><a href="https://github.com/PHACDataHub">GitHub Project Repository</a></h3>
+                </div>
+                <div class="column">
+                    <h3><a href="https://phacdatahub.github.io/datahub/">PHAC Data Strategy</a></h3>
+                </div>
+            </div>
+        </section>
     </div>
     
 </body>
