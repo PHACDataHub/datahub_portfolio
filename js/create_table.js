@@ -217,6 +217,15 @@ var tableData = [
         teams_using_it:["Data Hub"],
         projects_used_on:["Border Measures", "National Surveillance Project", "Dashboard for Immunization Related Diseases (DIRD)"]
     },
+        {tool:"Azure Blob Storage",
+        categories:["File Storage"],
+        cost:"Depends on usage case",
+        protected_b_data:"Yes",
+        link:"https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction",
+        self_hosted_version:"Yes",
+        teams_using_it:["Data Hub", "CIRID"],
+        projects_used_on:["Border Measures", "Wastewater Project", "National Surveillance Project"]
+    },
         {tool:"LiquidFiles",
         categories:["Data Transfer"],
         cost:"Free",
@@ -233,7 +242,7 @@ var tableData = [
         link:"https://github.com/",
         self_hosted_version:"No",
         teams_using_it:["Data Hub", "CIRID"],
-        projects_used_on:["CIRID Epitrend Reports", "Wasterwater Project"]
+        projects_used_on:["CIRID Epitrend Reports", "Wastewater Project"]
     },
         {tool:"Docker",
         categories:["Containerization", "Reproducibility"],
