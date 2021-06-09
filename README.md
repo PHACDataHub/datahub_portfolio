@@ -1,34 +1,140 @@
-# PHAC Tools Inventory
+# Data Analytics Portfolio
 
-The *PHAC Tools Inventory* consists of a page containing resources and tools used in various projects within the Public Health Agency of Canada (PHAC).
+The Data Analytics Portfolio page is developed using HTML, CSS, and JavaScript and it is being hosted and deployed by GitHub using GitHub Pages.
 
-You can access the interactive Notion page by clicking [here](https://www.notion.so/PHAC-Tools-Inventory-85cdcf9fdfbf46469423aec2e5ee5e25).
+# How to make updates
 
-## Main Resources
+Here is information on how to update the main sections of the portfolio
 
-## [Azure DevOps HCPHAC Organization](https://dev.azure.com/HCPHAC)
+## Color conventions
 
-## [PHAC Data Strategy](https://phacdatahub.github.io/datahub/)
+There are pre-defined color shades to be used on the page. They are defined at the end of the `css/style.css` file. If any other colors need to be defined, that is where they should go.
 
-## [GitHub Project Repository](https://github.com/PHACDataHub)
+The current defined colors are:
 
-## Tool Inventory Table
+- Pink (class `.pink-background`)
+- Gray (class `.gray-background`)
+- Brown (class `.brown-background`)
+- Orange (class `.orange-background`)
+- Yellow (class `.yellow-background`)
+- Green (class `.green-background`)
+- Blue (class `.blue-background`)
+- Purple (class `.purple-background`)
+- Red (class `.red-background`)
+- Light gray (class `.light-gray-background`)
 
-Categories | Tool | Cost | Protected B Data | Link | Self-hosted Version | Teams using it | Projects software is used in
---- | --- | --- | --- | --- | --- | --- | ---
-`Mapping` | ArcGIS | Per user fee | `Yes` | https://www.arcgis.com/index.html | `No` | `NML Geomatics` | -
-`Mapping` | QGIS | Free | `Yes` | https://www.qgis.org/en/site/ | `No` | - | -
-`Mapping` `Data Analysis` `Data Visualization` `Data Cleaning` | R | Free | `Yes` | https://www.r-project.org | `No` | `Data Hub` `CIRID` | `CIRID Epitrend Reports`
-`Data Collection` | LimeSurvey | [Free](https://www.limesurvey.org/pricing) | `Yes` | https://www.limesurvey.org | `Yes` | `Data Hub` `Compliance Enforcement` | `Border Measures`
-`Data Visualization` | PowerBI | USD$ 9.99 per user/month | `Yes` | https://powerbi.microsoft.com/en-us/ | `Yes` | `Data Hub` `Compliance Enforcement` | `Dashboard for Immunization Related Diseases (DIRD)` `Border Measures`
-`Mapping` `Data Analysis` `Data Visualization` `Data Cleaning` | Python | Free | `Yes` | https://www.python.org | - | `Data Hub` | `Border Measures` `Dashboard for Immunization Related Diseases (DIRD)` `Wastewater Project`
-`Project Management` `Code Repository` | Azure DevOps | Depends on usage case | `Yes` | https://azure.microsoft.com/en-ca/services/devops/ | `Yes` | `Data Hub` | `Border Measures` `National Surveillance Project`
-`Data Transfer` | LiquidFiles | Free | `Yes` | https://www.liquidfiles.com | `Yes` | `Data Hub` `Compliance Enforcement` | `Border Measures`
-`Project Management` `Code Repository` | GitHub | [Free](https://github.com/pricing) | `No` | https://github.com | `No` | `Data Hub` `CIRID` | `CIRID Epitrend Reports` `Wastewater Project`
-`Containerization` `Reproducibility` | Docker | [Free](https://www.docker.com/pricing) | `Yes` | https://www.docker.com | `Yes` | `Data Hub` | `National Surveillance Project`
-`Data Visualization` | Tableau | [$12 to $70 per user/month conditionally on additional features](https://www.tableau.com/pricing/teams-orgs) | `Yes` | https://www.tableau.com | `No` | - | -
-`Data Collection` | SurveyMonkey | [$27 to $75 per user/month conditionally on additional features](https://www.surveymonkey.com/pricing/teams/?ut_source=pricing-indv-details) | `No` | - | `No` | - | -
-`Data Collection` | VoxCo | Per user fee | `Yes` | https://www.voxco.com | `No` | `CCDIC` | -
-`Data Analysis` `Data Visualization` | Metabase | [Free if self-hosted and paid for metabase cloud/enterprise versions](https://www.metabase.com/pricing/) | `Yes` | https://www.metabase.com | `Yes` | `CIRID` | `DISCOVER`
-`Data Analysis` `Data Cleaning` | Databricks | Per user fee | `Yes` | https://databricks.com/ | `Yes` | `Data Hub` | `Dashboard for Immunization Related Diseases (DIRD)` `Border Measures`
-`Diagram creation` | Draw.io | Free | `No` | https://app.diagrams.net/ | `No` | `Data Hub` | `National Surveillance Project`
+Colors are mainly used for tag-like items, especially when looking at the tool inventory table and the tool sections under each project page.
+
+Categories, Teams, and Projects, are all automatically color-coded using formatted functions defined under `js/create_table.js`.
+
+If a new Category, Team, or Project, is added to the table and it needs a defined color, you must add it to their specific function's switch statement under the mentioned file.
+
+> If there’s an item not defined below OR it is misspelled (keeping in mind it is case-sensitive), its color will be defaulted to gray.
+
+The currently defined Categories/Teams/Projects colors are below. 
+
+## Categories
+
+- `Mapping` = pink
+- `Data Analysis` = green
+- `Data Cleaning` = blue
+- `Data Visualization` = yellow
+- `Data Collection` = orange
+- `Code Repository` = purple
+- `Project Management` = orange
+- `Data Transfer` = brown
+- `Containerization` = green
+- `Reproducibility` = red
+
+### Teams
+
+- `NML Geomatics` = pink
+- `CIRID` = yellow
+- `Data Hub` = orange
+- `Compliance Enforcement` = blue
+- `CCDIC` = green
+
+### Projects
+
+- `CIRID Epitrend Reports` = orange
+- `Border Measures` = green
+- `Dashboard for Immunization Related Diseases (DIRD)` = purple
+- `Wastewater Project` = blue
+- `National Surveillance Project` = red
+- `DISCOVER` = yellow
+
+For the columns "Protected B Data" and "Self-hosted Version", the only possible options are "Yes" or "No". They are also color-coded: "Yes" being green, and "No" being red.
+
+## Adding more projects to the portfolio
+
+The main section for this page is the project portfolio, which includes a collection of projects worked on by the data analytics team.
+
+When a new project needs to be added to the portfolio, there are 3 steps to take.
+
+### 1. Creating project page
+
+Each project in the portfolio has its own page. Each of them are developed taking the `project_template.html` file as a template.
+
+So, duplicate the file, rename it with something to do with your project, and make the following changes:
+
+1. Change the project title on 2 places — the `<title>` tag under `<head>` and the `<h1>` tag under `<header>`
+2. Change the background information by changing the `<p>` tags under the background title and add more if necessary
+3. Add a statement for the Problem, Goal, and Solution to each of their respective `<p>` tags under each column
+4. Change image(s) sources to a visual related to the project and add more if necessary
+5. Change the `<h3>` tags under Success Metrics and add more if necessary. Here, each of them are a `.tag` class as well as a color class (see [above](#color-conventions)), there's no standard color pattern here, so just make it look good.
+6. Change the `<h3>` tags under Tools Used and add more if necessary. Here, each of them are a `.tag` class as well as a color class (see [above](#color-conventions)), there's no standard color pattern here, so just make it look good.
+
+### 2. Getting stock project image
+
+Find a stock image to serve as a project card background. Websites like [Pexels](https://www.pexels.com) and [Unsplash](https://unsplash.com) are a great way to look for one. Make sure the image you pick is free and can be used on a public website.
+
+Then, import that image to the `images` folder under the project repository.
+
+### 3. Creating project card
+
+Last but not least, we need to create a project card in order to connect our home page to the project page created in [step 1](#1-creating-project-page).
+
+Under the `index.html` file, create a new link within the project portfolio section (under the `.project-card-list` div) with the following structure:
+
+```html
+<a class="project-card" href="LINK_TO_PROJECT_PAGE">
+	<img src="LINK_TO_STOCK_IMAGE" class="project-card-image">
+	<div class="project-card-information">
+		<span class="project-card-title">PROJECT TITLE</span>
+		<p class="project-card-description">SHORT PROJECT DESCRIPTION</p>
+	</div>
+</a>
+```
+
+Done, now there's a new card under the project portfolio page and, if all classes are correctly set, the styling should be taken care of.
+
+## Adding more tools to the tool inventory table
+
+The tool inventory table is generated using the Tabulator library on JavaScript. Hence, the column definitions and table data are defined under `js/create_table.js`. They are the last 2 things defined on the file.
+
+The `tableData` variable is a list of dictionaries — one for each of the tools shown on the table.
+
+To add more items to the tool inventory table, just add another tool dictionary to the `tableData` list following the specified project dictionary format:
+
+```jsx
+{
+	tool:"", // String - Name of the tool
+	categories:[], // List of Strings - Categories the tool is used for (see [above]())
+	cost:"", // String - Cost for using the tool
+	protected_b_data:"", // String - "Yes" or "No", specifying whether the tool is approved to be used with Protected B Data
+	link:"", // String - Link for the tool's website
+	self_hosted_version:"", // String - "Yes" or "No", specifying whether the tool has a self-hosted version within the Agency
+	teams_using_it:[], // List of Strings - Teams that the tool has been used by (see [above]())
+	projects_used_on:[] // List of Strings - Projects that the tool has been used on (see [above]())
+}
+```
+
+## Adding more tools to other useful tools
+
+The last section of the page is "Other Useful Tools" which includes a list of non-main tools used by the team.
+
+They are defined under the `index.html` page.
+
+It consists of a `.column-list` div with 3 `.column`'s inside. Each of the columns contains level 3 headings with the specified tools.
+
+To add a new tool to the list, just add another level 3 heading (e.g. `<h3>TOOL NAME</h3>`) to one of the columns (the length of each column is hard coded, so make sure the tables have similar-sized lengths so it looks good).
