@@ -79,10 +79,15 @@ a {
     box-shadow: 7px 7px 10px rgba(177, 177, 177, 0.7);
     margin: 20px 5px;
     width: 40%;
-    min-width: 350px;
+    min-width: 300px;
     text-decoration: none;
     transition: 0.3s;
-    min-height: 200px;
+    min-height: 400px;
+}
+@media screen and (max-width: 800px) {
+    .project-card {
+        min-height: 600px;
+    }
 }
 .project-card-title {
     font-size: 1.5rem;
