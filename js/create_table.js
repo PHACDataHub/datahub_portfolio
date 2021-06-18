@@ -154,7 +154,7 @@ var yes_no_tagFormatter = function(cell, formatterParams, onRendered){
 // Just fill in the data above and add it to the list below
 
 var tableData = [
-        {tool:"ArcGIS",
+    {   tool:"ArcGIS",
         categories:["Mapping"],
         cost: "Per user fee",
         protected_b_data:"Yes",
@@ -163,7 +163,7 @@ var tableData = [
         teams_using_it:["NML Geomatics"],
         projects_used_on:[]
     },
-        {tool:"QGIS",
+    {   tool:"QGIS",
         categories:["Mapping"],
         cost: "Free",
         protected_b_data:"Yes",
@@ -172,7 +172,7 @@ var tableData = [
         teams_using_it:[],
         projects_used_on:[]
     },
-        {tool:"R",
+    {   tool:"R",
         categories:["Data Analysis", "Data Cleaning", "Data Visualization", "Mapping"],
         cost:"Free",
         protected_b_data:"Yes",
@@ -181,7 +181,7 @@ var tableData = [
         teams_using_it:["Data Hub", "CIRID"],
         projects_used_on:["CIRID Epitrend Reports"]
     },
-        {tool:"LimeSurvey",
+    {   tool:"LimeSurvey",
         categories:["Data Collection"],
         cost:"Free",
         protected_b_data:"Yes",
@@ -190,7 +190,7 @@ var tableData = [
         teams_using_it:["Data Hub", "Compliance Enforcement"],
         projects_used_on:["Border Measures"]
     },
-        {tool:"Power BI",
+    {   tool:"Power BI",
         categories:["Data Visualization"],
         cost:"Per user/month fee",
         protected_b_data:"Yes",
@@ -199,7 +199,7 @@ var tableData = [
         teams_using_it:["Data Hub","Compliance Enforcement"],
         projects_used_on:["Border Measures", "Dashboard for Immunization Related Diseases (DIRD)"]
     },
-        {tool:"Python",
+    {   tool:"Python",
         categories:["Data Analysis", "Data Cleaning", "Data Visualization", "Mapping"],
         cost:"Free",
         protected_b_data:"Yes",
@@ -208,7 +208,7 @@ var tableData = [
         teams_using_it:["Data Hub"],
         projects_used_on:["Border Measures", "Dashboard for Immunization Related Diseases (DIRD)", "Wastewater Project"]
     },
-        {tool:"Azure DevOps",
+    {   tool:"Azure DevOps",
         categories:["Project Management", "Code Repository"],
         cost:"Depends on usage case",
         protected_b_data:"Yes",
@@ -217,7 +217,7 @@ var tableData = [
         teams_using_it:["Data Hub"],
         projects_used_on:["Border Measures", "National Surveillance Project", "Dashboard for Immunization Related Diseases (DIRD)"]
     },
-        {tool:"Azure Blob Storage",
+    {   tool:"Azure Blob Storage",
         categories:["File Storage"],
         cost:"Depends on usage case",
         protected_b_data:"Yes",
@@ -226,7 +226,7 @@ var tableData = [
         teams_using_it:["Data Hub", "CIRID"],
         projects_used_on:["Border Measures", "Wastewater Project", "National Surveillance Project"]
     },
-        {tool:"LiquidFiles",
+    {   tool:"LiquidFiles",
         categories:["Data Transfer"],
         cost:"Free",
         protected_b_data:"Yes",
@@ -235,7 +235,7 @@ var tableData = [
         teams_using_it:["Data Hub", "Compliance Enforcement"],
         projects_used_on:["Border Measures"]
     },
-        {tool:"GitHub",
+    {   tool:"GitHub",
         categories:["Project Management", "Code Repository"],
         cost:"Free",
         protected_b_data:"No",
@@ -244,7 +244,7 @@ var tableData = [
         teams_using_it:["Data Hub", "CIRID"],
         projects_used_on:["CIRID Epitrend Reports", "Wastewater Project"]
     },
-        {tool:"Docker",
+    {   tool:"Docker",
         categories:["Containerization", "Reproducibility"],
         cost:"Free",
         protected_b_data:"Yes",
@@ -253,7 +253,7 @@ var tableData = [
         teams_using_it:["Data Hub"],
         projects_used_on:["National Surveillance Project"]
     },
-        {tool:"Tableau",
+    {   tool:"Tableau",
         categories:["Data Visualization"],
         cost:"Per user/month fee",
         protected_b_data:"Yes",
@@ -262,7 +262,7 @@ var tableData = [
         teams_using_it:[],
         projects_used_on:[]
     },
-        {tool:"SurveyMonkey",
+    {   tool:"SurveyMonkey",
         categories:["Data Collection"],
         cost:"Per user/month fee",
         protected_b_data:"No",
@@ -271,7 +271,7 @@ var tableData = [
         teams_using_it:[],
         projects_used_on:[]
     },
-        {tool:"VoxCo",
+    {   tool:"VoxCo",
         categories:["Data Collection"],
         cost:"Per user fee",
         protected_b_data:"Yes",
@@ -280,7 +280,7 @@ var tableData = [
         teams_using_it:["CCDIC"],
         projects_used_on:[]
     },
-        {tool:"Metabase",
+    {   tool:"Metabase",
         categories:["Data Analysis", "Data Visualization"],
         cost:"Free if self-hosted and paid for metabase cloud/enterprise editions",
         protected_b_data:"Yes",
@@ -289,7 +289,7 @@ var tableData = [
         teams_using_it:["CIRID"],
         projects_used_on:["DISCOVER"]
     },
-        {tool:"Databricks",
+    {   tool:"Databricks",
         categories:["Data Analysis", "Data Cleaning"],
         cost:"Per user fee",
         protected_b_data:"Yes",
@@ -298,7 +298,7 @@ var tableData = [
         teams_using_it:["Data Hub"],
         projects_used_on:["Border Measures", "Dashboard for Immunization Related Diseases (DIRD)"]
     },
-        {tool:"Draw.io",
+    {   tool:"Draw.io",
         categories:["Diagram Creation"],
         cost:"Free",
         protected_b_data:"No",
@@ -309,18 +309,79 @@ var tableData = [
     }
 ]
 
+// Creating custom filter function for filtering by tags for tools
+function filterTag(filterParams, data){
+    //filterParams - params object passed to the filter - array of strings of selected filters
+    //data - data for the row being filtered - array of strings of tool's categories
+
+    var filteringFunction = function (value) {
+        return data.includes(value);
+    };
+
+    return filterParams.every(filteringFunction); // returns boolean - true if it passes the filter
+}
+
 // Creating the table and setting column names
 
 var table = new Tabulator('#tool-inventory-table',{
     data: tableData,
     columns:[
-        {title:"Tool", field:"tool"},
-        {title:"Categories", field:"categories", formatter: category_tagFormatter, headerSort:false},
-        {title:"Cost", field:"cost", formatter: "textarea", width: "200"},
-        {title:"Protected B Data", field:"protected_b_data", formatter: yes_no_tagFormatter, align:"center"},
-        {title:"Link", field:"link"},
-        {title:"Self-hosted Version", field:"self_hosted_version", formatter: yes_no_tagFormatter, align:"center"},
-        {title:"Teams using it", field:"teams_using_it", formatter: team_tagFormatter, headerSort:false},
-        {title:"Projects software is used on", field:"projects_used_on", formatter: project_tagFormatter, headerSort:false}
+        {   title:"Tool",
+            field:"tool"
+        },
+        {   title:"Categories",
+            field:"categories",
+            formatter: category_tagFormatter,
+            headerSort:false,
+            headerFilter:'select',
+            headerFilterFunc:filterTag,
+            headerFilterParams:{
+                values:["Mapping", "Data Analysis", "Data Cleaning", "Data Visualization", "Data Collection", "Code Repository", "Project Management", "Data Transfer", "Containerization", "Reproducibility"],
+                sortValuesList:'asc',
+                multiselect:true
+            }
+        },
+        {   title:"Cost",
+            field:"cost",
+            formatter: "textarea",
+            width: "200"
+        },
+        {   title:"Protected B Data",
+            field:"protected_b_data",
+            formatter: yes_no_tagFormatter,
+            align:"center"
+        },
+        {   title:"Link",
+            field:"link"
+        },
+        {   title:"Self-hosted Version",
+            field:"self_hosted_version",
+            formatter: yes_no_tagFormatter,
+            align:"center"
+        },
+        {   title:"Teams using it",
+            field:"teams_using_it",
+            formatter: team_tagFormatter,
+            headerSort:false,
+            headerFilter:'select',
+            headerFilterFunc:filterTag,
+            headerFilterParams:{
+                values:["NML Geomatics", "CIRID", "Data Hub", "Compliance Enforcement", "CCDIC"],
+                sortValuesList:'asc',
+                multiselect:true
+            }
+        },
+        {   title:"Projects software is used on",
+            field:"projects_used_on",
+            formatter: project_tagFormatter,
+            headerSort:false,
+            headerFilter:'select',
+            headerFilterFunc:filterTag,
+            headerFilterParams:{
+                values:["CIRID Epitrend Reports", "Border Measures", "Dashboard for Immunization Related Diseases (DIRD)", "Wastewater Project", "National Surveillance Project", "DISCOVER"],
+                sortValuesList:'asc',
+                multiselect:true
+            }
+        }
     ]
 })

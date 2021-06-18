@@ -27,7 +27,7 @@ Colors are mainly used for tag-like items, especially when looking at the tool i
 
 Categories, Teams, and Projects, are all automatically color-coded using formatted functions defined under `js/create_table.js`.
 
-If a new Category, Team, or Project, is added to the table and it needs a defined color, you must add it to their specific function's switch statement under the mentioned file.
+If a new Category, Team, or Project, is added to the table and it needs a defined color, you must add it to their specific function's switch statement under the mentioned file. Also, check the
 
 > If there’s an item not defined below OR it is misspelled (keeping in mind it is case-sensitive), its color will be defaulted to gray.
 
@@ -127,6 +127,31 @@ To add more items to the tool inventory table, just add another tool dictionary 
 	teams_using_it:[], // List of Strings - Teams that the tool has been used by (see [above]())
 	projects_used_on:[] // List of Strings - Projects that the tool has been used on (see [above]())
 }
+```
+
+If another Category, Team, or Project, needed to be added when adding the new tool, please make sure you check their respective sections to update all the filtering options.
+
+## Adding another Category, Team, or Project to the tool inventory table
+
+The columns and their filtering options are defined at the end of `js/create_table.js`.
+
+If another tool category, team, or project is added, please color code it as defined under [color conventions](#color-conventions) and also add it to the column's filtering options.
+
+To do so, add a string to the `values` array under `headerFilterParams` for the respective column. Example:
+
+```jsx
+{   title:"Categories",
+    field:"categories",
+    formatter: category_tagFormatter,
+    headerSort:false,
+    headerFilter:'select',
+    headerFilterFunc:filterCategory,
+    headerFilterParams:{
+        values:["Mapping", "Data Analysis", "Data Cleaning", "Data Visualization", "Data Collection", "Code Repository", "Project Management", "Data Transfer", "Containerization", "Reproducibility"], // ADD NEW CATEGORY TO THIS LIST
+        sortValuesList:'asc',
+        multiselect:true
+    }
+},
 ```
 
 ## Adding more tools to other useful tools
