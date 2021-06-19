@@ -113,7 +113,7 @@ var table = new Tabulator('#tool-inventory-table',{
             headerFilter:'select',
             headerFilterFunc:filterTag,
             headerFilterParams:{
-                values:projects, // projects is loaded and defined from 'variables.js' file
+                values:Object.keys(projects), // projects is loaded and defined from 'variables.js' file
                 sortValuesList:'asc',
                 multiselect:true
             }

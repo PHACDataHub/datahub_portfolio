@@ -25,13 +25,13 @@ The current defined colors are:
 
 Colors are mainly used for tag-like items, especially when looking at the tool inventory table and the tool sections under each project page.
 
-Categories, Teams, and Projects, are all automatically color-coded using formatted functions defined under `js/create_table.js`.
+Categories, Teams, and Projects, are all automatically color-coded using a formatter function defined under `js/create_table.js`.
 
-If a new Category, Team, or Project, is added to the table and it needs a defined color, you must add it to their specific function's switch statement under the mentioned file. Also, check the
+If a new Category, Team, or Project, is added to the table and it needs a defined color, you must add its color to their respective variable under `js/variables.js`.
 
-> If there’s an item not defined below OR it is misspelled (keeping in mind it is case-sensitive), its color will be defaulted to gray.
+> If there’s an item not defined OR it is misspelled (keeping in mind it is case-sensitive), its color will be defaulted to gray.
 
-The currently defined Categories/Teams/Projects colors are below. 
+The currently defined Categories/Teams/Projects objects are defined on `js/variables.js` and their colors are below. 
 
 ## Categories
 
@@ -45,6 +45,8 @@ The currently defined Categories/Teams/Projects colors are below.
 - `Data Transfer` = brown
 - `Containerization` = green
 - `Reproducibility` = red
+- `Diagram Creation` = purple
+- `File Storage` = green
 
 ### Teams
 
@@ -110,11 +112,11 @@ Done, now there's a new card under the project portfolio page and, if all classe
 
 ## Adding more tools to the tool inventory table
 
-The tool inventory table is generated using the Tabulator library on JavaScript. Hence, the column definitions and table data are defined under `js/create_table.js`. They are the last 2 things defined on the file.
+The tool inventory table is generated using the Tabulator library on JavaScript.
 
-The `tableData` variable is a list of dictionaries — one for each of the tools shown on the table.
+The `tools` variable defined on `js/variables.js` is a list of dictionaries — one for each of the tools shown on the table.
 
-To add more items to the tool inventory table, just add another tool dictionary to the `tableData` list following the specified project dictionary format:
+To add more items to the tool inventory table, just add another tool dictionary to the `tools` list following the specified project dictionary format:
 
 ```jsx
 {
@@ -129,30 +131,7 @@ To add more items to the tool inventory table, just add another tool dictionary 
 }
 ```
 
-If another Category, Team, or Project, needed to be added when adding the new tool, please make sure you check their respective sections to update all the filtering options.
-
-## Adding another Category, Team, or Project to the tool inventory table
-
-The columns and their filtering options are defined at the end of `js/create_table.js`.
-
-If another tool category, team, or project is added, please color code it as defined under [color conventions](#color-conventions) and also add it to the column's filtering options.
-
-To do so, add a string to the `values` array under `headerFilterParams` for the respective column. Example:
-
-```jsx
-{   title:"Categories",
-    field:"categories",
-    formatter: category_tagFormatter,
-    headerSort:false,
-    headerFilter:'select',
-    headerFilterFunc:filterCategory,
-    headerFilterParams:{
-        values:["Mapping", "Data Analysis", "Data Cleaning", "Data Visualization", "Data Collection", "Code Repository", "Project Management", "Data Transfer", "Containerization", "Reproducibility"], // ADD NEW CATEGORY TO THIS LIST
-        sortValuesList:'asc',
-        multiselect:true
-    }
-},
-```
+If another Category, Team, or Project needed to be added when adding the new tool, please make sure you add it to their respective variable on `js/variables.js` and color code it accordingly.
 
 ## Adding more tools to other useful tools
 

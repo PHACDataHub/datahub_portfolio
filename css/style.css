@@ -119,6 +119,7 @@ a {
 }
 
 /* Background color styles */
+/* Add ".COLOR-background" styling with the desired rgba to add more defined colors */
 .pink-background {
     background-color: rgba(221, 0, 129, 0.2);
 }

@@ -19,6 +19,8 @@ The currently defined colors are:
 - red
 - light-gray
 
+More colors can be added to the bottom of the style.css sheet
+
 */
 
 var categories = {
@@ -55,7 +57,7 @@ var projects = {
 };
 
 // Creates a unified dictionary so that colors can be easily accessed
-var allItems = Object.assign(Object.assign(categories, teams), projects);
+var allItems = Object.assign({}, categories, teams, projects);
 
 // The template for adding another tool to the list bellow is:
 //
