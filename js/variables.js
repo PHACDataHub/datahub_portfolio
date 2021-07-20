@@ -81,6 +81,15 @@ var tools = [
         teams_using_it:["NML Geomatics"],
         projects_used_on:[]
     },
+    {   tool:"OneDrive",
+        categories:["File Storage", "File Sharing", "Live Collaboration"],
+        cost: "Free",
+        protected_b_data:"Yes",
+        link:"https://onedrive.live.com/about/en-us/signin/",
+        self_hosted_version:"Yes",
+        teams_using_it:["Data Hub"],
+        projects_used_on:["Border Measures"]
+    },    
     {   tool:"QGIS",
         categories:["Mapping"],
         cost: "Free",
