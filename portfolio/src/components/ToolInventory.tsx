@@ -1,16 +1,13 @@
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Box,
-  Center,
   Heading,
   HStack,
-  Icon,
   Link,
   Stack,
   Tag,
   Image,
   Text,
-  VStack,
 } from "@chakra-ui/react";
 import { toolInventoryList } from "../utils/data/constants";
 import { InventoryTool } from "../utils/types";

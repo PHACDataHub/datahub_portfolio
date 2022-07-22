@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Link, Text, VStack } from "@chakra-ui/react";
+import { HStack, Link, Text, VStack } from "@chakra-ui/react";
 import { useSmallScreen } from "../utils/hooks";
 
 export function Footer(): JSX.Element {
