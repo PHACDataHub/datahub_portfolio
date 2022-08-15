@@ -9,3 +9,8 @@ export type InventoryTool = {
   projects: string[];
   image?: string;
 };
+
+export type TagType = {
+  name: string;
+  color: string;
+};

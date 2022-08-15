@@ -1,4 +1,4 @@
-import { InventoryTool } from "../types";
+import { InventoryTool, TagType } from "../types";
 
 export const otherUsefulToolsList = [
   "RStudio",
@@ -47,7 +47,7 @@ export const toolInventoryList: InventoryTool[] = [
     teams: [],
     projects: [],
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/c/c2/QGIS_logo%2C_2017.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/91/QGIS_logo_new.svg",
   },
   {
     name: "R",
@@ -63,7 +63,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: ["Data Hub", "CIRID"],
     projects: ["CIRID Epitrend Reports"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/512px-R_logo.svg.png",
   },
   {
     name: "LimeSurvey",
@@ -142,7 +143,8 @@ export const toolInventoryList: InventoryTool[] = [
       "Wastewater Project",
       "National Surveillance Project",
     ],
-    image: "https://www.cleo.com/sites/default/files/2019-06/azure-half.png",
+    image:
+      "https://images.ctfassets.net/3lmzp7rq9ytt/2GfvIyMz5Dd99vje52s3Gg/533b0b337103dfe3783733ab168584da/azure-storage-blob--v1.png",
   },
   {
     name: "LiquidFiles",
@@ -153,6 +155,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["Data Hub", "Compliance Enforcement"],
     projects: ["Border Measures"],
+    image:
+      "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
   },
   {
     name: "GitHub",
@@ -163,6 +167,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: ["Data Hub", "CIRID"],
     projects: ["CIRID Epitrend Reports", "Wastewater Project"],
+    image:
+      "https://cdn-icons-png.flaticon.com/512/25/25231.png",
   },
   {
     name: "Docker",
@@ -173,6 +179,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["Data Hub"],
     projects: ["National Surveillance Project"],
+    image:
+      "https://seeklogo.com/images/D/docker-logo-CF97D0124B-seeklogo.com.png",
   },
   {
     name: "Tableau",
@@ -183,6 +191,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: [],
     projects: [],
+    image:
+      "https://seeklogo.com/images/T/tableau-software-logo-F1CE2CA54A-seeklogo.com.png",
   },
   {
     name: "SurveyMonkey",
@@ -193,6 +203,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: [],
     projects: [],
+    image:
+      "https://prod.smassets.net/assets/cms/sm/uploads//mp-brandassets-goldie-768x334.png",
   },
   {
     name: "VoxCo",
@@ -203,6 +215,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: ["CCDIC"],
     projects: [],
+    image:
+      "https://www.voxco.com/wp-content/uploads/2020/04/cropped-Capture-removebg-preview.png",
   },
   {
     name: "Metabase",
@@ -213,6 +227,8 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["CIRID"],
     projects: ["DISCOVER"],
+    image:
+      "https://dka575ofm4ao0.cloudfront.net/pages-transactional_logos/retina/233858/logo.png",
   },
   {
     name: "Databricks",
@@ -226,6 +242,8 @@ export const toolInventoryList: InventoryTool[] = [
       "Border Measures",
       "Dashboard for Immunization Related Diseases (DIRD)",
     ],
+    image:
+      "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
   },
   {
     name: "Draw.io",
@@ -236,5 +254,116 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: false,
     teams: ["Data Hub"],
     projects: ["National Surveillance Project"],
+    image:
+      "https://drawio-app.com/wp-content/uploads/2021/05/drawio_logo_RGB_symbol_large.png",
   },
 ];
+
+export const categories: TagType[] = [
+  {
+    name: "Mapping",
+    color: "pink.200",
+  },
+  {
+    name: "Data Analysis",
+    color: "green.200",
+  },
+  {
+    name: "Data Cleaning",
+    color: "blue.200",
+  },
+  {
+    name: "Data Visualization",
+    color: "yellow.200",
+  },
+  {
+    name: "Data Collection",
+    color: "orange.200",
+  },
+  {
+    name: "Code Repository",
+    color: "purple.200",
+  },
+  {
+    name: "Project Management",
+    color: "orange.200",
+  },
+  {
+    name: "Data Transfer",
+    color: "orange.400",
+  },
+  {
+    name: "Containerization",
+    color: "green.200",
+  },
+  {
+    name: "Reproducibility",
+    color: "red.200",
+  },
+  {
+    name: "Diagram Creation",
+    color: "purple.200",
+  },
+  {
+    name: "File Storage",
+    color: "green.200",
+  },
+  {
+    name: "File Sharing",
+    color: "red.200",
+  },
+  {
+    name: "Live Collaboration",
+    color: "blue.200",
+  },
+];
+
+export const teams: TagType[] = [
+  {
+    name: "Data Hub",
+    color: "orange.200",
+  },
+  {
+    name: "Compliance Enforcement",
+    color: "blue.200",
+  },
+  {
+    name: "CIRID",
+    color: "yellow.200",
+  },
+  {
+    name: "CCDIC",
+    color: "green.200",
+  },
+  {
+    name: "NML Geomatics",
+    color: "pink.200",
+  },
+];
+
+export const projects: TagType[] = [
+  {
+    name: "CIRID Epitrend Reports",
+    color: "orange.200",
+  },
+  {
+    name: "Border Measures",
+    color: "green.200",
+  },
+  {
+    name: "Dashboard for Immunization Related Diseases (DIRD)",
+    color: "purple.200",
+  },
+  {
+    name: "Wastewater Project",
+    color: "blue.200",
+  },
+  {
+    name: "National Surveillance Project",
+    color: "red.200",
+  },
+  {
+    name: "DISCOVER",
+    color: "yellow.200",
+  }
+]

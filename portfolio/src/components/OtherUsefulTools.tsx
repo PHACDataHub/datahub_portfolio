@@ -4,7 +4,6 @@ import { otherUsefulToolsList } from "../utils/data/constants";
 
 export function OtherUsefulTools(): JSX.Element {
   const isSmallScreen = useSmallScreen();
-  console.log(isSmallScreen);
   return (
     <Box
       px={5}
