@@ -10,6 +10,20 @@ export type InventoryTool = {
   image?: string;
 };
 
+export type ProjectPage = {
+  id: string;
+  name: string;
+  description: string;
+  background: string[];
+  problem: string;
+  goal: string;
+  solution: string;
+  images: string[];
+  cardImage: string;
+  tools: string[];
+  successMetrics?: string[];
+};
+
 export type TagType = {
   name: string;
   color: string;

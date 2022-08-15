@@ -1,6 +1,15 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
+import { Link, useParams } from "react-router-dom";
+import { projectPages, projects } from "../utils/data/constants";
+import { ProjectPage } from "../utils/types";
+
+const ProjectCard = ({ project }: { project: ProjectPage }) => {
+  let { name } = project;
+  return <Heading>{name}</Heading>;
+};
 
 export function ProjectPortfolio(): JSX.Element {
+  let { id } = useParams();
   return (
     <Box
       px={5}
@@ -10,10 +19,22 @@ export function ProjectPortfolio(): JSX.Element {
       alignItems="center"
       w="100%"
     >
-      <Heading>Project Portfolio</Heading>
-      <Text my={4}>
-        Additional developer-focused tools that our team finds useful
-      </Text>
+      <Heading>Project Portfolio {id}</Heading>
+      <Box
+        py={8}
+        display="flex"
+        justifyContent="center"
+        alignItems="flex-start"
+        flexWrap="wrap"
+        gap={8}
+        maxW="90%"
+      >
+        {projectPages.map((project) => (
+          <Link to={`/project/${project.id}`} key={project.id}>
+            <ProjectCard project={project} />
+          </Link>
+        ))}
+      </Box>
     </Box>
   );
 }

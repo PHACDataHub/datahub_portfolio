@@ -15,7 +15,12 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { teams, toolInventoryList, categories, projects } from "../utils/data/constants";
+import {
+  teams,
+  toolInventoryList,
+  categories,
+  projects,
+} from "../utils/data/constants";
 import { InventoryTool } from "../utils/types";
 
 const ToolCard = ({ tool }: { tool: InventoryTool }) => {
@@ -25,9 +30,14 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
       maxW={"280px"}
       w={"full"}
       boxShadow={"xl"}
+      transition="all 0.2s ease-in-out"
+      _hover={{
+        boxShadow: "2xl",
+      }}
       rounded={"lg"}
-      pos={"relative"}
+      pos="relative"
       zIndex={1}
+      bgColor="white"
     >
       <Stack>
         {/* <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
@@ -74,13 +84,9 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
           rightIcon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? 'Less' : 'More'} Details
+          {isOpen ? "Less" : "More"} Details
         </Button>
-        <Stack
-          px={4}
-          pb={6}
-          display={isOpen ? "block" : "none"}
-        >
+        <Stack px={4} pb={6} display={isOpen ? "block" : "none"}>
           <HStack>
             <Text>Protected B Data:</Text>
             <Tag bgColor={tool.protected_b_data ? "green.200" : "red.200"}>
@@ -114,6 +120,7 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
                   <Text
                     fontWeight="500"
                     fontSize="sm"
+                    key={team}
                     px={2}
                     py={1}
                     borderRadius="lg"
@@ -138,10 +145,11 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
                     fontSize="sm"
                     px={2}
                     py={1}
+                    key={project}
                     borderRadius="lg"
                     bgColor={
-                      projects.find((projectObj) => projectObj.name === project)?.color ??
-                      "blue.200"
+                      projects.find((projectObj) => projectObj.name === project)
+                        ?.color ?? "blue.200"
                     }
                   >
                     {project}
