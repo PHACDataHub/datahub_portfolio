@@ -1,6 +1,6 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
-import { projectPages, projects } from "../utils/data/constants";
+import { projectPages } from "../utils/data/constants";
 import { ProjectPage } from "../utils/types";
 
 const ProjectCard = ({ project }: { project: ProjectPage }) => {
