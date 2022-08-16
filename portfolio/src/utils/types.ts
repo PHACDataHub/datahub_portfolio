@@ -10,6 +10,11 @@ export type InventoryTool = {
   image: string;
 };
 
+export type OtherTool = {
+  name: string;
+  url: string;
+};
+
 export type ProjectPage = {
   id: string;
   name: string;

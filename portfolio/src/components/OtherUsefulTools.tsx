@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Heading, Link, Text } from "@chakra-ui/react";
 import { useSmallScreen } from "../utils/hooks";
 import { otherUsefulToolsList } from "../utils/data/constants";
 
@@ -25,8 +25,20 @@ export function OtherUsefulTools(): JSX.Element {
         maxW="90%"
       >
         {otherUsefulToolsList.map((tool) => (
-          <Box w={isSmallScreen ? "45%" : "30%"} key={tool} textAlign="center">
-            <Heading size="md">{tool}</Heading>
+          <Box
+            w={isSmallScreen ? "45%" : "30%"}
+            key={tool.name}
+            textAlign="center"
+          >
+            <Link
+              href={tool.url}
+              target="_blank"
+              textDecor="underline"
+              fontWeight="semibold"
+              color="black"
+            >
+              <Heading size="md">{tool.name}</Heading>
+            </Link>
           </Box>
         ))}
       </Box>
