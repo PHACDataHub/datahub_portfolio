@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: { project: ProjectPage }) => {
       <Box overflow="hidden">
         <Image
           src={process.env.PUBLIC_URL + "images/" + cardImage}
-          transform={isHovered ? "scale(1.2)" : "scale(1)"}
+          transform={isHovered ? "scale(1.08)" : "scale(1)"}
           transition="all 0.2s ease-in-out"
         />
       </Box>
