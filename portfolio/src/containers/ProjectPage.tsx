@@ -2,8 +2,8 @@ import {
   Box,
   Button,
   Center,
+  Flex,
   Heading,
-  HStack,
   Image,
   Stack,
   Tag,
@@ -69,14 +69,14 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         objectFit="cover"
         src={process.env.PUBLIC_URL + "/images/" + cardImage}
       />
-      <VStack p={isSmallScreen ? 4 : 10} spacing={8}>
-        <Box w="100%">
-          <Link to="/">
-            <Button size="lg">Back</Button>
-          </Link>
-        </Box>
+      <Box w="100%" p={isSmallScreen ? 4 : 10}>
+        <Link to="/">
+          <Button size="lg">Back</Button>
+        </Link>
+      </Box>
+      <VStack spacing={8} w={isSmallScreen ? "90%" : "70%"} m="auto">
         <Heading>{name}</Heading>
-        <HStack>
+        <Flex gap={4} wrap="wrap">
           {tools.map((tool, idx) => (
             <Tag
               key={idx}
@@ -88,7 +88,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
               {tool}
             </Tag>
           ))}
-        </HStack>
+        </Flex>
         <Center {...titleStyle}>
           <Heading size="lg">Background</Heading>
         </Center>
