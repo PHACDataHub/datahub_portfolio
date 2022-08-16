@@ -43,19 +43,16 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
           {tool.image && (
             <Image position="absolute" maxW="40px" right="5" src={tool.image} />
           )}
-          <Heading
-            maxW="80%"
-            fontSize={"2xl"}
-            fontFamily={"body"}
-            fontWeight={500}
-          >
-            {tool.name}{" "}
-            {tool.url && (
-              <Link href={tool.url} target="_blank">
-                <ExternalLinkIcon boxSize="18" />
-              </Link>
-            )}
-          </Heading>
+          <Link href={tool.url} target="_blank">
+            <Heading
+              maxW="80%"
+              fontSize={"2xl"}
+              fontFamily={"body"}
+              fontWeight={500}
+            >
+              {tool.name} {tool.url && <ExternalLinkIcon boxSize="18" />}
+            </Heading>
+          </Link>
           <Box pt={7} pb={2} display="flex" flexWrap="wrap" gap={1}>
             {tool.categories.map((category) => (
               <Tag
