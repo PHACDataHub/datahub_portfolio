@@ -7,7 +7,7 @@ export type InventoryTool = {
   self_hosted_version: boolean;
   teams: string[];
   projects: string[];
-  image?: string;
+  image: string;
 };
 
 export type ProjectPage = {
