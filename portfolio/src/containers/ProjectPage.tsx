@@ -34,7 +34,17 @@ const getSomeRandomColors = (count: number): any[] => {
 };
 
 const ProjectDetails = ({ project }: { project: ProjectPage }) => {
-  let { name, background, problem, goal, solution, images, tools, successMetrics } = project;
+  let {
+    name,
+    background,
+    problem,
+    goal,
+    solution,
+    images,
+    tools,
+    successMetrics,
+    cardImage,
+  } = project;
   const isSmallScreen = useSmallScreen();
 
   const titleStyle = {
@@ -44,64 +54,90 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     borderRadius: "xl",
   };
 
-  let colors = getSomeRandomColors(tools.length + (successMetrics ? successMetrics.length : 0));
+  let colors = getSomeRandomColors(
+    tools.length + (successMetrics ? successMetrics.length : 0)
+  );
+  let metricColors = getSomeRandomColors(
+    successMetrics ? successMetrics.length : 0
+  );
 
   return (
-    <VStack p={isSmallScreen ? 4 : 10} spacing={8}>
-      <Box w="100%">
-        <Link to="/">
-          <Button size="lg">Back</Button>
-        </Link>
-      </Box>
-      <Heading>{name}</Heading>
-      <HStack>
-        {tools.map((tool, idx) => (
-          <Tag
-            key={idx}
-            size="lg"
-            bgColor={colors[idx]}
-            fontWeight="bold"
-            fontSize="xl"
-          >
-            {tool}
-          </Tag>
+    <>
+      <Image
+        h="100px"
+        w="100%"
+        objectFit="cover"
+        src={process.env.PUBLIC_URL + "/images/" + cardImage}
+      />
+      <VStack p={isSmallScreen ? 4 : 10} spacing={8}>
+        <Box w="100%">
+          <Link to="/">
+            <Button size="lg">Back</Button>
+          </Link>
+        </Box>
+        <Heading>{name}</Heading>
+        <HStack>
+          {tools.map((tool, idx) => (
+            <Tag
+              key={idx}
+              size="lg"
+              bgColor={colors[idx]}
+              fontWeight="bold"
+              fontSize="xl"
+            >
+              {tool}
+            </Tag>
+          ))}
+        </HStack>
+        <Center {...titleStyle}>
+          <Heading size="lg">Background</Heading>
+        </Center>
+        {background.map((paragraph, idx) => (
+          <Text key={idx}>{paragraph}</Text>
         ))}
-      </HStack>
-      <Center {...titleStyle}>
-        <Heading size="lg">Background</Heading>
-      </Center>
-      {background.map((paragraph, idx) => (
-        <Text key={idx}>{paragraph}</Text>
-      ))}
-      <Stack direction={isSmallScreen ? "column" : "row"} spacing={8}>
-        <VStack w={isSmallScreen ? "100%" : "33%"}>
-          <Center {...titleStyle}>
-            <Heading size="lg">Problem</Heading>
-          </Center>
-          <Text>{problem}</Text>
-        </VStack>
-        <VStack w={isSmallScreen ? "100%" : "33%"}>
-          <Center {...titleStyle}>
-            <Heading size="lg">Goal</Heading>
-          </Center>
-          <Text>{goal}</Text>
-        </VStack>
-        <VStack w={isSmallScreen ? "100%" : "33%"}>
-          <Center {...titleStyle}>
-            <Heading size="lg">Solution</Heading>
-          </Center>
-          <Text>{solution}</Text>
-        </VStack>
-      </Stack>
-      {successMetrics && <><Center {...titleStyle}>
-        <Heading size="lg">Success Metrics</Heading>
-      </Center>
-      {successMetrics.map((metric, idx) => <Tag fontWeight="bold" size="lg" fontSize="xl">{metric}</Tag>)}
-      </>}
-      {images.map((image, idx) => (
-        <Image key={idx} src={process.env.PUBLIC_URL + "/images/" + image} />
-      ))}
-    </VStack>
+        <Stack direction={isSmallScreen ? "column" : "row"} spacing={8}>
+          <VStack w={isSmallScreen ? "100%" : "33%"}>
+            <Center {...titleStyle}>
+              <Heading size="lg">Problem</Heading>
+            </Center>
+            <Text>{problem}</Text>
+          </VStack>
+          <VStack w={isSmallScreen ? "100%" : "33%"}>
+            <Center {...titleStyle}>
+              <Heading size="lg">Goal</Heading>
+            </Center>
+            <Text>{goal}</Text>
+          </VStack>
+          <VStack w={isSmallScreen ? "100%" : "33%"}>
+            <Center {...titleStyle}>
+              <Heading size="lg">Solution</Heading>
+            </Center>
+            <Text>{solution}</Text>
+          </VStack>
+        </Stack>
+        {successMetrics && (
+          <>
+            <Center {...titleStyle}>
+              <Heading size="lg">Success Metrics</Heading>
+            </Center>
+            {successMetrics.map((metric, idx) => (
+              <Tag
+                key={idx}
+                fontWeight="bold"
+                bgColor={metricColors[idx]}
+                size="lg"
+                fontSize="xl"
+              >
+                {metric}
+              </Tag>
+            ))}
+          </>
+        )}
+        {images.map((image, idx) => (
+          <Image key={idx} src={process.env.PUBLIC_URL + "/images/" + image} />
+        ))}
+      </VStack>
+    </>
   );
 };
 

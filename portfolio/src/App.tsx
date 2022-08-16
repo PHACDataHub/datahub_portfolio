@@ -1,7 +1,8 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Portfolio } from "./containers";
 import { ProjectPageContainer } from "./containers/ProjectPage";
+import { useEffect } from "react";
 
 const theme = extendTheme({
   colors: {
@@ -22,8 +23,19 @@ const theme = extendTheme({
   },
 });
 
+export default function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 export const App = () => (
   <ChakraProvider theme={theme}>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Portfolio />} />
       <Route path="/project/:id" element={<ProjectPageContainer />} />

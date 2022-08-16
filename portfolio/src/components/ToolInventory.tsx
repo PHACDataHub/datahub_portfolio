@@ -29,7 +29,7 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
     <Box
       maxW={"280px"}
       w={"full"}
-      boxShadow={"xl"}
+      boxShadow={"lg"}
       transition="all 0.2s ease-in-out"
       _hover={{
         boxShadow: "2xl",
