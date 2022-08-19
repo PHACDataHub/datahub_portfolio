@@ -33,3 +33,8 @@ export type TagType = {
   name: string;
   color: string;
 };
+
+export type Product = {
+  name: string;
+  image: string;
+};

@@ -1,6 +1,6 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { projectPages } from "../utils/data/constants";
 import { ProjectPage } from "../utils/types";
 
@@ -36,7 +36,6 @@ const ProjectCard = ({ project }: { project: ProjectPage }) => {
 };
 
 export function ProjectPortfolio(): JSX.Element {
-  let { id } = useParams();
   return (
     <Box
       px={5}
@@ -46,7 +45,7 @@ export function ProjectPortfolio(): JSX.Element {
       alignItems="center"
       w="100%"
     >
-      <Heading>Project Portfolio {id}</Heading>
+      <Heading>Projects</Heading>
       <Box
         py={8}
         display="flex"

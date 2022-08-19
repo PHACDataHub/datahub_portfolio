@@ -36,6 +36,9 @@ export function OtherUsefulTools(): JSX.Element {
               textDecor="underline"
               fontWeight="semibold"
               color="black"
+              _hover={{
+                color: "brand.canada",
+              }}
             >
               <Heading size="md">{tool.name}</Heading>
             </Link>

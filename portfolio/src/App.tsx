@@ -6,19 +6,20 @@ import { useEffect } from "react";
 
 const theme = extendTheme({
   colors: {
-    tag: {
-      100: "rgba(82, 227, 225, 0.4)",
-      200: "rgba(160, 228, 38, 0.4)",
-      300: "rgba(252, 240, 71, 0.5)",
-      400: "rgba(216, 131, 255, 0.5)",
-      500: "rgba(50, 163, 195, 0.5)",
-      600: "rgba(221, 0, 129, 0.4)",
-      700: "rgba(245, 93, 0, 0.4)",
-      800: "rgba(233, 168, 0, 0.4)",
-      900: "rgba(0, 135, 107, 0.4)",
-      1000: "rgba(0, 120, 223, 0.4)",
-      1100: "rgba(103, 36, 222, 0.4)",
-      1200: "rgba(255, 0, 26, 0.4)",
+    brand: {
+      bluegreenlight: "rgba(82, 227, 225, 0.4)",
+      greenlight: "rgba(160, 228, 38, 0.4)",
+      yellowlight: "rgba(252, 240, 71, 0.5)",
+      pink: "rgba(216, 131, 255, 0.5)",
+      bluegreendark: "rgba(50, 163, 195, 0.5)",
+      turquoise: "rgba(221, 0, 129, 0.4)",
+      orange: "rgba(245, 93, 0, 0.4)",
+      yellowdark: "rgba(233, 168, 0, 0.4)",
+      greendark: "rgba(0, 135, 107, 0.4)",
+      blue: "rgba(0, 120, 223, 0.4)",
+      purple: "rgba(103, 36, 222, 0.4)",
+      red: "rgba(255, 0, 26, 0.4)",
+      canada: "#e82042",
     },
   },
 });

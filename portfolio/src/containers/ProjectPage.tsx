@@ -17,18 +17,18 @@ import { ProjectPage } from "../utils/types";
 
 const getSomeRandomColors = (count: number): any[] => {
   const colors = [
-    "tag.100",
-    "tag.200",
-    "tag.300",
-    "tag.400",
-    "tag.500",
-    "tag.600",
-    "tag.700",
-    "tag.800",
-    "tag.900",
-    "tag.1000",
-    "tag.1100",
-    "tag.1200",
+    "brand.bluegreenlight",
+    "brand.greenlight",
+    "brand.yellowlight",
+    "brand.pink",
+    "brand.bluegreendark",
+    "brand.turquoise",
+    "brand.orange",
+    "brand.yellowdark",
+    "brand.greendark",
+    "brand.blue",
+    "brand.purple",
+    "brand.red",
   ];
   return colors.sort(() => 0.5 - Math.random()).slice(0, count);
 };

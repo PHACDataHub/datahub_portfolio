@@ -1,4 +1,4 @@
-import { InventoryTool, OtherTool, ProjectPage } from "../types";
+import { InventoryTool, OtherTool, Product, ProjectPage } from "../types";
 
 export const otherUsefulToolsList: OtherTool[] = [
   { name: "RStudio", url: "https://rstudio.com/" },
@@ -42,21 +42,6 @@ export const toolInventoryList: InventoryTool[] = [
     projects: ["CIRID Epitrend Reports"],
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/512px-R_logo.svg.png",
-  },
-  {
-    name: "LimeSurvey",
-    categories: ["Data Collection"],
-    cost: "Free",
-    protected_b_data: true,
-    url: "https://www.limesurvey.org/",
-    self_hosted_version: true,
-    teams: [
-      "Data Management, Innovation and Analytics (DMIA)",
-      "Compliance Enforcement",
-    ],
-    projects: ["Border Measures"],
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png",
   },
   {
     name: "Power BI",
@@ -130,21 +115,6 @@ export const toolInventoryList: InventoryTool[] = [
       "https://images.ctfassets.net/3lmzp7rq9ytt/2GfvIyMz5Dd99vje52s3Gg/533b0b337103dfe3783733ab168584da/azure-storage-blob--v1.png",
   },
   {
-    name: "LiquidFiles",
-    categories: ["Data Transfer"],
-    cost: "Free",
-    protected_b_data: true,
-    url: "https://www.liquidfiles.com/",
-    self_hosted_version: true,
-    teams: [
-      "Data Management, Innovation and Analytics (DMIA)",
-      "Compliance Enforcement",
-    ],
-    projects: ["Border Measures"],
-    image:
-      "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
-  },
-  {
     name: "GitHub",
     categories: ["Project Management", "Code Repository"],
     cost: "Free",
@@ -166,21 +136,6 @@ export const toolInventoryList: InventoryTool[] = [
     projects: [],
     image:
       "https://seeklogo.com/images/T/tableau-software-logo-F1CE2CA54A-seeklogo.com.png",
-  },
-  {
-    name: "Databricks",
-    categories: ["Data Analysis", "Data Cleaning"],
-    cost: "Per user fee",
-    protected_b_data: true,
-    url: "https://databricks.com/",
-    self_hosted_version: true,
-    teams: ["Data Management, Innovation and Analytics (DMIA)"],
-    projects: [
-      "Border Measures",
-      "Dashboard for Immunization Related Diseases (DIRD)",
-    ],
-    image:
-      "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
   },
   {
     name: "Draw.io",
@@ -317,5 +272,23 @@ export const projectPages: ProjectPage[] = [
       "2-3 hour daily process reduced to a few minutes",
       "3-4 weekly human errors minimized on average",
     ],
+  },
+];
+
+export const products: Product[] = [
+  {
+    name: "Databricks",
+    image:
+      "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
+  },
+  {
+    name: "LimeSurvey",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png",
+  },
+  {
+    name: "LiquidFiles",
+    image:
+      "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
   },
 ];

@@ -22,6 +22,7 @@ export function Footer(): JSX.Element {
           textDecor="underline"
           fontWeight="semibold"
           color="black"
+          _hover={{ color: "brand.canada" }}
         >
           GitHub Project Repository
         </Link>
@@ -31,6 +32,7 @@ export function Footer(): JSX.Element {
           textDecor="underline"
           fontWeight="semibold"
           color="black"
+          _hover={{ color: "brand.canada" }}
         >
           PHAC Data Strategy
         </Link>
