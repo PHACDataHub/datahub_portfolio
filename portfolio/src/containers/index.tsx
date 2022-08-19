@@ -1,6 +1,6 @@
 import { Center, Divider, Heading, Stack } from "@chakra-ui/react";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import { Footer } from "../components/organisms/Footer";
+import { Header } from "../components/organisms/Header";
 import { OtherUsefulTools } from "../components/OtherUsefulTools";
 import ProductPortfolio from "../components/ProductPortfolio";
 import { ProjectPortfolio } from "../components/ProjectPortfolio";

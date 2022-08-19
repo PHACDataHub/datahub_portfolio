@@ -1,5 +1,5 @@
 import { Stack, Heading, Image } from "@chakra-ui/react";
-import { useSmallScreen } from "../utils/hooks";
+import { useSmallScreen } from "../../utils/hooks";
 
 export function Header(): JSX.Element {
   const isSmallScreen = useSmallScreen();

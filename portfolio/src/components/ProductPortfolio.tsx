@@ -14,12 +14,14 @@ import { Product } from "../utils/types";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { name, cardImage, slogan } = product;
   return (
     <Box px={5} display="flex" flexDir="column" alignItems="center">
       <Center pb={12}>
         <Box
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          cursor="pointer"
           role={"group"}
           p={6}
           bg={useColorModeValue("white", "gray.800")}
@@ -40,7 +42,7 @@ const ProductCard = ({ product }: { product: Product }) => {
               pos: "absolute",
               top: 0,
               left: 0,
-              backgroundImage: `url(${product.image})`,
+              backgroundImage: `url(${cardImage})`,
               backgroundSize: "cover",
               filter: "blur(30px)",
               zIndex: -1,
@@ -58,10 +60,10 @@ const ProductCard = ({ product }: { product: Product }) => {
               transform={isHovered ? "scale(1.15)" : "scale(1)"}
               mx="auto"
               objectFit="contain"
-              src={product.image}
+              src={cardImage}
             />
           </Box>
-          <Stack pt={10} align={"center"}>
+          <Stack pt={4} align={"center"} spacing={5}>
             {/* <Text
               color={"gray.500"}
               fontSize={"sm"}
@@ -70,7 +72,10 @@ const ProductCard = ({ product }: { product: Product }) => {
               Brand
             </Text> */}
             <Heading fontSize={"4xl"} fontFamily={"body"} fontWeight={700}>
-              {product.name}
+              {name}
+            </Heading>
+            <Heading fontSize={"xl"} fontWeight={400}>
+              {slogan}
             </Heading>
           </Stack>
         </Box>

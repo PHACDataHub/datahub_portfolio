@@ -30,16 +30,7 @@ export function OtherUsefulTools(): JSX.Element {
             key={tool.name}
             textAlign="center"
           >
-            <Link
-              href={tool.url}
-              target="_blank"
-              textDecor="underline"
-              fontWeight="semibold"
-              color="black"
-              _hover={{
-                color: "brand.canada",
-              }}
-            >
+            <Link href={tool.url} target="_blank">
               <Heading size="md">{tool.name}</Heading>
             </Link>
           </Box>

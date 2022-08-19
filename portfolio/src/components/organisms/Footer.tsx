@@ -1,5 +1,5 @@
 import { HStack, Link, Text, VStack } from "@chakra-ui/react";
-import { useSmallScreen } from "../utils/hooks";
+import { useSmallScreen } from "../../utils/hooks";
 
 export function Footer(): JSX.Element {
   const isSmallScreen = useSmallScreen();
@@ -21,19 +21,10 @@ export function Footer(): JSX.Element {
           target="_blank"
           textDecor="underline"
           fontWeight="semibold"
-          color="black"
-          _hover={{ color: "brand.canada" }}
         >
           GitHub Project Repository
         </Link>
-        <Link
-          href="https://phacdatahub.github.io/datahub/"
-          target="_blank"
-          textDecor="underline"
-          fontWeight="semibold"
-          color="black"
-          _hover={{ color: "brand.canada" }}
-        >
+        <Link href="https://phacdatahub.github.io/datahub/" target="_blank">
           PHAC Data Strategy
         </Link>
       </HStack>

@@ -22,6 +22,18 @@ const theme = extendTheme({
       canada: "#e82042",
     },
   },
+  components: {
+    Link: {
+      baseStyle: {
+        color: "black",
+        _hover: {
+          color: "brand.canada",
+        },
+        textDecor: "underline",
+        fontWeight: "semibold",
+      },
+    },
+  },
 });
 
 export default function ScrollToTop() {

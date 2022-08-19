@@ -161,7 +161,7 @@ export const toolInventoryList: InventoryTool[] = [
       "Dashboard for Immunization Related Diseases (DIRD)",
       "Border Measures",
     ],
-    image: process.env.PUBLIC_URL + "/images/sql_database.png",
+    image: process.env.PUBLIC_URL + "/images/tools/sql_database.png",
   },
   {
     name: "Django",
@@ -172,7 +172,7 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["Data Management, Innovation and Analytics (DMIA)"],
     projects: [],
-    image: process.env.PUBLIC_URL + "/images/django_logo.png",
+    image: process.env.PUBLIC_URL + "/images/tools/django_logo.png",
   },
   {
     name: "Azure Data Factory",
@@ -188,7 +188,7 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["Data Management, Innovation and Analytics (DMIA)"],
     projects: ["Border Measures"],
-    image: process.env.PUBLIC_URL + "/images/adf_logo.png",
+    image: process.env.PUBLIC_URL + "/images/tools/adf_logo.png",
   },
   {
     name: "D3",
@@ -199,7 +199,7 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ["Infobase"],
     projects: [],
-    image: process.env.PUBLIC_URL + "/images/d3_logo.svg",
+    image: process.env.PUBLIC_URL + "/images/tools/d3_logo.svg",
   },
 ];
 
@@ -217,8 +217,8 @@ export const projectPages: ProjectPage[] = [
     goal: "Remove manual work and move the data analysis into a more dynamic automated data system readily available to people at PHAC.",
     solution:
       "A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.",
-    images: ["border_measures_1.png"],
-    cardImage: "border_measures_stock.jpg",
+    images: ["projects/border_measures_1.png"],
+    cardImage: "projects/border_measures_stock.jpg",
     tools: [
       "Power BI Dashboard",
       "Power BI Dataflow",
@@ -240,8 +240,8 @@ export const projectPages: ProjectPage[] = [
     goal: "An all-encompassing platform where epidemiologists, data analysts, and decision makers can get curated data based on their needs.",
     solution:
       "Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources. Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.",
-    images: ["dird_1.gif"],
-    cardImage: "dird_stock.jpg",
+    images: ["projects/dird_1.gif"],
+    cardImage: "projects/dird_stock.jpg",
     tools: [
       "Power BI",
       "Python",
@@ -265,8 +265,8 @@ export const projectPages: ProjectPage[] = [
     goal: "Automate the generation of the daily report while still maintaining the same format and information previously established.",
     solution:
       "Development of a script that can automatically pull the latest data and generate a daily report including all the necessary trends and charts, with all the correct formatting applied.",
-    images: ["epi_trend_1.png", "epi_trend_2.png"],
-    cardImage: "epi_trend_stock.jpg",
+    images: ["projects/epi_trend_1.png", "projects/epi_trend_2.png"],
+    cardImage: "projects/epi_trend_stock.jpg",
     tools: ["R", "R Markdown", "Python", "Github"],
     successMetrics: [
       "2-3 hour daily process reduced to a few minutes",
@@ -276,19 +276,32 @@ export const projectPages: ProjectPage[] = [
 ];
 
 export const products: Product[] = [
-  {
-    name: "Databricks",
-    image:
-      "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
-  },
+  // {
+  //   name: "Databricks",
+  //   image:
+  //     "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
+  // },
   {
     name: "LimeSurvey",
-    image:
+    cardImage:
       "https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png",
+    slogan: "A SaaS data collection tool",
+    description: [
+      "LimeSurvey is a SaaS tool used for data collection, as part of the National Surveillance Platform (NSP). DMIA is using version 3.22.6 of the community version of LimeSurvey, which means it is open-source and is installed on our own Canadian servers within the HC/PHAC network. LimeSurvey allows users to create forms in both official languages and, as of version 3, the tool has been deemed WCAP compliant.",
+      "LimeSurvey is currently being used to collect quantitative and qualitative data on topics ranging from public health surveillance to program assessment. Examples of projects that currently utilize or have utilized LimeSurvey include, but are not limited to, the Maritime Declaration of Health and the corresponding Annexes, the Review of the Yellow Fever Vaccination Centre Designation Program, the PHAC Incident Notification Form as part of the COVID-19 Border Measures Analytics project, etc.",
+    ],
+    url: "https://www.limesurvey.org/",
+    images: [
+      "products/LimeSurvey_01.PNG",
+      "products/LimeSurvey_02.PNG",
+      "products/LimeSurvey_03.PNG",
+      "products/LimeSurvey_04.PNG",
+      "products/LimeSurvey_05.PNG",
+    ],
   },
-  {
-    name: "LiquidFiles",
-    image:
-      "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
-  },
+  // {
+  //   name: "LiquidFiles",
+  //   image:
+  //     "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
+  // },
 ];

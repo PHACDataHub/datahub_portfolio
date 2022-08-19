@@ -36,5 +36,9 @@ export type TagType = {
 
 export type Product = {
   name: string;
-  image: string;
+  cardImage: string;
+  slogan: string;
+  description: string[];
+  url: string;
+  images: string[];
 };
