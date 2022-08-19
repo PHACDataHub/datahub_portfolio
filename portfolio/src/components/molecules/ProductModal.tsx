@@ -13,15 +13,13 @@ import {
   Heading,
   VStack,
   Divider,
-  Box,
 } from "@chakra-ui/react";
 import { Product } from "../../utils/types";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { ImageCarousel } from "./ImageCarousel";
 
 export default function ProductModal({
   isOpen,
@@ -62,28 +60,7 @@ export default function ProductModal({
               </>
             ))}
           </VStack>
-          <Box>
-            <Swiper
-              loop
-              autoplay={{
-                delay: 2000,
-              }}
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Navigation, Pagination]}
-            >
-              {images.map((image) => (
-                <SwiperSlide>
-                  <Image
-                    p={10}
-                    src={process.env.PUBLIC_URL + "images/" + image}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Box>
+          <ImageCarousel images={images} />
         </ModalBody>
         <ModalFooter>
           <Button bgColor="brand.canada" color="white" mr={3} onClick={onClose}>
