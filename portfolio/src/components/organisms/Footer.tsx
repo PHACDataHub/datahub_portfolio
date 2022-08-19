@@ -19,12 +19,15 @@ export function Footer(): JSX.Element {
         <Link
           href="https://github.com/PHACDataHub"
           target="_blank"
-          textDecor="underline"
-          fontWeight="semibold"
+          fontSize="lg"
         >
           GitHub Project Repository
         </Link>
-        <Link href="https://phacdatahub.github.io/datahub/" target="_blank">
+        <Link
+          fontSize="lg"
+          href="https://phacdatahub.github.io/datahub/"
+          target="_blank"
+        >
           PHAC Data Strategy
         </Link>
       </HStack>

@@ -11,9 +11,14 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
-import { projectPages } from "../utils/data/constants";
-import { useSmallScreen } from "../utils/hooks";
-import { ProjectPage } from "../utils/types";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { projectPages } from "../../utils/data/constants";
+import { useSmallScreen } from "../../utils/hooks";
+import { ProjectPage } from "../../utils/types";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const getSomeRandomColors = (count: number): any[] => {
   const colors = [
@@ -133,9 +138,28 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
             ))}
           </>
         )}
-        {images.map((image, idx) => (
-          <Image key={idx} src={process.env.PUBLIC_URL + "/images/" + image} />
-        ))}
+        {images.length > 0 && images.length > 1 ? (
+          <Box w="100%">
+            <Swiper
+              loop
+              autoplay={{ delay: 2000 }}
+              navigation={true}
+              pagination={{ clickable: true }}
+              modules={[Navigation, Pagination]}
+            >
+              {images.map((image, idx) => (
+                <SwiperSlide key={idx}>
+                  <Image
+                    p={12}
+                    src={process.env.PUBLIC_URL + "/images/" + image}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Box>
+        ) : (
+          <Image src={process.env.PUBLIC_URL + "/images/" + images[0]} />
+        )}
       </VStack>
     </>
   );

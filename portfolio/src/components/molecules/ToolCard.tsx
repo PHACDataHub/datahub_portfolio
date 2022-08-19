@@ -15,11 +15,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { toolInventoryList } from "../utils/data/constants";
-import { teams, categories, projects } from "../utils/data/tagColors";
-import { InventoryTool } from "../utils/types";
+import { categories, projects, teams } from "../../utils/data/tagColors";
+import { InventoryTool } from "../../utils/types";
 
-const ToolCard = ({ tool }: { tool: InventoryTool }) => {
+export default function ToolCard({ tool }: { tool: InventoryTool }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Box
@@ -37,8 +36,8 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
     >
       <Stack>
         {/* <Text color={"gray.500"} fontSize={"sm"} textTransform={"uppercase"}>
-            Brand
-          </Text> */}
+              Brand
+            </Text> */}
         <Box px={4} pt={4}>
           {tool.image && (
             <Image position="absolute" maxW="40px" right="5" src={tool.image} />
@@ -154,36 +153,5 @@ const ToolCard = ({ tool }: { tool: InventoryTool }) => {
         </Stack>
       </Stack>
     </Box>
-  );
-};
-
-export function ToolInventory(): JSX.Element {
-  return (
-    <Stack
-      bgColor="rgb(235,236,237)"
-      display="flex"
-      flexDir="column"
-      alignItems="center"
-      p={8}
-    >
-      <Heading>Tool Inventory</Heading>
-      <Heading size="md" fontWeight="normal">
-        The collection of tools below are used by our team and our partners for
-        various projects
-      </Heading>
-      <Box
-        py={8}
-        display="flex"
-        justifyContent="center"
-        alignItems="flex-start"
-        flexWrap="wrap"
-        gap={8}
-        maxW="90%"
-      >
-        {toolInventoryList.map((tool) => (
-          <ToolCard key={tool.name} tool={tool} />
-        ))}
-      </Box>
-    </Stack>
   );
 }

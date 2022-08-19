@@ -298,6 +298,7 @@ export const products: Product[] = [
       "products/LimeSurvey_04.PNG",
       "products/LimeSurvey_05.PNG",
     ],
+    color: "#3b9900",
   },
   // {
   //   name: "LiquidFiles",

@@ -1,10 +1,10 @@
 import { Center, Divider, Heading, Stack } from "@chakra-ui/react";
 import { Footer } from "../components/organisms/Footer";
 import { Header } from "../components/organisms/Header";
-import { OtherUsefulTools } from "../components/OtherUsefulTools";
-import ProductPortfolio from "../components/ProductPortfolio";
+import { OtherUsefulTools } from "../components/organisms/OtherUsefulTools";
+import ProductPortfolio from "../components/organisms/ProductPortfolio";
 import { ProjectPortfolio } from "../components/ProjectPortfolio";
-import { ToolInventory } from "../components/ToolInventory";
+import { ToolInventory } from "../components/organisms/ToolInventory";
 
 export function Portfolio(): JSX.Element {
   return (
