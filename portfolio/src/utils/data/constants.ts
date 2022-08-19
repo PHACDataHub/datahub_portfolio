@@ -175,6 +175,17 @@ export const toolInventoryList: InventoryTool[] = [
     image: process.env.PUBLIC_URL + "/images/tools/django_logo.png",
   },
   {
+    name: "D3",
+    categories: ["Data Visualization", "Data Analysis", "Dashboard Creation"],
+    cost: "Free",
+    protected_b_data: false,
+    url: "https://d3js.org/",
+    self_hosted_version: true,
+    teams: ["Infobase"],
+    projects: [],
+    image: process.env.PUBLIC_URL + "/images/tools/d3_logo.svg",
+  },
+  {
     name: "Azure Data Factory",
     categories: [
       "Data Integration",
@@ -189,17 +200,6 @@ export const toolInventoryList: InventoryTool[] = [
     teams: ["Data Management, Innovation and Analytics (DMIA)"],
     projects: ["Border Measures"],
     image: process.env.PUBLIC_URL + "/images/tools/adf_logo.png",
-  },
-  {
-    name: "D3",
-    categories: ["Data Visualization", "Data Analysis", "Dashboard Creation"],
-    cost: "Free",
-    protected_b_data: false,
-    url: "https://d3js.org/",
-    self_hosted_version: true,
-    teams: ["Infobase"],
-    projects: [],
-    image: process.env.PUBLIC_URL + "/images/tools/d3_logo.svg",
   },
 ];
 

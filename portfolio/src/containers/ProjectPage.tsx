@@ -13,9 +13,9 @@ import {
 import { Link, useParams } from "react-router-dom";
 import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { projectPages } from "../../utils/data/constants";
-import { useSmallScreen } from "../../utils/hooks";
-import { ProjectPage } from "../../utils/types";
+import { projectPages } from "../utils/data/constants";
+import { useSmallScreen } from "../utils/hooks";
+import { ProjectPage } from "../utils/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

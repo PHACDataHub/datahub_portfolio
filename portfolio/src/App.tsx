@@ -1,7 +1,7 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Portfolio } from "./containers";
-import { ProjectPageContainer } from "./components/templates/ProjectPage";
+import { ProjectPageContainer } from "./containers/ProjectPage";
 import { useEffect } from "react";
 
 const theme = extendTheme({

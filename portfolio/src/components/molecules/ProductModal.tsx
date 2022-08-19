@@ -17,11 +17,11 @@ import {
 } from "@chakra-ui/react";
 import { Product } from "../../utils/types";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./style.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function ProductModal({
   isOpen,
@@ -32,7 +32,7 @@ export default function ProductModal({
   onClose: () => void;
   product: Product;
 }) {
-  const { name, description, cardImage, images } = product;
+  const { name, description, cardImage, images, url } = product;
   return (
     <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -45,6 +45,15 @@ export default function ProductModal({
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
+          <Button
+            as="a"
+            target="_blank"
+            href={url}
+            rightIcon={<ExternalLinkIcon />}
+            mb={3}
+          >
+            Visit the website
+          </Button>
           <VStack>
             {description.map((paragraph) => (
               <>
