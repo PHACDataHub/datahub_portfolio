@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Center,
-  Flex,
   Heading,
   Image,
   Stack,
@@ -12,30 +11,13 @@ import {
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import { projectPages } from "../utils/data/constants";
-import { useSmallScreen } from "../utils/hooks";
+import { useRandomColors, useSmallScreen } from "../utils/hooks";
 import { ProjectPage } from "../utils/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ImageCarousel } from "../components/molecules/ImageCarousel";
-
-const getSomeRandomColors = (count: number): any[] => {
-  const colors = [
-    "brand.bluegreenlight",
-    "brand.greenlight",
-    "brand.yellowlight",
-    "brand.pink",
-    "brand.bluegreendark",
-    "brand.turquoise",
-    "brand.orange",
-    "brand.yellowdark",
-    "brand.greendark",
-    "brand.blue",
-    "brand.purple",
-    "brand.red",
-  ];
-  return colors.sort(() => 0.5 - Math.random()).slice(0, count);
-};
+import TagList from "../components/molecules/TagList";
 
 const ProjectDetails = ({ project }: { project: ProjectPage }) => {
   let {
@@ -58,10 +40,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     borderRadius: "xl",
   };
 
-  let colors = getSomeRandomColors(
-    tools.length + (successMetrics ? successMetrics.length : 0)
-  );
-  let metricColors = getSomeRandomColors(
+  let metricColors = useRandomColors(
     successMetrics ? successMetrics.length : 0
   );
 
@@ -78,21 +57,9 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           <Button size="lg">Back</Button>
         </Link>
       </Box>
-      <VStack spacing={8} w={isSmallScreen ? "90%" : "70%"} m="auto">
+      <VStack spacing={5} w={isSmallScreen ? "90%" : "70%"} m="auto">
         <Heading>{name}</Heading>
-        <Flex gap={4} wrap="wrap">
-          {tools.map((tool, idx) => (
-            <Tag
-              key={idx}
-              size="lg"
-              bgColor={colors[idx]}
-              fontWeight="bold"
-              fontSize="xl"
-            >
-              {tool}
-            </Tag>
-          ))}
-        </Flex>
+        <TagList tags={tools} />
         <Center {...titleStyle}>
           <Heading size="lg">Background</Heading>
         </Center>

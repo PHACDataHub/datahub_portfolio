@@ -20,6 +20,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { ImageCarousel } from "./ImageCarousel";
+import TagList from "./TagList";
 
 export default function ProductModal({
   isOpen,
@@ -30,7 +31,7 @@ export default function ProductModal({
   onClose: () => void;
   product: Product;
 }) {
-  const { name, description, cardImage, images, url } = product;
+  const { name, description, cardImage, images, url, categories } = product;
   return (
     <Modal size="5xl" isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -43,15 +44,17 @@ export default function ProductModal({
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <Button
-            as="a"
-            target="_blank"
-            href={url}
-            rightIcon={<ExternalLinkIcon />}
-            mb={3}
-          >
-            Visit the website
-          </Button>
+          <HStack mb={3} justify="space-between">
+            <TagList tags={categories} />
+            <Button
+              as="a"
+              target="_blank"
+              href={url}
+              rightIcon={<ExternalLinkIcon />}
+            >
+              Visit the website
+            </Button>
+          </HStack>
           <VStack>
             {description.map((paragraph) => (
               <>
