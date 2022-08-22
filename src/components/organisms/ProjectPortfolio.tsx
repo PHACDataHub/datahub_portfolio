@@ -1,6 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { projectPages } from "../../utils/constants";
+import { projectPageList } from "../../utils/constants";
 import { ProjectCard } from "../molecules/ProjectCard";
 
 export function ProjectPortfolio(): JSX.Element {
@@ -23,7 +23,7 @@ export function ProjectPortfolio(): JSX.Element {
         gap={8}
         maxW="90%"
       >
-        {projectPages.map((project) => (
+        {projectPageList.map((project) => (
           <Link to={`/project/${project.id}`} key={project.id}>
             <ProjectCard project={project} />
           </Link>

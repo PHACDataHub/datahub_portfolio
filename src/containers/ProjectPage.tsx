@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
-import { projectPages } from "../utils/constants";
+import { projectPageList } from "../utils/constants";
 import { useRandomColors, useSmallScreen } from "../utils/hooks";
 import { ProjectPage } from "../utils/types";
 import "swiper/css";
@@ -117,7 +117,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
 export function ProjectPageContainer(): JSX.Element {
   let { id } = useParams();
 
-  let project = projectPages.find((project) => project.id === id);
+  let project = projectPageList.find((project) => project.id === id);
 
   return project ? (
     <ProjectDetails project={project} />
