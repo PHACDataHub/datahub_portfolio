@@ -1,5 +1,5 @@
 import { Heading, HStack, VStack } from "@chakra-ui/react";
-import { products } from "../../utils/data/constants";
+import { products } from "../../utils/constants";
 import ProductCard from "../molecules/ProductCard";
 
 export default function ProductPortfolio() {

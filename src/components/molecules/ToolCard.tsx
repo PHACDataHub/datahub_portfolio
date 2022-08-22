@@ -15,7 +15,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { categories, projects, teams } from "../../utils/data/tagColors";
+import { categories, projects, teams } from "../../utils/tagColors";
 import { InventoryTool } from "../../utils/types";
 
 export default function ToolCard({ tool }: { tool: InventoryTool }) {

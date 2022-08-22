@@ -1,4 +1,4 @@
-import { InventoryTool, OtherTool, Product, ProjectPage } from "../types";
+import { InventoryTool, OtherTool, Product, ProjectPage } from "./types";
 
 export const otherUsefulToolsList: OtherTool[] = [
   { name: "RStudio", url: "https://rstudio.com/" },

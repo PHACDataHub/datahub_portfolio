@@ -50,8 +50,8 @@ export const App = () => (
   <ChakraProvider theme={theme}>
     <ScrollToTop />
     <Routes>
-      <Route path="/" element={<Portfolio />} />
       <Route path="/project/:id" element={<ProjectPageContainer />} />
+      <Route path="/" element={<Portfolio />} />
     </Routes>
   </ChakraProvider>
 );
