@@ -8,7 +8,7 @@ export default function ProductPortfolio() {
       <Heading mt={10}>Products</Heading>
       <HStack wrap="wrap">
         {products.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard key={product.name} product={product} />
         ))}
       </HStack>
     </VStack>
