@@ -18,7 +18,13 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <>
-      <Box px={5} display="flex" flexDir="column" alignItems="center">
+      <Box
+        px={5}
+        maxW="40%"
+        display="flex"
+        flexDir="column"
+        alignItems="center"
+      >
         <Center pb={12}>
           <Box
             onMouseEnter={() => setIsHovered(true)}

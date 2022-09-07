@@ -17,8 +17,8 @@ export function ImageCarousel({ images }: { images: string[] }) {
         }}
         modules={[Navigation, Pagination, Autoplay]}
       >
-        {images.map((image) => (
-          <SwiperSlide>
+        {images.map((image, idx) => (
+          <SwiperSlide key={idx}>
             <Image p={10} src={process.env.PUBLIC_URL + "/images/" + image} />
           </SwiperSlide>
         ))}

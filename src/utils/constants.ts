@@ -73,11 +73,17 @@ export const projectPageList: ProjectPage[] = [
 ];
 
 export const productList: Product[] = [
-  // {
-  //   name: "Databricks",
-  //   image:
-  //     "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
-  // },
+  {
+    name: "Databricks",
+    cardImage:
+      "https://www.brighttalk.com/wp-content/uploads/2019/07/Databricks-logo-1.png",
+    slogan: "The world's most powerful data science platform",
+    description: [],
+    categories: ["Data Science", "Big Data", "Machine Learning"],
+    url: "https://www.databricks.com/",
+    images: [],
+    color: "#00b1b1",
+  },
   {
     name: "LimeSurvey",
     cardImage:
