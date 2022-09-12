@@ -13,20 +13,20 @@ import {
   Heading,
   VStack,
   Divider,
-  Box,
-} from "@chakra-ui/react";
-import { Product } from "../../utils/types";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { ImageCarousel } from "./ImageCarousel";
-import TagList from "./TagList";
+  Box
+} from '@chakra-ui/react';
+import { Product } from '../../utils/types';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { ImageCarousel } from './ImageCarousel';
+import TagList from './TagList';
 
 export default function ProductModal({
   isOpen,
   onClose,
-  product,
+  product
 }: {
   isOpen: boolean;
   onClose: () => void;

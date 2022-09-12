@@ -1,7 +1,7 @@
-import { Box, Heading } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import { projectPageList } from "../../utils/constants";
-import { ProjectCard } from "../molecules/ProjectCard";
+import { Box, Heading } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import { projectPageList } from '../../utils/constants';
+import { ProjectCard } from '../molecules/ProjectCard';
 
 export function ProjectPortfolio(): JSX.Element {
   return (

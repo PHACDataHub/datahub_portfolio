@@ -1,6 +1,6 @@
-import { Box, Heading, Link, Text } from "@chakra-ui/react";
-import { useSmallScreen } from "../../utils/hooks";
-import { otherUsefulToolsList } from "../../utils/constants";
+import { Box, Heading, Link, Text } from '@chakra-ui/react';
+import { useSmallScreen } from '../../utils/hooks';
+import { otherUsefulToolsList } from '../../utils/constants';
 
 export function OtherUsefulTools(): JSX.Element {
   const isSmallScreen = useSmallScreen();
@@ -26,7 +26,7 @@ export function OtherUsefulTools(): JSX.Element {
       >
         {otherUsefulToolsList.map((tool) => (
           <Box
-            w={isSmallScreen ? "45%" : "30%"}
+            w={isSmallScreen ? '45%' : '30%'}
             key={tool.name}
             textAlign="center"
           >

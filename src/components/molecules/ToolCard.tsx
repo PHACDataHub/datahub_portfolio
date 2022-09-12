@@ -1,8 +1,8 @@
 import {
   ChevronDownIcon,
   ChevronUpIcon,
-  ExternalLinkIcon,
-} from "@chakra-ui/icons";
+  ExternalLinkIcon
+} from '@chakra-ui/icons';
 import {
   Box,
   Heading,
@@ -12,24 +12,24 @@ import {
   Tag,
   Image,
   Text,
-  Button,
-} from "@chakra-ui/react";
-import { useState } from "react";
-import { categories, projects, teams } from "../../utils/tagColors";
-import { InventoryTool } from "../../utils/types";
+  Button
+} from '@chakra-ui/react';
+import { useState } from 'react';
+import { categories, projects, teams } from '../../utils/tagColors';
+import { InventoryTool } from '../../utils/types';
 
 export default function ToolCard({ tool }: { tool: InventoryTool }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Box
-      maxW={"280px"}
-      w={"full"}
-      boxShadow={"lg"}
+      maxW={'280px'}
+      w={'full'}
+      boxShadow={'lg'}
       transition="all 0.2s ease-in-out"
       _hover={{
-        boxShadow: "2xl",
+        boxShadow: '2xl'
       }}
-      rounded={"lg"}
+      rounded={'lg'}
       pos="relative"
       zIndex={1}
       bgColor="white"
@@ -45,8 +45,8 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
           <Link href={tool.url} target="_blank">
             <Heading
               maxW="80%"
-              fontSize={"2xl"}
-              fontFamily={"body"}
+              fontSize={'2xl'}
+              fontFamily={'body'}
               fontWeight={500}
             >
               {tool.name} {tool.url && <ExternalLinkIcon boxSize="18" />}
@@ -59,7 +59,7 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
                 fontSize="smaller"
                 bgColor={
                   categories.find((tool) => tool.name === category)?.color ??
-                  "blue.300"
+                  'blue.300'
                 }
               >
                 {category}
@@ -70,25 +70,25 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
         <Button
           borderY="lightgray solid 1px"
           borderTopRadius={0}
-          borderBottomRadius={isOpen ? 0 : "lg"}
+          borderBottomRadius={isOpen ? 0 : 'lg'}
           variant="ghost"
           w="100%"
           rightIcon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? "Less" : "More"} Details
+          {isOpen ? 'Less' : 'More'} Details
         </Button>
-        <Stack px={4} pb={6} display={isOpen ? "block" : "none"}>
+        <Stack px={4} pb={6} display={isOpen ? 'block' : 'none'}>
           <HStack>
             <Text>Protected B Data:</Text>
-            <Tag bgColor={tool.protected_b_data ? "green.200" : "red.200"}>
-              {tool.protected_b_data ? "Yes" : "No"}
+            <Tag bgColor={tool.protected_b_data ? 'green.200' : 'red.200'}>
+              {tool.protected_b_data ? 'Yes' : 'No'}
             </Tag>
           </HStack>
           <HStack>
             <Text>Self Hosted Version:</Text>
-            <Tag bgColor={tool.self_hosted_version ? "green.200" : "red.200"}>
-              {tool.self_hosted_version ? "Yes" : "No"}
+            <Tag bgColor={tool.self_hosted_version ? 'green.200' : 'red.200'}>
+              {tool.self_hosted_version ? 'Yes' : 'No'}
             </Tag>
           </HStack>
           <HStack>
@@ -118,7 +118,7 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
                     borderRadius="lg"
                     bgColor={
                       teams.find((teamObj) => teamObj.name === team)?.color ??
-                      "blue.200"
+                      'blue.200'
                     }
                   >
                     {team}
@@ -141,7 +141,7 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
                     borderRadius="lg"
                     bgColor={
                       projects.find((projectObj) => projectObj.name === project)
-                        ?.color ?? "blue.200"
+                        ?.color ?? 'blue.200'
                     }
                   >
                     {project}

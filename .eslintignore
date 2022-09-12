@@ -1,0 +1,7 @@
+node_modules
+build
+archived
+test-utils.tsx
+setupTests.ts
+serviceWorker.ts
+reportWebVitals.ts

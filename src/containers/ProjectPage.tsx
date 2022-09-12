@@ -7,20 +7,20 @@ import {
   Stack,
   Tag,
   Text,
-  VStack,
-} from "@chakra-ui/react";
-import { Link, useParams } from "react-router-dom";
-import { projectPageList } from "../utils/constants";
-import { useRandomColors, useSmallScreen } from "../utils/hooks";
-import { ProjectPage } from "../utils/types";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { ImageCarousel } from "../components/molecules/ImageCarousel";
-import TagList from "../components/molecules/TagList";
+  VStack
+} from '@chakra-ui/react';
+import { Link, useParams } from 'react-router-dom';
+import { projectPageList } from '../utils/constants';
+import { useRandomColors, useSmallScreen } from '../utils/hooks';
+import { ProjectPage } from '../utils/types';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { ImageCarousel } from '../components/molecules/ImageCarousel';
+import TagList from '../components/molecules/TagList';
 
 const ProjectDetails = ({ project }: { project: ProjectPage }) => {
-  let {
+  const {
     name,
     background,
     problem,
@@ -29,18 +29,18 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     images,
     tools,
     successMetrics,
-    cardImage,
+    cardImage
   } = project;
   const isSmallScreen = useSmallScreen();
 
   const titleStyle = {
-    bgColor: "gray.100",
-    w: "100%",
+    bgColor: 'gray.100',
+    w: '100%',
     p: 3,
-    borderRadius: "xl",
+    borderRadius: 'xl'
   };
 
-  let metricColors = useRandomColors(
+  const metricColors = useRandomColors(
     successMetrics ? successMetrics.length : 0
   );
 
@@ -50,14 +50,14 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         h="100px"
         w="100%"
         objectFit="cover"
-        src={process.env.PUBLIC_URL + "/images/" + cardImage}
+        src={process.env.PUBLIC_URL + '/images/' + cardImage}
       />
       <Box w="100%" p={isSmallScreen ? 4 : 10}>
         <Link to="/">
           <Button size="lg">Back</Button>
         </Link>
       </Box>
-      <VStack spacing={5} w={isSmallScreen ? "90%" : "70%"} m="auto">
+      <VStack spacing={5} w={isSmallScreen ? '90%' : '70%'} m="auto">
         <Heading>{name}</Heading>
         <TagList tags={tools} />
         <Center {...titleStyle}>
@@ -66,20 +66,20 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         {background.map((paragraph, idx) => (
           <Text key={idx}>{paragraph}</Text>
         ))}
-        <Stack direction={isSmallScreen ? "column" : "row"} spacing={8}>
-          <VStack w={isSmallScreen ? "100%" : "33%"}>
+        <Stack direction={isSmallScreen ? 'column' : 'row'} spacing={8}>
+          <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
               <Heading size="lg">Problem</Heading>
             </Center>
             <Text>{problem}</Text>
           </VStack>
-          <VStack w={isSmallScreen ? "100%" : "33%"}>
+          <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
               <Heading size="lg">Goal</Heading>
             </Center>
             <Text>{goal}</Text>
           </VStack>
-          <VStack w={isSmallScreen ? "100%" : "33%"}>
+          <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
               <Heading size="lg">Solution</Heading>
             </Center>
@@ -107,7 +107,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         {images.length > 0 && images.length > 1 ? (
           <ImageCarousel images={images} />
         ) : (
-          <Image src={process.env.PUBLIC_URL + "/images/" + images[0]} />
+          <Image src={process.env.PUBLIC_URL + '/images/' + images[0]} />
         )}
       </VStack>
     </>
@@ -115,9 +115,9 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
 };
 
 export function ProjectPageContainer(): JSX.Element {
-  let { id } = useParams();
+  const { id } = useParams();
 
-  let project = projectPageList.find((project) => project.id === id);
+  const project = projectPageList.find((project) => project.id === id);
 
   return project ? (
     <ProjectDetails project={project} />

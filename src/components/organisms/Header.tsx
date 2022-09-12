@@ -1,5 +1,5 @@
-import { Stack, Heading, Image } from "@chakra-ui/react";
-import { useSmallScreen } from "../../utils/hooks";
+import { Stack, Heading, Image } from '@chakra-ui/react';
+import { useSmallScreen } from '../../utils/hooks';
 
 export function Header(): JSX.Element {
   const isSmallScreen = useSmallScreen();
@@ -9,7 +9,7 @@ export function Header(): JSX.Element {
       <Stack
         margin="auto"
         spacing={8}
-        w={isSmallScreen ? "80%" : "70%"}
+        w={isSmallScreen ? '80%' : '70%'}
         py={10}
       >
         <Image

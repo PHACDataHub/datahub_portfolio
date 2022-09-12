@@ -1,6 +1,6 @@
-import { Heading, HStack, VStack } from "@chakra-ui/react";
-import { productList } from "../../utils/constants";
-import ProductCard from "../molecules/ProductCard";
+import { Heading, HStack, VStack } from '@chakra-ui/react';
+import { productList } from '../../utils/constants';
+import ProductCard from '../molecules/ProductCard';
 
 export default function ProductPortfolio() {
   return (

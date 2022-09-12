@@ -1,5 +1,5 @@
-import { HStack, Link, Text, VStack } from "@chakra-ui/react";
-import { useSmallScreen } from "../../utils/hooks";
+import { HStack, Link, Text, VStack } from '@chakra-ui/react';
+import { useSmallScreen } from '../../utils/hooks';
 
 export function Footer(): JSX.Element {
   const isSmallScreen = useSmallScreen();
