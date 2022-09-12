@@ -16,9 +16,9 @@ import {
   Box
 } from '@chakra-ui/react';
 import { Product } from '../../utils/types';
-import 'swiper/swiper.min.css';
-import 'swiper/modules/navigation/navigation.min.css';
-import 'swiper/modules/pagination/pagination.min.css';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { ImageCarousel } from './ImageCarousel';
 import TagList from './TagList';
