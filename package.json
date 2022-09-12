@@ -4,7 +4,8 @@
   "homepage": "https://phacdatahub.github.io/datahub_portfolio",
   "private": false,
   "dependencies": {
-    "@chakra-ui/react": "^2.2.4",
+    "@chakra-ui/icons": "^2.0.9",
+    "@chakra-ui/react": "^2.3.2",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@testing-library/jest-dom": "^5.16.4",
