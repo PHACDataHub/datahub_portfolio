@@ -13,9 +13,9 @@ import { Link, useParams } from 'react-router-dom';
 import { projectPageList } from '../utils/constants';
 import { useRandomColors, useSmallScreen } from '../utils/hooks';
 import { ProjectPage } from '../utils/types';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/swiper.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
 import { ImageCarousel } from '../components/molecules/ImageCarousel';
 import TagList from '../components/molecules/TagList';
 
