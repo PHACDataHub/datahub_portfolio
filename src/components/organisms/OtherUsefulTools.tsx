@@ -1,6 +1,6 @@
 import { Box, Heading, Link, Text } from '@chakra-ui/react';
 import { useSmallScreen } from '../../utils/hooks';
-import { otherUsefulToolsList } from '../../utils/constants';
+import { otherUsefulToolsList } from '../../data/otherUsefulTools';
 
 export function OtherUsefulTools(): JSX.Element {
   const isSmallScreen = useSmallScreen();

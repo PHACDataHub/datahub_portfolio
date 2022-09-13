@@ -1,5 +1,5 @@
 import { Box, Heading, Stack } from '@chakra-ui/react';
-import { toolInventoryList } from '../../utils/constants';
+import { toolInventoryList } from '../../data/toolInventory';
 import ToolCard from '../molecules/ToolCard';
 
 export function ToolInventory(): JSX.Element {

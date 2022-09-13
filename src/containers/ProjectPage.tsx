@@ -10,7 +10,7 @@ import {
   VStack
 } from '@chakra-ui/react';
 import { Link, useParams } from 'react-router-dom';
-import { projectPageList } from '../utils/constants';
+import { projectPageList } from '../data/projectPages';
 import { useRandomColors, useSmallScreen } from '../utils/hooks';
 import { ProjectPage } from '../utils/types';
 import 'swiper/scss';
