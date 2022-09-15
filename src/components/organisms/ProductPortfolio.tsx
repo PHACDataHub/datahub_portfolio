@@ -6,7 +6,7 @@ export default function ProductPortfolio() {
   return (
     <VStack spacing={16}>
       <Heading mt={10}>Products</Heading>
-      <HStack wrap="wrap">
+      <HStack wrap="wrap" w="100%" justify="center">
         {productList.map((product) => (
           <ProductCard key={product.name} product={product} />
         ))}
