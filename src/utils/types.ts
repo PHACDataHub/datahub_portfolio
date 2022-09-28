@@ -15,10 +15,16 @@ export type OtherTool = {
   url: string;
 };
 
+interface Link {
+  label: string;
+  url: string;
+}
+
 export type ProjectPage = {
   id: string;
   name: string;
   description: string;
+  importantLink?: Link;
   background: string[];
   problem: string;
   goal: string;

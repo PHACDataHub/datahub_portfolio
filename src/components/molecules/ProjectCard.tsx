@@ -8,11 +8,10 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
   const { name, cardImage, description } = project;
   return (
     <Box
-      maxW="sm"
-      h="initial"
+      maxW={300}
+      flex={1}
       backgroundColor="gray.100"
       borderBottomRadius="xl"
-      boxSizing="border-box"
       transition="all 0.2s ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

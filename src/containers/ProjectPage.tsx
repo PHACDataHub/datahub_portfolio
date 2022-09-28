@@ -3,6 +3,7 @@ import {
   Button,
   Center,
   Heading,
+  HStack,
   Image,
   Stack,
   Tag,
@@ -18,6 +19,7 @@ import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import { ImageCarousel } from '../components/molecules/ImageCarousel';
 import TagList from '../components/molecules/TagList';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const ProjectDetails = ({ project }: { project: ProjectPage }) => {
   const {
@@ -29,7 +31,8 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     images,
     tools,
     successMetrics,
-    cardImage
+    cardImage,
+    importantLink
   } = project;
   const isSmallScreen = useSmallScreen();
 
@@ -57,8 +60,25 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           <Button size="lg">Back</Button>
         </Link>
       </Box>
-      <VStack spacing={5} w={isSmallScreen ? '90%' : '70%'} m="auto">
+      <VStack spacing={6} w={isSmallScreen ? '90%' : '70%'} m="auto" mb={8}>
         <Heading>{name}</Heading>
+        {importantLink && (
+          <a target="_blank" href={importantLink.url}>
+            <HStack
+              backgroundColor="gray.200"
+              py={2}
+              px={3}
+              borderRadius="md"
+              transition="all 0.2s ease-in-out"
+              _hover={{
+                backgroundColor: 'gray.300'
+              }}
+            >
+              <Heading size="md">{importantLink.label}</Heading>
+              <ExternalLinkIcon fontSize="lg" />
+            </HStack>
+          </a>
+        )}
         <TagList tags={tools} />
         <Center {...titleStyle}>
           <Heading size="lg">Background</Heading>
@@ -104,11 +124,11 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
             ))}
           </>
         )}
-        {images.length > 0 && images.length > 1 ? (
+        {images.length > 1 ? (
           <ImageCarousel images={images} />
-        ) : (
+        ) : images.length > 0 ? (
           <Image src={process.env.PUBLIC_URL + '/images/' + images[0]} />
-        )}
+        ) : null}
       </VStack>
     </>
   );

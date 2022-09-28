@@ -18,7 +18,8 @@ export function ProjectPortfolio(): JSX.Element {
         py={8}
         display="flex"
         justifyContent="center"
-        alignItems="flex-start"
+        alignItems="stretch"
+        // alignItems="flex-start"
         flexWrap="wrap"
         gap={8}
         maxW="90%"

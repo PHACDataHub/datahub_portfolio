@@ -62,5 +62,37 @@ export const projectPageList: ProjectPage[] = [
       '2-3 hour daily process reduced to a few minutes',
       '3-4 weekly human errors minimized on average'
     ]
+  },
+  {
+    id: '4',
+    name: 'National Wastewater Surveillance Platform',
+    description:
+      'Development of a Protected B cloud-based data platform to support COVID-19 case surveillance',
+    importantLink: {
+      label: 'Access the public dashboard',
+      url: 'https://health-infobase.canada.ca/covid-19/wastewater/'
+    },
+    background: [
+      'The virus that causes COVID-19 infection can be detected by testing and monitoring wastewater (sewage) of infected people, without the need for individual testing.',
+      'Wastewater surveillance can also be used to monitor the circulation of variants of concern and can be used as an early indicator for the presence of COVID-19 infections not yet detected by traditional clinical surveillance.',
+      'In addition to COVID-19, wastewater surveillance can be used to monitor other public health threats, including the presence of antimicrobial resistance, additional communicable diseases (e.g. Tuberculosis) and chemical markers indicating the health of a community (e.g. the use of opioids).'
+    ],
+    problem:
+      'No existing centralised and national database of wastewater COVID-19 test results, along with inconsistency in data received and reported by sites across Canada. There is a large effort for cleaning and transforming the data into a standard format, with no existing data validation, sharing agreement, or dissemination processes.',
+    goal: 'Platform that can be used by laboratories and municipalities to share data and have it transformed into a standard format without an additional effort on their part.',
+    solution:
+      'The waster surveillance project includes: a data collection tool that enables edit/validation rules to get a structured and consistent data, a national wastewater SQL database with a secure API endpoint, dashboards to visualize data for external and internal clients,and data sharing agreements and dissemination processes to control the risk of disclosure when publishing data.',
+    images: ['projects/wastewater_1.png', 'projects/wastewater_2.png'],
+    cardImage: 'projects/wastewater_stock.jpg',
+    tools: [
+      'Power Apps',
+      'Power BI',
+      'Azure Databricks',
+      'Azure Data Factory',
+      'Azure SQL Database',
+      'Azure API Management',
+      'LiquidFiles',
+      'GitHub'
+    ]
   }
 ];
