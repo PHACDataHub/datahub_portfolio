@@ -94,5 +94,30 @@ export const projectPageList: ProjectPage[] = [
       'LiquidFiles',
       'GitHub'
     ]
+  },
+  {
+    id: '5',
+    name: 'Monkeypox Outbreak Project',
+    description:
+      'A data platform to manage and transform Monkeypox data collected from provinces and territories',
+    background: [
+      'The Federal (DMIA and Epidemiologists within PHAC), Provincial, and Territorial partners are working collaboratively on this project to monitor and respond to the monkeypox outbreak in Canada.',
+      'It involves building and maintaining a data platform to manage and transform data collected from provinces and territories, and to provide a central repository for data analysis and reporting.'
+    ],
+    problem:
+      'Epidemiologists need clean and standardized data from provinces and territories so they can analyze and report key monkeypox variables to Canadians and to the World Health Organization (WHO).',
+    goal: 'The goal is a system that collects and cleans national monkeypox data received from provinces and territories, and allows the data to be shared for analysis and reporting.',
+    solution:
+      'The monkeypox project aims to build an integrated national surveillance system that analyzes and monitors the number of monkeypox cases, detects any trends or patterns, and informs effective public health actions through reports and dashboards.',
+    images: [],
+    cardImage: 'projects/monkeypox_stock.jpg',
+    tools: [
+      'Power BI',
+      'Azure Databricks',
+      'Azure Data Factory',
+      'Azure SQL Database',
+      'Azure Blob Storage',
+      'LiquidFiles'
+    ]
   }
 ];

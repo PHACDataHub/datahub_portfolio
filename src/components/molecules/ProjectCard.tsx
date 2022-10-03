@@ -1,21 +1,32 @@
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
-import { useState } from 'react';
+import { Box, Heading, Image, Spacer, Text, VStack } from '@chakra-ui/react';
+import { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ProjectPage } from '../../utils/types';
 
 export function ProjectCard({ project }: { project: ProjectPage }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const { name, cardImage, description } = project;
+
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(
+    () => navigate(`/project/${project.id}`, { replace: true }),
+    [navigate]
+  );
+
   return (
     <Box
+      display="flex"
+      flexDir="column"
       maxW={300}
-      flex={1}
       backgroundColor="gray.100"
       borderBottomRadius="xl"
       transition="all 0.2s ease-in-out"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       boxShadow={isHovered ? '2xl' : 'lg'}
+      onClick={handleOnClick}
+      cursor="pointer"
     >
       <Box overflow="hidden">
         <Image
@@ -24,10 +35,11 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
           transition="all 0.2s ease-in-out"
         />
       </Box>
-      <Box p={5}>
+      <VStack p={4} flexGrow={1} align="start">
         <Heading size="md">{name}</Heading>
+        <Spacer />
         <Text size="sm">{description}</Text>
-      </Box>
+      </VStack>
     </Box>
   );
 }
