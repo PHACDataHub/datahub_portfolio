@@ -5,7 +5,7 @@ export const projectPageList: ProjectPage[] = [
     id: '1',
     name: 'Border Measures Analytics',
     description:
-      'Power BI dashboard for analyzing data related ot the Canadian border in response to the COVID-19 pandemic',
+      'Power BI dashboard for analyzing data related to the Canadian border in response to the COVID-19 pandemic',
     background: [
       'Due to the COVID-19 pandemic, different teams needed to analyze data related to the Canadian border. The data includes information on travellers going into Canada, such as their designated quarantine facilities, information on approved quarantine accommodations, and traveller follow ups to confirm quarantine rules are being complied.'
     ],
