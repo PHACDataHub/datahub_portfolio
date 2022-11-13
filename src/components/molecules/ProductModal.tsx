@@ -11,9 +11,7 @@ import {
   Image,
   HStack,
   Heading,
-  VStack,
-  Divider,
-  Box
+  VStack
 } from '@chakra-ui/react';
 import { Product } from '../../utils/types';
 import 'swiper/scss';
@@ -56,12 +54,11 @@ export default function ProductModal({
               Visit the website
             </Button>
           </HStack>
-          <VStack>
+          <VStack spacing={4}>
             {description.map((paragraph, idx) => (
-              <Box key={idx}>
-                <Text fontSize="lg">{paragraph}</Text>
-                <Divider />
-              </Box>
+              <Text key={`t-${idx}`} fontSize="lg">
+                {paragraph}
+              </Text>
             ))}
           </VStack>
           <ImageCarousel images={images} />
