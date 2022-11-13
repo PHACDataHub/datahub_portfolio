@@ -4,6 +4,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '1',
     name: 'Border Measures Analytics',
+    status: 'closed',
     description:
       'Power BI dashboard for analyzing data related to the Canadian border in response to the COVID-19 pandemic',
     background: [
@@ -26,6 +27,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '2',
     name: 'Dashboard for Immunization Related Diseases (DIRD)',
+    status: 'closed',
     description:
       'Using natural language processing and artificial intelligence to gather information about vaccines from various news and scientific sources',
     background: [
@@ -44,6 +46,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '3',
     name: 'Daily Epidemiological Trend Report Automation',
+    status: 'closed',
     description:
       'R Markdown based framework to automatically generate daily reports for the Chief Public Health Officer',
     background: [
@@ -66,6 +69,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '4',
     name: 'National Wastewater Surveillance Platform',
+    status: 'active',
     description:
       'Development of a Protected B cloud-based data platform to support COVID-19 case surveillance',
     importantLink: {
@@ -98,6 +102,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '5',
     name: 'Monkeypox Outbreak Project',
+    status: 'active',
     description:
       'A data platform to manage and transform Monkeypox data collected from provinces and territories',
     background: [
@@ -119,5 +124,23 @@ export const projectPageList: ProjectPage[] = [
       'Azure Blob Storage',
       'LiquidFiles'
     ]
+  },
+  {
+    id: '6',
+    name: 'NACI Databricks Analysis',
+    status: 'active',
+    description:
+      'A cloud computing platform to support NACI analysis and model training of vaccine simulations',
+    background: [
+      'The National Advisory Committee on Immunization (NACI) Secretariat will be developing a series of infections disease and health economic models to conduct cost-effectiveness analyses of vaccination programs in support of national vaccine recommendations by NACI. This forms a core piece of the operational work performed by the NACI Secretariat on an ongoing basis.'
+    ],
+    problem:
+      'The models will simulate various scenarios of infections from vaccine-preventable diseases, the health consequences of those infections, and the effects of vaccination over long periods. As many of these models will carry a significant computational burden, the NACI Secretariat is requesting the use of a cloud server(s) to run these simulations.',
+    goal: 'Provide NACI a high performance computing environment and storage capacity to carry out infectious disease modeling and analytical work.',
+    solution:
+      'A combination of an Azure Virtual Machine, Azure Databricks, and Azure Blob Storage',
+    images: [],
+    cardImage: 'projects/cloud_computer_stock.jpg',
+    tools: ['Azure Virtual Machine', 'Azure Databricks', 'Azure Blob Storage']
   }
 ];
