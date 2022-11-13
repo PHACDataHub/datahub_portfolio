@@ -1,11 +1,9 @@
 import { Box, Heading, Image, Spacer, Text, VStack } from '@chakra-ui/react';
-import { useCallback, useState } from 'react';
+import { useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProjectPage } from '../../utils/types';
 
 export function ProjectCard({ project }: { project: ProjectPage }) {
-  const [isHovered, setIsHovered] = useState(false);
-
   const { name, cardImage, description } = project;
 
   const navigate = useNavigate();
@@ -14,24 +12,43 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
     [navigate]
   );
 
+  const cardImg = useRef<HTMLImageElement>(null);
+
   return (
     <Box
       display="flex"
       flexDir="column"
-      maxW={300}
+      maxW={280}
+      minW={240}
+      flex={1}
       backgroundColor="gray.100"
       borderBottomRadius="xl"
       transition="all 0.2s ease-in-out"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      boxShadow={isHovered ? '2xl' : 'lg'}
+      _hover={{
+        boxShadow: '2xl'
+      }}
+      onMouseEnter={() => {
+        if (cardImg.current) {
+          cardImg.current.style.transform = 'scale(1.1)';
+        }
+      }}
+      onMouseLeave={() => {
+        if (cardImg.current) {
+          cardImg.current.style.transform = 'scale(1)';
+        }
+      }}
+      boxShadow="lg"
       onClick={handleOnClick}
       cursor="pointer"
     >
       <Box overflow="hidden">
         <Image
           src={process.env.PUBLIC_URL + '/images/' + cardImage}
-          transform={isHovered ? 'scale(1.08)' : 'scale(1)'}
+          transform="scale(1)"
+          _hover={{
+            transform: 'scale(1.08)'
+          }}
+          ref={cardImg}
           transition="all 0.2s ease-in-out"
         />
       </Box>
