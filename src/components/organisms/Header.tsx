@@ -6,12 +6,7 @@ export function Header(): JSX.Element {
 
   return (
     <Stack p={5} bgColor="rgb(235, 236, 237)">
-      <Stack
-        margin="auto"
-        spacing={8}
-        w={isSmallScreen ? '80%' : '70%'}
-        py={10}
-      >
+      <Stack margin="auto" spacing={8} w={isSmallScreen ? '80%' : '70%'} py={6}>
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/8/84/PHAC_wordmark.svg"
           alt=""
@@ -19,8 +14,8 @@ export function Header(): JSX.Element {
           w="100%"
           maxW="400px"
         />
-        <Heading size="lg" fontWeight="medium">
-          The Data Analytics team partners with program areas to develop
+        <Heading fontSize={isSmallScreen ? 18 : 22} fontWeight="medium">
+          The Data Science team partners with program areas to develop
           innovative solutions for some of the most pressing data challenges
           across the Agency
         </Heading>
