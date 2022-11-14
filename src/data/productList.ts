@@ -39,5 +39,14 @@ export const productList: Product[] = [
   //   name: "LiquidFiles",
   //   image:
   //     "https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png",
+  //   slogan: "Send Large Files Fast, Easy, Secure and Affordable",
+  //   description: [
+  //       'LiquidFiles is a Virtual Application that allows for the electronic exchange of files of any size with both internal and external parties. DMIA has version 3.6.7 installed on our HC/PHAC private Azure cloud, which means we can send files up to Protected B.',
+  //       'LiquidFiles is currently being used for a variety of projects to securely transfer sensitive information to and from external and internal parties. This includes transfers of large video files (<20 GBs files) that cannot be done through email. Some examples of projects that have utilized LiquidFiles are Covid Cases, Monkeypox, Quarantine Act Traveller Verification, Traveller Information and Symptoomolgy Data, Omicron Data, Vaccine Shipment Information, Vaccine Reports, Boarder Measures, ArriveCAN Reporting, and Vector Borne Diseases.'
+  // ],
+  //   categories: ['File Transfer'],
+  //   url: 'https://www.liquidfiles.com/',
+  //   images: [],
+  //   color: ''
   // },
 ];
