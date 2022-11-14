@@ -119,5 +119,5 @@ export const projectPageList: ProjectPage[] = [
       'Azure Blob Storage',
       'LiquidFiles'
     ]
-  },
+  }
 ];
