@@ -119,5 +119,26 @@ export const projectPageList: ProjectPage[] = [
       'Azure Blob Storage',
       'LiquidFiles'
     ]
+  }，
+  {
+    id: '6',
+    name: 'Opioid Modelling Project',
+    description:
+      'A simulation model that provides the number of opioid-related deaths that might occur.',
+    background: [
+      'The Public Health Agency of Canada (PHAC) developed a simulation model of opioid-related deaths that provides information on the number of these deaths that might occur during the COVID-19 outbreak in 2020 through to December 2022.',
+      'Models use mathematical equations to estimate how many cases of a disease or health event may occur in the coming weeks or months. They help researchers simulate real-world possibilities in a virtual environment.'
+    ],
+    problem:
+      'The opioid overdose crisis continues to have significant impacts on people living in Canada. Data from several jurisdictions across Canada and PHAC show a substantial increase in opioid-related harms and deaths since the beginning of the COVID-19 outbreak.',
+    goal: 'The goal of the Opioid Modelling Project was a collaborative project with epidemiologist from the Health Promotion and Chronic Disease Prevention Branch, to support the implementation of time-series model that tracks opioid-related deaths since COVID-19 pandemic.',
+    solution:
+      'PHAC developed a simulation model that provides the number of opioid-related deaths that might occur using original code from the program AnyLogic and attempting to duplicate results in RStudio, through modelling different scenarios according to different public health measures and calculating usage rates through ordinary differential equations. Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.',
+    images: [],
+    cardImage: '',
+    tools: [
+      'R',
+      'RStudio'
+    ]
   }
 ];
