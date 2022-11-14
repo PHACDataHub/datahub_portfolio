@@ -146,7 +146,7 @@ export const projectPageList: ProjectPage[] = [
   {
     id: '7',
     name: 'Opioid Modelling Project',
-    status: 'active',
+    status: 'closed',
     description:
       'A simulation model that provides the number of opioid-related deaths that might occur.',
     background: [
