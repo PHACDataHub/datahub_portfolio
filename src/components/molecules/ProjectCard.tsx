@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import { ProjectPage } from '../../utils/types';
 
 export function ProjectCard({ project }: { project: ProjectPage }) {
-  const { name, cardImage, description } = project;
+  const { id, name, cardImage, description } = project;
 
   const navigate = useNavigate();
   const handleOnClick = useCallback(
-    () => navigate(`/project/${project.id}`, { replace: true }),
+    () => navigate(`/project/${id}`, { replace: true }),
     [navigate]
   );
 
@@ -40,19 +40,41 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
       boxShadow="lg"
       onClick={handleOnClick}
       cursor="pointer"
+      position="relative"
     >
+      {/* IDEA 1 - TAG ON IMAGE */}
+      {/* <Box
+        bgColor={status === 'active' ? 'green.400' : 'red.400'}
+        borderRadius="lg"
+        position="absolute"
+        zIndex={2}
+        p={2}
+        top={2}
+        right={2}
+      >
+        <Heading color="white" size="xs">
+          {status === 'active' ? 'Active' : 'Closed'}
+        </Heading>
+      </Box> */}
+
       <Box overflow="hidden">
         <Image
           src={process.env.PUBLIC_URL + '/images/' + cardImage}
-          transform="scale(1)"
-          _hover={{
-            transform: 'scale(1.08)'
-          }}
           ref={cardImg}
           transition="all 0.2s ease-in-out"
         />
       </Box>
       <VStack p={4} flexGrow={1} align="start">
+        {/* IDEA 2 - TAG ON CARD */}
+        {/* <Box
+          bgColor={status === 'active' ? 'green.400' : 'red.400'}
+          borderRadius="lg"
+          p={2}
+        >
+          <Heading color="white" fontSize={14}>
+            {status === 'active' ? 'Active' : 'Closed'}
+          </Heading>
+        </Box> */}
         <Heading size="md">{name}</Heading>
         <Spacer />
         <Text size="sm">{description}</Text>

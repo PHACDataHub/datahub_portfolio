@@ -14,7 +14,7 @@ export function ProjectPortfolio(): JSX.Element {
       alignItems="center"
       w="100%"
     >
-      <Heading fontSize={isSmallScreen ? 20 : 24}>Projects</Heading>
+      <Heading fontSize={isSmallScreen ? 20 : 24}> Current Projects</Heading>
       <Box
         py={8}
         display="flex"
@@ -25,9 +25,30 @@ export function ProjectPortfolio(): JSX.Element {
         gap={8}
         w={isSmallScreen ? '98%' : '80%'}
       >
-        {projectPageList.map((project) => (
-          <ProjectCard project={project} key={project.id} />
-        ))}
+        {projectPageList.map(
+          (project) =>
+            project.status === 'active' && (
+              <ProjectCard project={project} key={project.id} />
+            )
+        )}
+      </Box>
+      <Heading fontSize={isSmallScreen ? 20 : 24}> Closed Projects</Heading>
+      <Box
+        py={8}
+        display="flex"
+        justifyContent="center"
+        alignItems="stretch"
+        // alignItems="flex-start"
+        flexWrap="wrap"
+        gap={8}
+        w={isSmallScreen ? '98%' : '80%'}
+      >
+        {projectPageList.map(
+          (project) =>
+            project.status === 'closed' && (
+              <ProjectCard project={project} key={project.id} />
+            )
+        )}
       </Box>
     </Box>
   );
