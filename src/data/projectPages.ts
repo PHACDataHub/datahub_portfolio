@@ -119,7 +119,7 @@ export const projectPageList: ProjectPage[] = [
       'Azure Blob Storage',
       'LiquidFiles'
     ]
-  }，
+  },
   {
     id: '6',
     name: 'Opioid Modelling Project',
@@ -136,9 +136,6 @@ export const projectPageList: ProjectPage[] = [
       'PHAC developed a simulation model that provides the number of opioid-related deaths that might occur using original code from the program AnyLogic and attempting to duplicate results in RStudio, through modelling different scenarios according to different public health measures and calculating usage rates through ordinary differential equations. Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.',
     images: [],
     cardImage: '',
-    tools: [
-      'R',
-      'RStudio'
-    ]
+    tools: ['R', 'RStudio']
   }
 ];
