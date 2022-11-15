@@ -226,5 +226,19 @@ export const projectPageList: ProjectPage[] = [
     ],
     cardImage: 'projects/biosecurity/biosecurity_stock.jpeg',
     tools: ['PowerBI', 'Excel']
+  },
+    {
+    id: '10',
+    name: 'Anti-microbial Resistance (AMR)',
+    status: 'active',
+    description:
+      'DMIA aims to partner with CFEZID and other Antimicrobial Resistance (AMR) or Antimicrobial Use (AMU) surveillance programs to improve public health outcomes by leveraging modern data tools',
+    background: 
+      'Centre for Food borne, Environmental and Zoonotic Infectious Diseases (CFEZID) uses suite of Tableau software to analyze and share information on known or newly emerging antimicrobial resistant pathogens. This tool enables CFEZID to provide automated and dynamic reporting to PHAC senior management, empowering informative decision-making.',
+    problem:
+      'One of the major issues CFEZID is currently facing is not having the proper technical support within PHAC to help them maintain the Tableau Server. Moreover, they require Tableau Server to operate in a Protected B environment as the data used to build dashboards is Protected B. Furthermore, the Azure Active Directory (AAD) must be enabled for a single sign-in, which will require a reinstallation of Tableau Server into a new virtual machine (VM). Finally, CFEZID would also like assistance in publicly disseminating their dashboards.',
+    goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
+    tools: ['DevOps', 'Tableau', 'Azure Cloud']
   }
+  
 ];
