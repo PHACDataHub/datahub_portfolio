@@ -131,18 +131,6 @@ export const toolInventoryList: InventoryTool[] = [
     image: 'https://cdn-icons-png.flaticon.com/512/25/25231.png'
   },
   {
-    name: 'Tableau',
-    categories: ['Data Visualization'],
-    cost: 'Per user/month fee',
-    protected_b_data: true,
-    url: 'https://www.tableau.com/',
-    self_hosted_version: false,
-    teams: [],
-    projects: [],
-    image:
-      'https://seeklogo.com/images/T/tableau-software-logo-F1CE2CA54A-seeklogo.com.png'
-  },
-  {
     name: 'Draw.io',
     categories: ['Diagram Creation'],
     cost: 'Free',

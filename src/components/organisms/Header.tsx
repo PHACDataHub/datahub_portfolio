@@ -13,6 +13,8 @@ export function Header(): JSX.Element {
           objectFit="contain"
           w="100%"
           maxW="400px"
+          onClick={() => window.location.reload()}
+          cursor="pointer"
         />
         <Heading fontSize={isSmallScreen ? 18 : 22} fontWeight="medium">
           The Data Science team partners with program areas to develop
