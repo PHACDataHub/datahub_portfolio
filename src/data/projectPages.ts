@@ -287,8 +287,9 @@ export const projectPageList: ProjectPage[] = [
     status: 'closed',
     description:
       'The report provides data on the COVID-19 cases to help monitor outbreaks and support the analysis of and response to the pandemic.',
-    background:
-      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.',
+    background: [
+      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.'
+    ],
     problem:
       'The provinces and territories need cleaned, standardized and aggregate data of the key COVID-19 variables to analyze the impact of the COVID-19 confirmed cases.',
     goal: 'The goal is a report that shares the data and data visualizations of the respective province’s or territory’s COVID-19 confirmed cases.',
@@ -296,6 +297,12 @@ export const projectPageList: ProjectPage[] = [
       'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting. This report provides additional insight of the province and territory data as compared to the national data.',
     images: [],
     cardImage: '',
-    tools: ['Azure Data', 'Factory', 'Azure SQL Database', 'Azure Blob Storag', 'Power BI']
+    tools: [
+      'Azure Data',
+      'Factory',
+      'Azure SQL Database',
+      'Azure Blob Storag',
+      'Power BI'
+    ]
   }
 ];
