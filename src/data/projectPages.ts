@@ -200,5 +200,31 @@ export const projectPageList: ProjectPage[] = [
       'Jinja2',
       'PostgresQL'
     ]
+  },
+  {
+    id: '9',
+    name: 'Biosecurity Dashboard',
+    status: 'active',
+    description:
+      'A multi-purpose PowerBI dashboard to support a variety of management needs for the Centre for Biosecurity team.',
+    background: [
+      'The Centre for Biosecurity had an operational dashboard they would make yearly in PDF, using Excel spreadsheets with data from CRM.',
+      "The dashboard tracked high-level summary of highlights, the volume and type of application processed in a given time range, the program's performance against established service standards, etc."
+    ],
+    problem:
+      'The Centre for Biosecurity team wanted to have a more advanced dashboard and data management process using PowerBI, as the current process depended too much on manual processing.',
+    goal: 'One dashboard to suit their needs to cover multiple years, with filtering, sorting, and other general features to support the analysis they need.',
+    solution:
+      'A PowerBI dashboard to have a better process for data management, making it easier to update the dashboard when new information arrives. The dashboard contains interactive buttons and filters, a shareable link to a persistent report on the web, visuals, and pages to support the variety of needs of the Centre for Biosecurity team.',
+    images: [
+      'projects/biosecurity/biosecurity_1.png',
+      'projects/biosecurity/biosecurity_3.png',
+      'projects/biosecurity/biosecurity_4.png',
+      'projects/biosecurity/biosecurity_5.png',
+      'projects/biosecurity/biosecurity_6.png',
+      'projects/biosecurity/biosecurity_7.png'
+    ],
+    cardImage: 'projects/biosecurity/biosecurity_stock.jpeg',
+    tools: ['PowerBI', 'Excel']
   }
 ];
