@@ -49,4 +49,18 @@ export const productList: Product[] = [
   //   images: [],
   //   color: ''
   // },
+  // {
+  //   name: "Tableau",
+  //   image:
+  //     "",
+  //   slogan: "Analytics for everyone, from anywhere",
+  //   description: [
+  //       'Tableau is an excellent data visualization and business intelligence tool used for reporting and analyzing vast volumes of data. Tableau Server, which is installed on the HC/PHAC Microsoft Azure tenant. To ensure data confidentiality and security, administrators of Tableau Server can manage user access levels. ',
+  //       'Tableau is currently in the deployment phase, used in the AMR project, and will be put to use in other future projects as a DMIA product'
+  // ],
+  //   categories: ['Data Analysis', 'Data Visualization'],
+  //   url: 'https://www.tableau.com/',
+  //   images: [],
+  //   color: ''
+  // },
 ];
