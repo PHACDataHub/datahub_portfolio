@@ -15,8 +15,8 @@ export const projectPageList: ProjectPage[] = [
     goal: 'Remove manual work and move the data analysis into a more dynamic automated data system readily available to people at PHAC.',
     solution:
       'A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.',
-    images: ['projects/border_measures_1.png'],
-    cardImage: 'projects/border_measures_stock.jpg',
+    images: ['projects/borders/border_measures_1.png'],
+    cardImage: 'projects/borders/border_measures_stock.jpg',
     tools: [
       'Power BI Dashboard',
       'Power BI Dataflow',
@@ -39,8 +39,8 @@ export const projectPageList: ProjectPage[] = [
     goal: 'An all-encompassing platform where epidemiologists, data analysts, and decision makers can get curated data based on their needs.',
     solution:
       'Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources. Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.',
-    images: ['projects/dird_1.gif'],
-    cardImage: 'projects/dird_stock.jpg',
+    images: ['projects/dird/dird_1.gif'],
+    cardImage: 'projects/dird/dird_stock.jpg',
     tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
   },
   {
@@ -58,8 +58,11 @@ export const projectPageList: ProjectPage[] = [
     goal: 'Automate the generation of the daily report while still maintaining the same format and information previously established.',
     solution:
       'Development of a script that can automatically pull the latest data and generate a daily report including all the necessary trends and charts, with all the correct formatting applied.',
-    images: ['projects/epi_trend_1.png', 'projects/epi_trend_2.png'],
-    cardImage: 'projects/epi_trend_stock.jpg',
+    images: [
+      'projects/epi_trend/epi_trend_1.png',
+      'projects/epi_trend/epi_trend_2.png'
+    ],
+    cardImage: 'projects/epi_trend/epi_trend_stock.jpg',
     tools: ['R', 'R Markdown', 'Python', 'Github'],
     successMetrics: [
       '2-3 hour daily process reduced to a few minutes',
@@ -86,8 +89,11 @@ export const projectPageList: ProjectPage[] = [
     goal: 'Platform that can be used by laboratories and municipalities to share data and have it transformed into a standard format without an additional effort on their part.',
     solution:
       'The waster surveillance project includes: a data collection tool that enables edit/validation rules to get a structured and consistent data, a national wastewater SQL database with a secure API endpoint, dashboards to visualize data for external and internal clients,and data sharing agreements and dissemination processes to control the risk of disclosure when publishing data.',
-    images: ['projects/wastewater_1.png', 'projects/wastewater_2.png'],
-    cardImage: 'projects/wastewater_stock.jpg',
+    images: [
+      'projects/wastewater/wastewater_1.png',
+      'projects/wastewater/wastewater_2.png'
+    ],
+    cardImage: 'projects/wastewater/wastewater_stock.jpg',
     tools: [
       'Power Apps',
       'Power BI',
@@ -161,5 +167,38 @@ export const projectPageList: ProjectPage[] = [
     images: [],
     cardImage: '',
     tools: ['R', 'RStudio']
+  },
+  {
+    id: '8',
+    name: 'Centre for Integrated Risk Assessment (CIRA)',
+    status: 'active',
+    description:
+      'A data platform to support agency-wide integration to collect, store, transform, update, analyze, and disseminate public health signals/threats as they are detected.',
+    background: [
+      "The Centre for Integrated Risk Assessment (CIRA) was creatred to integrate public health risk assessment activities (from risk identification to risk mitication) across the Agency. The integration of signals and threats will optimize PHAC's ability to anticipate, understand, and act on public health risks to protect the health of Canadians.",
+      'To achieve this, CIRA is collaborating the Data Management, Innovation, and Analytics (DMIA) team to develop an online platform that will support their goals.'
+    ],
+    problem:
+      'The existing e-mail/Microsoft Office-based process for collecting and sharing information on public health signals and threats can be enhanced to allow for more efficient and effective collaboration and information sharing.',
+    goal: 'The goal is to develop a data platform to support agency-wide integration to collect, store, transform, update, analyze, and disseminate public health signals/threats as they are detected.',
+    solution:
+      'Hosted in the National Surveillance Platform, the platform will allow for authorized PHAC users to access the frontend and enter data on signals and threats, which can then be shared between internal users in HC/PHAC. Furthermore, the tool will also allow for the creation and dissemination of Weekly Threat Reports to subject matter experts and senior management, including the Chief Public Health Officer, as well as allowing for robus data management and documentation for fturue analytic and auditing needs.',
+    images: [
+      'projects/cira/cira_1.png',
+      'projects/cira/cira_2.png',
+      'projects/cira/cira_3.png',
+      'projects/cira/cira_4.png'
+    ],
+    cardImage: 'projects/cira/cira_stock.jpg',
+    tools: [
+      'Python',
+      'GitHub',
+      'Azure Cloud',
+      'Django',
+      'Docker',
+      'HTMX',
+      'Jinja2',
+      'PostgresQL'
+    ]
   }
 ];
