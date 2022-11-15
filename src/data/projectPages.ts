@@ -250,15 +250,35 @@ export const projectPageList: ProjectPage[] = [
     status: 'active',
     description:
       'SITIR prepares proposals for the improvement of the monitoring system infrastructure, which will serve as a basic requirement for the development and implementation phase of the monitoring infrastructure renovation work.',
-    background:
-      'PHAC surveillance systems rely on numerous information technology (IT) infrastructure components and software tools, including databases, statistical analysis programs, and communication applications, to collect, analyze, store, and disseminate public health information.',
-   
+    background: [
+      'PHAC surveillance systems rely on numerous information technology (IT) infrastructure components and software tools, including databases, statistical analysis programs, and communication applications, to collect, analyze, store, and disseminate public health information.'
+    ],
     problem:
       'According to PHAC audit reports conducted to date (‘Corporate Data Management Initiative Technical Infrastructure Report’, 2015, ‘Audit of Surveillance at the Public Health Agency of Canada’, 2019), surveillance information systems and infrastructure need improvement as there are issues with surveillance data transmission and processing, uninterrupted availability, as well as reliability and adoptability.',
     goal: 'The Project Charter entitled Surveillance IT Infrastructure Renewal (SITIR) identified the need for a Surveillance IT Infrastructure Renewal project. The purpose of this project is to prepare recommendations for surveillance systems infrastructure improvements, which would serve as a base requirement for the development and implementation phase of surveillance infrastructure renovation effort.',
     solution:
       'The project will produce a Conceptual Architecture Proposal, IT Support and Transition Plan recommendation documents after a detailed evaluation of public health surveillance operational needs, and corresponding system infrastructure inefficiencies and gaps is conducted.',
-    
     cardImage: '',
+    images: [],
+    tools: []
+  },
+  {
+    id: '12',
+    name: 'Health of Canadians Report',
+    status: 'active',
+    description:
+      'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
+    background: [
+      'The Chief Public Health Officer is mandated to report annually on the Health of Canadians (HoC), and the HoC initiative fulfills part of that mandate.',
+      'Previously, HoC reporting was done through an annual manual update of ~40 indicators in an appendix of the CPHO report.'
+    ],
+    problem:
+      'The manual process was time-consuming and error-prone, and the data was not always up-to-date. The CPHO wanted to have a more advanced and automated platform to support the annual HoC report.',
+    goal: 'While split in different phases, the overall goal is to develop a data platform and pipeline to collect, standardize, and maintain incoming data from surveillance programs to serve as the foundation for an interfactive dashboard.',
+    solution:
+      'A Django web application to collect, centralize, and standardize incoming data. The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.',
+    images: [],
+    cardImage: 'projects/hoc/hoc_stock.jpg',
+    tools: ['Python', 'GitHub', 'Azure Cloud', 'Django', 'Docker', 'HTMX']
   }
 ];
