@@ -22,7 +22,7 @@ export const productList: Product[] = [
     name: 'LiquidFiles',
     cardImage:
       'https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png',
-    slogan: 'Send Large Files Fast, Easy, Secure and Affordable',
+    slogan: 'Send Large Files: Fast, Easy, Secure and Affordable',
     description: [
       'LiquidFiles is a virtual application that allows for the electronic exchange of files of any size with both internal and external parties. DMIA has version 3.6.7 installed on our HC/PHAC private Azure cloud, which means we can send files up to Protected B.',
       'LiquidFiles is currently being used for a variety of projects to securely transfer sensitive information to and from external and internal parties. This includes transfers of large video files (<20 GBs files) that cannot be done through email. Some examples of projects that have utilized LiquidFiles are Covid Cases, Monkeypox, Quarantine Act Traveller Verification, Traveller Information and Symptoomolgy Data, Omicron Data, Vaccine Shipment Information, Vaccine Reports, Boarder Measures, ArriveCAN Reporting, and Vector Borne Diseases.'
@@ -40,10 +40,10 @@ export const productList: Product[] = [
     name: 'LimeSurvey',
     cardImage:
       'https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png',
-    slogan: 'A SaaS data collection tool',
+    slogan: 'Turn questions into answers',
     categories: ['Data Collection'],
     description: [
-      'LimeSurvey is a SaaS tool used for data collection, as part of the National Surveillance Platform (NSP). DMIA is using version 3.22.6 of the community version of LimeSurvey, which means it is open-source and is installed on our own Canadian servers within the HC/PHAC network. LimeSurvey allows users to create forms in both official languages and, as of version 3, the tool has been deemed WCAP compliant.',
+      'LimeSurvey is a Software as a Service (SaaS) tool used for data collection, as part of the National Surveillance Platform (NSP). DMIA is using version 3.22.6 of the community version of LimeSurvey, which means it is open-source and is installed on our own Canadian servers within the HC/PHAC network. LimeSurvey allows users to create forms in both official languages and, as of version 3, the tool has been deemed WCAP compliant.',
       'LimeSurvey is currently being used to collect quantitative and qualitative data on topics ranging from public health surveillance to program assessment. Examples of projects that currently utilize or have utilized LimeSurvey include, but are not limited to, the Maritime Declaration of Health and the corresponding Annexes, the Review of the Yellow Fever Vaccination Centre Designation Program, the PHAC Incident Notification Form as part of the COVID-19 Border Measures Analytics project, etc.'
     ],
     url: 'https://www.limesurvey.org/',
