@@ -50,4 +50,5 @@ export type Product = {
   url: string;
   images: string[];
   color?: string;
+  comingSoon?: boolean;
 };
