@@ -243,5 +243,22 @@ export const projectPageList: ProjectPage[] = [
     solution: '',
     images: [],
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
+  },
+  {
+    id: '11',
+    name: 'Surveillance IT Infrastructure Renewal (SITIR)',
+    status: 'active',
+    description:
+      'SITIR prepares proposals for the improvement of the monitoring system infrastructure, which will serve as a basic requirement for the development and implementation phase of the monitoring infrastructure renovation work.',
+    background:
+      'PHAC surveillance systems rely on numerous information technology (IT) infrastructure components and software tools, including databases, statistical analysis programs, and communication applications, to collect, analyze, store, and disseminate public health information.',
+   
+    problem:
+      'According to PHAC audit reports conducted to date (‘Corporate Data Management Initiative Technical Infrastructure Report’, 2015, ‘Audit of Surveillance at the Public Health Agency of Canada’, 2019), surveillance information systems and infrastructure need improvement as there are issues with surveillance data transmission and processing, uninterrupted availability, as well as reliability and adoptability.',
+    goal: 'The Project Charter entitled Surveillance IT Infrastructure Renewal (SITIR) identified the need for a Surveillance IT Infrastructure Renewal project. The purpose of this project is to prepare recommendations for surveillance systems infrastructure improvements, which would serve as a base requirement for the development and implementation phase of surveillance infrastructure renovation effort.',
+    solution:
+      'The project will produce a Conceptual Architecture Proposal, IT Support and Transition Plan recommendation documents after a detailed evaluation of public health surveillance operational needs, and corresponding system infrastructure inefficiencies and gaps is conducted.',
+    
+    cardImage: '',
   }
 ];
