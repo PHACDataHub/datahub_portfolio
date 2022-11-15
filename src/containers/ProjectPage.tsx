@@ -60,7 +60,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           <Button size="lg">Back</Button>
         </Link>
       </Box>
-      <VStack spacing={6} w={isSmallScreen ? '90%' : '70%'} m="auto" mb={8}>
+      <VStack spacing={6} w={isSmallScreen ? '95%' : '70%'} m="auto" mb={8}>
         <Heading fontSize={32}>{name}</Heading>
         {importantLink && (
           <a target="_blank" href={importantLink.url}>
@@ -84,7 +84,9 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           <Heading fontSize={22}>Background</Heading>
         </Center>
         {background.map((paragraph, idx) => (
-          <Text key={idx}>{paragraph}</Text>
+          <Text alignSelf="start" key={idx}>
+            {paragraph}
+          </Text>
         ))}
         <Stack direction={isSmallScreen ? 'column' : 'row'} spacing={8}>
           <VStack w={isSmallScreen ? '100%' : '33%'}>

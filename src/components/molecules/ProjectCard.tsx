@@ -1,4 +1,4 @@
-import { Box, Heading, Image, Spacer, Text, VStack } from '@chakra-ui/react';
+import { Box, Divider, Heading, Image, Text, VStack } from '@chakra-ui/react';
 import { useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProjectPage } from '../../utils/types';
@@ -42,41 +42,19 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
       cursor="pointer"
       position="relative"
     >
-      {/* IDEA 1 - TAG ON IMAGE */}
-      {/* <Box
-        bgColor={status === 'active' ? 'green.400' : 'red.400'}
-        borderRadius="lg"
-        position="absolute"
-        zIndex={2}
-        p={2}
-        top={2}
-        right={2}
-      >
-        <Heading color="white" size="xs">
-          {status === 'active' ? 'Active' : 'Closed'}
-        </Heading>
-      </Box> */}
-
       <Box overflow="hidden">
         <Image
           src={process.env.PUBLIC_URL + '/images/' + cardImage}
           ref={cardImg}
+          w="100%"
+          h={140}
+          objectFit="cover"
           transition="all 0.2s ease-in-out"
         />
       </Box>
-      <VStack p={4} flexGrow={1} align="start">
-        {/* IDEA 2 - TAG ON CARD */}
-        {/* <Box
-          bgColor={status === 'active' ? 'green.400' : 'red.400'}
-          borderRadius="lg"
-          p={2}
-        >
-          <Heading color="white" fontSize={14}>
-            {status === 'active' ? 'Active' : 'Closed'}
-          </Heading>
-        </Box> */}
+      <VStack p={4} flexGrow={1} align="start" spacing={4}>
         <Heading size="md">{name}</Heading>
-        <Spacer />
+        <Divider borderColor="gray.200" />
         <Text size="sm">{description}</Text>
       </VStack>
     </Box>

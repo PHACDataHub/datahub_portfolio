@@ -19,8 +19,8 @@ export function ProjectPortfolio(): JSX.Element {
         py={8}
         display="flex"
         justifyContent="center"
-        alignItems="stretch"
-        // alignItems="flex-start"
+        // alignItems="stretch"
+        alignItems="flex-start"
         flexWrap="wrap"
         gap={8}
         w={isSmallScreen ? '98%' : '80%'}
@@ -37,8 +37,8 @@ export function ProjectPortfolio(): JSX.Element {
         py={8}
         display="flex"
         justifyContent="center"
-        alignItems="stretch"
-        // alignItems="flex-start"
+        // alignItems="stretch"
+        alignItems="flex-start"
         flexWrap="wrap"
         gap={8}
         w={isSmallScreen ? '98%' : '80%'}

@@ -6,7 +6,7 @@ export function Header(): JSX.Element {
 
   return (
     <Stack p={5} bgColor="rgb(235, 236, 237)">
-      <Stack margin="auto" spacing={8} w={isSmallScreen ? '80%' : '70%'} py={6}>
+      <Stack margin="auto" spacing={8} w={isSmallScreen ? '98%' : '80%'} py={6}>
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/8/84/PHAC_wordmark.svg"
           alt=""
