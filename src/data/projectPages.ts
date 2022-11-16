@@ -242,6 +242,7 @@ export const projectPageList: ProjectPage[] = [
     goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
     solution: '',
     images: [],
+    cardImage: 'projects/Antimicrobial.jpg',
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
   },
   {
