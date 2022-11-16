@@ -264,7 +264,7 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '12',
-    name: 'Health of Canadians Report',
+    name: 'Health of Canadians Report Automation',
     status: 'active',
     description:
       'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
@@ -278,8 +278,12 @@ export const projectPageList: ProjectPage[] = [
     solution:
       'A Django web application to collect, centralize, and standardize incoming data. The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.',
     images: [],
-    cardImage: 'projects/hoc/hoc_stock.jpg',
-    tools: ['Python', 'GitHub', 'Azure Cloud', 'Django', 'Docker', 'HTMX']
+    cardImage: 'projects/cpho/cpho_stock.jpg',
+    tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
+    importantLink: {
+      label: 'See past reports',
+      url: 'https://www.canada.ca/en/public-health/corporate/publications/chief-public-health-officer-reports-state-public-health-canada.html'
+    }
   },
   {
     id: '13',
