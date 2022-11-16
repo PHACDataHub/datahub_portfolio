@@ -300,7 +300,7 @@ export const projectPageList: ProjectPage[] = [
     solution:
       'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting. This report provides additional insight of the province and territory data as compared to the national data.',
     images: [],
-    cardImage: '',
+    cardImage: 'projects/covid_case/covidcasereport.jpg',
     tools: [
       'Azure Data',
       'Factory',
