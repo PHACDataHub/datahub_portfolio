@@ -258,7 +258,7 @@ export const projectPageList: ProjectPage[] = [
     goal: 'The Project Charter entitled Surveillance IT Infrastructure Renewal (SITIR) identified the need for a Surveillance IT Infrastructure Renewal project. The purpose of this project is to prepare recommendations for surveillance systems infrastructure improvements, which would serve as a base requirement for the development and implementation phase of surveillance infrastructure renovation effort.',
     solution:
       'The project will produce a Conceptual Architecture Proposal, IT Support and Transition Plan recommendation documents after a detailed evaluation of public health surveillance operational needs, and corresponding system infrastructure inefficiencies and gaps is conducted.',
-    cardImage: '',
+    cardImage: 'projects/SITIR.jpg',
     images: [],
     tools: []
   },
