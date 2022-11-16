@@ -165,7 +165,7 @@ export const projectPageList: ProjectPage[] = [
     solution:
       'PHAC developed a simulation model that provides the number of opioid-related deaths that might occur using original code from the program AnyLogic and attempting to duplicate results in RStudio, through modelling different scenarios according to different public health measures and calculating usage rates through ordinary differential equations. Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.',
     images: [],
-    cardImage: '',
+    cardImage: 'projects/Opioid_Modelling.jpg',
     tools: ['R', 'RStudio']
   },
   {
