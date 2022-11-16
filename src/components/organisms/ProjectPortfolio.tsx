@@ -32,7 +32,7 @@ export function ProjectPortfolio(): JSX.Element {
             )
         )}
       </Box>
-      <Heading fontSize={isSmallScreen ? 20 : 24}> Closed Projects</Heading>
+      <Heading fontSize={isSmallScreen ? 20 : 24}>Completed Projects</Heading>
       <Box
         py={8}
         display="flex"
