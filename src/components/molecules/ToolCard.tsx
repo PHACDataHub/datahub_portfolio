@@ -23,6 +23,8 @@ export default function ToolCard({ tool }: { tool: InventoryTool }) {
   return (
     <Box
       maxW={'280px'}
+      minW={'220px'}
+      flex={1}
       w={'full'}
       boxShadow={'lg'}
       transition="all 0.2s ease-in-out"

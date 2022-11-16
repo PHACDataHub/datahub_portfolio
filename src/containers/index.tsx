@@ -11,7 +11,7 @@ export function Portfolio(): JSX.Element {
     <Stack w="100%">
       <Header />
       <Center>
-        <Heading size="2xl" mt={10}>
+        <Heading size="xl" mt={6}>
           Portfolio
         </Heading>
       </Center>

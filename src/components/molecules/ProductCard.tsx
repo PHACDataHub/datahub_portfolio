@@ -13,17 +13,20 @@ import ProductModal from './ProductModal';
 
 export default function ProductCard({ product }: { product: Product }) {
   const [isHovered, setIsHovered] = useState(false);
-  const { name, cardImage, slogan, color } = product;
+  const { name, cardImage, slogan, color, comingSoon } = product;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
       <Box
         px={5}
-        maxW="40%"
+        maxW={320}
+        minW={250}
+        flex={1}
         display="flex"
         flexDir="column"
         alignItems="center"
+        position="relative"
       >
         <Center pb={12}>
           <Box
@@ -59,7 +62,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 transition="all .3s ease-in-out"
                 transform={isHovered ? 'scale(1.15)' : 'scale(1)'}
                 mx="auto"
-                objectFit="contain"
+                objectFit="cover"
                 src={cardImage}
               />
             </Box>
@@ -67,7 +70,18 @@ export default function ProductCard({ product }: { product: Product }) {
               <Heading fontSize={'4xl'} fontFamily={'body'} fontWeight={700}>
                 {name}
               </Heading>
-              <Heading fontSize={'xl'} fontWeight={400}>
+              {comingSoon && (
+                <Box
+                  bgColor="brand.canada"
+                  color="white"
+                  py={1}
+                  px={2}
+                  borderRadius="md"
+                >
+                  <Heading size="xs">COMING SOON</Heading>
+                </Box>
+              )}
+              <Heading fontSize={'xl'} textAlign="center" fontWeight={400}>
                 {slogan}
               </Heading>
               <Button color={color} variant="link">

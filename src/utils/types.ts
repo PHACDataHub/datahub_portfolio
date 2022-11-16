@@ -23,6 +23,7 @@ interface Link {
 export type ProjectPage = {
   id: string;
   name: string;
+  status: 'active' | 'closed';
   description: string;
   importantLink?: Link;
   background: string[];
@@ -49,4 +50,5 @@ export type Product = {
   url: string;
   images: string[];
   color?: string;
+  comingSoon?: boolean;
 };

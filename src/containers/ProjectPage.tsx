@@ -37,7 +37,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
   const isSmallScreen = useSmallScreen();
 
   const titleStyle = {
-    bgColor: 'gray.100',
+    bgColor: 'rgb(244, 247, 250)',
     w: '100%',
     p: 3,
     borderRadius: 'xl'
@@ -60,8 +60,8 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           <Button size="lg">Back</Button>
         </Link>
       </Box>
-      <VStack spacing={6} w={isSmallScreen ? '90%' : '70%'} m="auto" mb={8}>
-        <Heading>{name}</Heading>
+      <VStack spacing={6} w={isSmallScreen ? '95%' : '70%'} m="auto" mb={8}>
+        <Heading fontSize={32}>{name}</Heading>
         {importantLink && (
           <a target="_blank" href={importantLink.url}>
             <HStack
@@ -74,34 +74,36 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
                 backgroundColor: 'gray.300'
               }}
             >
-              <Heading size="md">{importantLink.label}</Heading>
-              <ExternalLinkIcon fontSize="lg" />
+              <Heading size="sm">{importantLink.label}</Heading>
+              <ExternalLinkIcon fontSize="md" />
             </HStack>
           </a>
         )}
         <TagList tags={tools} />
         <Center {...titleStyle}>
-          <Heading size="lg">Background</Heading>
+          <Heading fontSize={22}>Background</Heading>
         </Center>
         {background.map((paragraph, idx) => (
-          <Text key={idx}>{paragraph}</Text>
+          <Text alignSelf="start" key={idx}>
+            {paragraph}
+          </Text>
         ))}
         <Stack direction={isSmallScreen ? 'column' : 'row'} spacing={8}>
           <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
-              <Heading size="lg">Problem</Heading>
+              <Heading fontSize={22}>Problem</Heading>
             </Center>
             <Text>{problem}</Text>
           </VStack>
           <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
-              <Heading size="lg">Goal</Heading>
+              <Heading fontSize={22}>Goal</Heading>
             </Center>
             <Text>{goal}</Text>
           </VStack>
           <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
-              <Heading size="lg">Solution</Heading>
+              <Heading fontSize={22}>Solution</Heading>
             </Center>
             <Text>{solution}</Text>
           </VStack>
