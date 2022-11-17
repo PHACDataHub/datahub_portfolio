@@ -37,163 +37,59 @@ export const projectPageList: ProjectPage[] = [
       'GitHub'
     ]
   },
-  // {
-  //   id: '2',
-  //   name: 'NACI Databricks Analysis',
-  //   status: 'active',
-  //   description:
-  //     'A cloud computing platform to support NACI analysis and model training of vaccine simulations',
-  //   background: [
-  //     'The National Advisory Committee on Immunization (NACI) Secretariat will be developing a series of infections disease and health economic models to conduct cost-effectiveness analyses of vaccination programs in support of national vaccine recommendations by NACI. This forms a core piece of the operational work performed by the NACI Secretariat on an ongoing basis.'
-  //   ],
-  //   problem:
-  //     'The models will simulate various scenarios of infections from vaccine-preventable diseases, the health consequences of those infections, and the effects of vaccination over long periods. As many of these models will carry a significant computational burden, the NACI Secretariat is requesting the use of a cloud server(s) to run these simulations.',
-  //   goal: 'Provide NACI a high performance computing environment and storage capacity to carry out infectious disease modeling and analytical work.',
-  //   solution:
-  //     'A combination of an Azure Virtual Machine, Azure Databricks, and Azure Blob Storage',
-  //   images: [],
-  //   cardImage: 'projects/cloud_computer_stock.jpg',
-  //   tools: ['Azure Virtual Machine', 'Azure Databricks', 'Azure Blob Storage']
-  // },
   {
-    id: '3',
-    name: 'Opioid Modelling Project',
-    status: 'closed',
+    id: '2',
+    name: 'Anti-microbial Resistance (AMR)',
+    status: 'active',
+    cardImage: 'projects/Antimicrobial.jpg',
     description:
-      'A simulation model that provides the number of opioid-related deaths that might occur.',
+      'DMIA aims to partner with CFEZID and other Antimicrobial Resistance (AMR) or Antimicrobial Use (AMU) surveillance programs to improve public health outcomes by leveraging modern data tools',
     background: [
-      'The Public Health Agency of Canada (PHAC) developed a simulation model of opioid-related deaths that provides information on the number of these deaths that might occur during the COVID-19 outbreak in 2020 through to December 2022.',
-      'Models use mathematical equations to estimate how many cases of a disease or health event may occur in the coming weeks or months. They help researchers simulate real-world possibilities in a virtual environment.'
+      'Centre for Food borne, Environmental and Zoonotic Infectious Diseases (CFEZID) uses suite of Tableau software to analyze and share information on known or newly emerging antimicrobial resistant pathogens. This tool enables CFEZID to provide automated and dynamic reporting to PHAC senior management, empowering informative decision-making.'
     ],
     problem:
-      'The opioid overdose crisis continues to have significant impacts on people living in Canada. Data from several jurisdictions across Canada and PHAC show a substantial increase in opioid-related harms and deaths since the beginning of the COVID-19 outbreak.',
-    goal: 'The goal of the Opioid Modelling Project was a collaborative project with epidemiologist from the Health Promotion and Chronic Disease Prevention Branch, to support the implementation of time-series model that tracks opioid-related deaths since COVID-19 pandemic.',
-    solution:
-      'PHAC developed a simulation model that provides the number of opioid-related deaths that might occur using original code from the program AnyLogic and attempting to duplicate results in RStudio, through modelling different scenarios according to different public health measures and calculating usage rates through ordinary differential equations. Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.',
+      'One of the major issues CFEZID is currently facing is not having the proper technical support within PHAC to help them maintain the Tableau Server. Moreover, they require Tableau Server to operate in a Protected B environment as the data used to build dashboards is Protected B. Furthermore, the Azure Active Directory (AAD) must be enabled for a single sign-in, which will require a reinstallation of Tableau Server into a new virtual machine (VM). Finally, CFEZID would also like assistance in publicly disseminating their dashboards.',
+    goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
+    solution: `
+      Data Acquisition
+      Set up LiquidFiles to AMR Task-Force to collect large data files that can contain data up to Protected B securely from external stakeholders.
+      Data System Modernization
+      Using Per built azure tools to smooth their path and to automate the process that would also allow for live dashboards and timelier reporting.
+      Data Dissemination
+      Take technical ownership of Tableau Server and improve the robustness, accessibility and security of the tool.
+      Pursuing Authority to operate in a Protected B environment.
+      Changing environment from Linux to Windows as Windows is more user-friendly and there is more support within the team for patch fixes.
+      Enabling Azure Active Directory (AAD) during deployment and after the server is installed to connect to live databases.
+      Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.
+    `,
     images: [],
-    cardImage: 'projects/Opioid_Modelling.jpg',
-    tools: ['R', 'RStudio']
+    tools: ['DevOps', 'Tableau', 'Azure Cloud']
+  },
+  {
+    id: '3',
+    name: 'Health of Canadians Report Automation',
+    status: 'active',
+    description:
+      'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
+    background: [
+      'The Chief Public Health Officer is mandated to report annually on the Health of Canadians (HoC), and the HoC initiative fulfills part of that mandate.',
+      'Previously, HoC reporting was done through an annual manual update of ~40 indicators in an appendix of the CPHO report.'
+    ],
+    problem:
+      'The manual process was time-consuming and error-prone, and the data was not always up-to-date. The CPHO wanted to have a more advanced and automated platform to support the annual HoC report.',
+    goal: 'While split in different phases, the overall goal is to develop a data platform and pipeline to collect, standardize, and maintain incoming data from surveillance programs to serve as the foundation for an interfactive dashboard.',
+    solution:
+      'A Django web application to collect, centralize, and standardize incoming data. The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.',
+    images: [],
+    cardImage: 'projects/cpho/cpho_stock.jpg',
+    tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
+    importantLink: {
+      label: 'See past reports',
+      url: 'https://www.canada.ca/en/public-health/corporate/publications/chief-public-health-officer-reports-state-public-health-canada.html'
+    }
   },
   {
     id: '4',
-    name: 'COVID-19 Confirmed Cases Report',
-    status: 'closed',
-    description:
-      'The report provides data on the COVID-19 cases to help monitor outbreaks and support the analysis of and response to the pandemic.',
-    background: [
-      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.'
-    ],
-    problem:
-      'The provinces and territories need cleaned, standardized and aggregate data of the key COVID-19 variables to analyze the impact of the COVID-19 confirmed cases.',
-    goal: 'The goal is a report that shares the data and data visualizations of the respective province’s or territory’s COVID-19 confirmed cases.',
-    solution:
-      'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting. This report provides additional insight of the province and territory data as compared to the national data.',
-    images: [],
-    cardImage: 'projects/covid_case/covidcasereport.jpg',
-    tools: [
-      'Azure Data',
-      'Factory',
-      'Azure SQL Database',
-      'Azure Blob Storage',
-      'Power BI'
-    ]
-  },
-  {
-    id: '5',
-    name: 'Dashboard for Immunization Related Diseases (DIRD)',
-    status: 'closed',
-    description:
-      'Using natural language processing and artificial intelligence to gather information about vaccines from various news and scientific sources',
-    background: [
-      'In June 2020, the Centre for Immunization and Respiratory Infectious Diseases (CIRID) approached the Data Management, Innovation and Analytics (DMIA) detailing a need for a platform that centralizes information about vaccines, interventions, and antivirals for various Immunization-related diseases.',
-      'This project, when complete, provides policy and clinical guidance to epidemiologists and policy makers. It will initially focus on COVID-19 related information, and other Immunization-related diseases will be added in subsequent releases.'
-    ],
-    problem:
-      'Evidence that informs decision-making is exponentially growing, so it is becoming increasingly difficul for human analysts to properly sort through and interpret the emerging data needed to stay abreast of the latest developments in public health.',
-    goal: 'An all-encompassing platform where epidemiologists, data analysts, and decision makers can get curated data based on their needs.',
-    solution:
-      'Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources. Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.',
-    images: ['projects/dird/dird_1.gif'],
-    cardImage: 'projects/dird/dird_stock.jpg',
-    tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
-  },
-  {
-    id: '6',
-    name: 'Border Measures Analytics',
-    status: 'closed',
-    description:
-      'Power BI dashboard for analyzing data related to the Canadian border in response to the COVID-19 pandemic',
-    background: [
-      'Due to the COVID-19 pandemic, different teams needed to analyze data related to the Canadian border. The data includes information on travellers going into Canada, such as their designated quarantine facilities, information on approved quarantine accommodations, and traveller follow ups to confirm quarantine rules are being complied.'
-    ],
-    problem:
-      'A lot of analytics were based on senior management pressing needs and giving recurring stats took a lot of manual work to update and share, since so many different types of analysis were necessary.',
-    goal: 'Remove manual work and move the data analysis into a more dynamic automated data system readily available to people at PHAC.',
-    solution:
-      'A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.',
-    images: ['projects/borders/border_measures_1.png'],
-    cardImage: 'projects/borders/border_measures_stock.jpg',
-    tools: [
-      'Power BI Dashboard',
-      'Power BI Dataflow',
-      'OneDrive Sharepoint',
-      'Azure DevOps'
-    ]
-  },
-  {
-    id: '7',
-    name: 'Daily Epidemiological Trend Report Automation',
-    status: 'closed',
-    description:
-      'R Markdown based framework to automatically generate daily reports for the Chief Public Health Officer',
-    background: [
-      'The Health Portfolio Operations Centre (HPOC) is temporarily established when there is a new health crisis in place (e.g. COVID-19 pandemic). HPOC needs to provide updates to health officers and decision makers related to that health crisis to update them on the trends and data of the current situation.',
-      "For the COVID-19 pandemic, for example, a daily report needs to be created with information related to cases, deaths, hospitalization rates, tests, and others. It also showcases the data split by province and comparisons to other countries, to better understand Canada's situation."
-    ],
-    problem:
-      'Manually completing a daily report with the necessary information is time consuming and prone to human errors, as it entails manual work such as copy/pasting, processing of data, formatting, etc.',
-    goal: 'Automate the generation of the daily report while still maintaining the same format and information previously established.',
-    solution:
-      'Development of a script that can automatically pull the latest data and generate a daily report including all the necessary trends and charts, with all the correct formatting applied.',
-    images: [
-      'projects/epi_trend/epi_trend_1.png',
-      'projects/epi_trend/epi_trend_2.png'
-    ],
-    cardImage: 'projects/epi_trend/epi_trend_stock.jpg',
-    tools: ['R', 'R Markdown', 'Python', 'Github'],
-    successMetrics: [
-      '2-3 hour daily process reduced to a few minutes',
-      '3-4 weekly human errors minimized on average'
-    ]
-  },
-  {
-    id: '8',
-    name: 'Monkeypox Outbreak Project',
-    status: 'active',
-    description:
-      'A data platform to manage and transform Monkeypox data collected from provinces and territories',
-    background: [
-      'The Federal (DMIA and Epidemiologists within PHAC), Provincial, and Territorial partners are working collaboratively on this project to monitor and respond to the monkeypox outbreak in Canada.',
-      'It involves building and maintaining a data platform to manage and transform data collected from provinces and territories, and to provide a central repository for data analysis and reporting.'
-    ],
-    problem:
-      'Epidemiologists need clean and standardized data from provinces and territories so they can analyze and report key monkeypox variables to Canadians and to the World Health Organization (WHO).',
-    goal: 'The goal is a system that collects and cleans national monkeypox data received from provinces and territories, and allows the data to be shared for analysis and reporting.',
-    solution:
-      'The monkeypox project aims to build an integrated national surveillance system that analyzes and monitors the number of monkeypox cases, detects any trends or patterns, and informs effective public health actions through reports and dashboards.',
-    images: [],
-    cardImage: 'projects/monkeypox_stock.jpg',
-    tools: [
-      'Power BI',
-      'Azure Databricks',
-      'Azure Data Factory',
-      'Azure SQL Database',
-      'Azure Blob Storage',
-      'LiquidFiles'
-    ]
-  },
-  {
-    id: '9',
     name: 'Centre for Integrated Risk Assessment (CIRA)',
     status: 'active',
     description:
@@ -226,7 +122,33 @@ export const projectPageList: ProjectPage[] = [
     ]
   },
   {
-    id: '10',
+    id: '5',
+    name: 'Monkeypox Outbreak Project',
+    status: 'active',
+    description:
+      'A data platform to manage and transform Monkeypox data collected from provinces and territories',
+    background: [
+      'The Federal (DMIA and Epidemiologists within PHAC), Provincial, and Territorial partners are working collaboratively on this project to monitor and respond to the monkeypox outbreak in Canada.',
+      'It involves building and maintaining a data platform to manage and transform data collected from provinces and territories, and to provide a central repository for data analysis and reporting.'
+    ],
+    problem:
+      'Epidemiologists need clean and standardized data from provinces and territories so they can analyze and report key monkeypox variables to Canadians and to the World Health Organization (WHO).',
+    goal: 'The goal is a system that collects and cleans national monkeypox data received from provinces and territories, and allows the data to be shared for analysis and reporting.',
+    solution:
+      'The monkeypox project aims to build an integrated national surveillance system that analyzes and monitors the number of monkeypox cases, detects any trends or patterns, and informs effective public health actions through reports and dashboards.',
+    images: [],
+    cardImage: 'projects/monkeypox_stock.jpg',
+    tools: [
+      'Power BI',
+      'Azure Databricks',
+      'Azure Data Factory',
+      'Azure SQL Database',
+      'Azure Blob Storage',
+      'LiquidFiles'
+    ]
+  },
+  {
+    id: '6',
     name: 'Biosecurity Dashboard',
     status: 'active',
     description:
@@ -252,39 +174,122 @@ export const projectPageList: ProjectPage[] = [
     tools: ['PowerBI', 'Excel']
   },
   {
-    id: '11',
-    name: 'Anti-microbial Resistance (AMR)',
-    status: 'active',
-    cardImage: 'projects/Antimicrobial.jpg',
+    id: '7',
+    name: 'Border Measures Analytics',
+    status: 'closed',
     description:
-      'DMIA aims to partner with CFEZID and other Antimicrobial Resistance (AMR) or Antimicrobial Use (AMU) surveillance programs to improve public health outcomes by leveraging modern data tools',
+      'Power BI dashboard for analyzing data related to the Canadian border in response to the COVID-19 pandemic',
     background: [
-      'Centre for Food borne, Environmental and Zoonotic Infectious Diseases (CFEZID) uses suite of Tableau software to analyze and share information on known or newly emerging antimicrobial resistant pathogens. This tool enables CFEZID to provide automated and dynamic reporting to PHAC senior management, empowering informative decision-making.'
+      'Due to the COVID-19 pandemic, different teams needed to analyze data related to the Canadian border. The data includes information on travellers going into Canada, such as their designated quarantine facilities, information on approved quarantine accommodations, and traveller follow ups to confirm quarantine rules are being complied.'
     ],
     problem:
-      'One of the major issues CFEZID is currently facing is not having the proper technical support within PHAC to help them maintain the Tableau Server. Moreover, they require Tableau Server to operate in a Protected B environment as the data used to build dashboards is Protected B. Furthermore, the Azure Active Directory (AAD) must be enabled for a single sign-in, which will require a reinstallation of Tableau Server into a new virtual machine (VM). Finally, CFEZID would also like assistance in publicly disseminating their dashboards.',
-    goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
-    solution: `
-      Data Acquisition
-      Set up LiquidFiles to AMR Task-Force to collect large data files that can contain data up to Protected B securely from external stakeholders.
-      Data System Modernization
-      Using Per built azure tools to smooth their path and to automate the process that would also allow for live dashboards and timelier reporting.
-      Data Dissemination
-      Take technical ownership of Tableau Server and improve the robustness, accessibility and security of the tool.
-      Pursuing Authority to operate in a Protected B environment.
-      Changing environment from Linux to Windows as Windows is more user-friendly and there is more support within the team for patch fixes.
-      Enabling Azure Active Directory (AAD) during deployment and after the server is installed to connect to live databases.
-      Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.
-    `,
+      'A lot of analytics were based on senior management pressing needs and giving recurring stats took a lot of manual work to update and share, since so many different types of analysis were necessary.',
+    goal: 'Remove manual work and move the data analysis into a more dynamic automated data system readily available to people at PHAC.',
+    solution:
+      'A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.',
+    images: ['projects/borders/border_measures_1.png'],
+    cardImage: 'projects/borders/border_measures_stock.jpg',
+    tools: [
+      'Power BI Dashboard',
+      'Power BI Dataflow',
+      'OneDrive Sharepoint',
+      'Azure DevOps'
+    ]
+  },
+  {
+    id: '8',
+    name: 'Opioid Modelling Project',
+    status: 'closed',
+    description:
+      'A simulation model that provides the number of opioid-related deaths that might occur.',
+    background: [
+      'The Public Health Agency of Canada (PHAC) developed a simulation model of opioid-related deaths that provides information on the number of these deaths that might occur during the COVID-19 outbreak in 2020 through to December 2022.',
+      'Models use mathematical equations to estimate how many cases of a disease or health event may occur in the coming weeks or months. They help researchers simulate real-world possibilities in a virtual environment.'
+    ],
+    problem:
+      'The opioid overdose crisis continues to have significant impacts on people living in Canada. Data from several jurisdictions across Canada and PHAC show a substantial increase in opioid-related harms and deaths since the beginning of the COVID-19 outbreak.',
+    goal: 'The goal of the Opioid Modelling Project was a collaborative project with epidemiologist from the Health Promotion and Chronic Disease Prevention Branch, to support the implementation of time-series model that tracks opioid-related deaths since COVID-19 pandemic.',
+    solution:
+      'PHAC developed a simulation model that provides the number of opioid-related deaths that might occur using original code from the program AnyLogic and attempting to duplicate results in RStudio, through modelling different scenarios according to different public health measures and calculating usage rates through ordinary differential equations. Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.',
     images: [],
-    tools: ['DevOps', 'Tableau', 'Azure Cloud']
+    cardImage: 'projects/Opioid_Modelling.jpg',
+    tools: ['R', 'RStudio']
+  },
+  {
+    id: '9',
+    name: 'Daily Epidemiological Trend Report Automation',
+    status: 'closed',
+    description:
+      'R Markdown based framework to automatically generate daily reports for the Chief Public Health Officer',
+    background: [
+      'The Health Portfolio Operations Centre (HPOC) is temporarily established when there is a new health crisis in place (e.g. COVID-19 pandemic). HPOC needs to provide updates to health officers and decision makers related to that health crisis to update them on the trends and data of the current situation.',
+      "For the COVID-19 pandemic, for example, a daily report needs to be created with information related to cases, deaths, hospitalization rates, tests, and others. It also showcases the data split by province and comparisons to other countries, to better understand Canada's situation."
+    ],
+    problem:
+      'Manually completing a daily report with the necessary information is time consuming and prone to human errors, as it entails manual work such as copy/pasting, processing of data, formatting, etc.',
+    goal: 'Automate the generation of the daily report while still maintaining the same format and information previously established.',
+    solution:
+      'Development of a script that can automatically pull the latest data and generate a daily report including all the necessary trends and charts, with all the correct formatting applied.',
+    images: [
+      'projects/epi_trend/epi_trend_1.png',
+      'projects/epi_trend/epi_trend_2.png'
+    ],
+    cardImage: 'projects/epi_trend/epi_trend_stock.jpg',
+    tools: ['R', 'R Markdown', 'Python', 'Github'],
+    successMetrics: [
+      '2-3 hour daily process reduced to a few minutes',
+      '3-4 weekly human errors minimized on average'
+    ]
+  },
+  {
+    id: '10',
+    name: 'COVID-19 Confirmed Cases Report',
+    status: 'closed',
+    description:
+      'The report provides data on the COVID-19 cases to help monitor outbreaks and support the analysis of and response to the pandemic.',
+    background: [
+      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.'
+    ],
+    problem:
+      'The provinces and territories need cleaned, standardized and aggregate data of the key COVID-19 variables to analyze the impact of the COVID-19 confirmed cases.',
+    goal: 'The goal is a report that shares the data and data visualizations of the respective province’s or territory’s COVID-19 confirmed cases.',
+    solution:
+      'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting. This report provides additional insight of the province and territory data as compared to the national data.',
+    images: [],
+    cardImage: 'projects/covid_case/covidcasereport.jpg',
+    tools: [
+      'Azure Data',
+      'Factory',
+      'Azure SQL Database',
+      'Azure Blob Storage',
+      'Power BI'
+    ]
+  },
+  {
+    id: '11',
+    name: 'Dashboard for Immunization Related Diseases (DIRD)',
+    status: 'closed',
+    description:
+      'Using natural language processing and artificial intelligence to gather information about vaccines from various news and scientific sources',
+    background: [
+      'In June 2020, the Centre for Immunization and Respiratory Infectious Diseases (CIRID) approached the Data Management, Innovation and Analytics (DMIA) detailing a need for a platform that centralizes information about vaccines, interventions, and antivirals for various Immunization-related diseases.',
+      'This project, when complete, provides policy and clinical guidance to epidemiologists and policy makers. It will initially focus on COVID-19 related information, and other Immunization-related diseases will be added in subsequent releases.'
+    ],
+    problem:
+      'Evidence that informs decision-making is exponentially growing, so it is becoming increasingly difficul for human analysts to properly sort through and interpret the emerging data needed to stay abreast of the latest developments in public health.',
+    goal: 'An all-encompassing platform where epidemiologists, data analysts, and decision makers can get curated data based on their needs.',
+    solution:
+      'Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources. Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.',
+    images: ['projects/dird/dird_1.gif'],
+    cardImage: 'projects/dird/dird_stock.jpg',
+    tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
   },
   {
     id: '12',
     name: 'Surveillance IT Infrastructure Renewal (SITIR)',
     status: 'active',
     description:
-      'SITIR prepares proposals for the improvement of the monitoring system infrastructure, which will serve as a basic requirement for the development and implementation phase of the monitoring infrastructure renovation work.',
+      'The SITIR project recommends how to plan and build out surveillance systems and infrastructure for moving PHAC towards a modern data analytics environment.',
     background: [
       'PHAC surveillance systems rely on numerous information technology (IT) infrastructure components and software tools, including databases, statistical analysis programs, and communication applications, to collect, analyze, store, and disseminate public health information.'
     ],
@@ -296,28 +301,5 @@ export const projectPageList: ProjectPage[] = [
     cardImage: 'projects/SITIR.jpg',
     images: [],
     tools: []
-  },
-  {
-    id: '13',
-    name: 'Health of Canadians Report Automation',
-    status: 'active',
-    description:
-      'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
-    background: [
-      'The Chief Public Health Officer is mandated to report annually on the Health of Canadians (HoC), and the HoC initiative fulfills part of that mandate.',
-      'Previously, HoC reporting was done through an annual manual update of ~40 indicators in an appendix of the CPHO report.'
-    ],
-    problem:
-      'The manual process was time-consuming and error-prone, and the data was not always up-to-date. The CPHO wanted to have a more advanced and automated platform to support the annual HoC report.',
-    goal: 'While split in different phases, the overall goal is to develop a data platform and pipeline to collect, standardize, and maintain incoming data from surveillance programs to serve as the foundation for an interfactive dashboard.',
-    solution:
-      'A Django web application to collect, centralize, and standardize incoming data. The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.',
-    images: [],
-    cardImage: 'projects/cpho/cpho_stock.jpg',
-    tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
-    importantLink: {
-      label: 'See past reports',
-      url: 'https://www.canada.ca/en/public-health/corporate/publications/chief-public-health-officer-reports-state-public-health-canada.html'
-    }
   }
 ];
