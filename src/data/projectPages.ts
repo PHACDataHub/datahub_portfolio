@@ -266,15 +266,11 @@ export const projectPageList: ProjectPage[] = [
     goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
     solution: `
       Data Acquisition
-      Set up LiquidFiles to AMR Task-Force to collect large data files that can contain data up to Protected B securely from external stakeholders.
+      Setting up LiquidFiles to collect large data files that can contain data up to Protected B securely from external stakeholders.
       Data System Modernization
-      Using Per built azure tools to smooth their path and to automate the process that would also allow for live dashboards and timelier reporting.
+      Using per built azure tools to smooth data pipelines and to automate the process that would allow for live dashboards and timelier reporting.
       Data Dissemination
-      Take technical ownership of Tableau Server and improve the robustness, accessibility and security of the tool.
-      Pursuing Authority to operate in a Protected B environment.
-      Changing environment from Linux to Windows as Windows is more user-friendly and there is more support within the team for patch fixes.
-      Enabling Azure Active Directory (AAD) during deployment and after the server is installed to connect to live databases.
-      Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.
+      AMR team will primarily use Tableau for their data dissemination to have interactive visualization. Additionally, with Azure Active Directory (AAD) enabled, users will be able to access other data sources available on the National Surveillance Platform.
     `,
     images: [],
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
