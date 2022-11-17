@@ -274,7 +274,7 @@ export const projectPageList: ProjectPage[] = [
       'Pursuing Authority to operate in a Protected B environment.',
       'Changing environment from Linux to Windows as Windows is more user-friendly and there is more support within the team for patch fixes.',
       'Enabling Azure Active Directory (AAD) during deployment and after the server is installed to connect to live databases.',
-      'Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.',    
+      'Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.'
     ],
     images: [],
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
