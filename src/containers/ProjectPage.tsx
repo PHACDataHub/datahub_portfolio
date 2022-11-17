@@ -51,18 +51,33 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
   return (
     <>
       <Image
-        h="100px"
+        h={isSmallScreen ? '80px' : '120px'}
         w="100%"
         objectFit="cover"
         src={process.env.PUBLIC_URL + '/images/' + cardImage}
+        transition="all 0.5s ease"
       />
-      <Box w="100%" p={isSmallScreen ? 4 : 10}>
+      <Box
+        w="100%"
+        p={isSmallScreen ? 4 : 6}
+        position={isSmallScreen ? 'relative' : 'absolute'}
+      >
         <Link to="/">
-          <Button size="lg">Back</Button>
+          <Button size="lg" px={4} py={1}>
+            Back
+          </Button>
         </Link>
       </Box>
-      <VStack spacing={6} w={isSmallScreen ? '95%' : '70%'} m="auto" mb={8}>
-        <Heading fontSize={32}>{name}</Heading>
+      <VStack
+        spacing={6}
+        w={isSmallScreen ? '95%' : '70%'}
+        m="auto"
+        mb={8}
+        mt={isSmallScreen ? 0 : 12}
+      >
+        <Heading fontSize={32} textAlign="center">
+          {name}
+        </Heading>
         {importantLink && (
           <a target="_blank" href={importantLink.url}>
             <HStack
