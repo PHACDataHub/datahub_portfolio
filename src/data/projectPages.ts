@@ -264,7 +264,18 @@ export const projectPageList: ProjectPage[] = [
     problem:
       'One of the major issues CFEZID is currently facing is not having the proper technical support within PHAC to help them maintain the Tableau Server. Moreover, they require Tableau Server to operate in a Protected B environment as the data used to build dashboards is Protected B. Furthermore, the Azure Active Directory (AAD) must be enabled for a single sign-in, which will require a reinstallation of Tableau Server into a new virtual machine (VM). Finally, CFEZID would also like assistance in publicly disseminating their dashboards.',
     goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
-    solution: '',
+    solution: [
+      'Data Acquisition',
+      'Set up LiquidFiles to AMR Task-Force to collect large data files that can contain data up to Protected B securely from external stakeholders.',
+      'Data System Modernization',
+      'Using Per built azure tools to smooth their path and to automate the process that would also allow for live dashboards and timelier reporting.',
+      'Data Dissemination',
+      '•	Take technical ownership of Tableau Server and improve the robustness, accessibility and security of the tool. ',
+      '•	Pursuing Authority to operate in a Protected B environment.',
+      '•	Changing environment from Linux to Windows as Windows is more user-friendly and there is more support within the team for patch fixes.',
+      '•	Enabling Azure Active Directory (AAD) during deployment and after the server is installed to connect to live databases.',
+      '•	Working with the Antimicrobial Resistance Task Force and Centre for Communicable Diseases and Infection Control to help them leverage their data by building interactive dashboards or reports using Business Intelligence tools.',    
+    ],
     images: [],
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
   },
