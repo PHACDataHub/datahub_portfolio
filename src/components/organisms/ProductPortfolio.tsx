@@ -10,7 +10,7 @@ export default function ProductPortfolio() {
       <Heading fontSize={isSmallScreen ? 20 : 24} mt={10}>
         Products
       </Heading>
-      <HStack wrap="wrap" w="100%" justify="center">
+      <HStack wrap="wrap" w="95%" justify="center">
         {productList.map((product) => (
           <ProductCard key={product.name} product={product} />
         ))}
