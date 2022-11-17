@@ -264,14 +264,11 @@ export const projectPageList: ProjectPage[] = [
     problem:
       'One of the major issues CFEZID is currently facing is not having the proper technical support within PHAC to help them maintain the Tableau Server. Moreover, they require Tableau Server to operate in a Protected B environment as the data used to build dashboards is Protected B. Furthermore, the Azure Active Directory (AAD) must be enabled for a single sign-in, which will require a reinstallation of Tableau Server into a new virtual machine (VM). Finally, CFEZID would also like assistance in publicly disseminating their dashboards.',
     goal: 'DMIA aims to partner with CFEZID and other AMR or AMU surveillance programs to improve public health outcomes by leveraging modern data tools, such as the suite of Tableau software, creating new data flows, redesigning ETLs and seeking new sources of data. Moreover, DMIA seeks to provide strategic direction on optimal use of data in AMR/AMU surveillance program areas.',
-    solution: `
-      Data Acquisition
-      Setting up LiquidFiles to collect large data files that can contain data up to Protected B securely from external stakeholders.
-      Data System Modernization
-      Using per built azure tools to smooth data pipelines and to automate the process that would allow for live dashboards and timelier reporting.
-      Data Dissemination
-      AMR team will primarily use Tableau for their data dissemination to have interactive visualization. Additionally, with Azure Active Directory (AAD) enabled, users will be able to access other data sources available on the National Surveillance Platform.
-    `,
+    solution: [
+      'Data Acquisition: Setting up LiquidFiles to collect large data files that can contain data up to Protected B securely from external stakeholders.',
+      'Data System Modernization: Using per built azure tools to smooth data pipelines and to automate the process that would allow for live dashboards and timelier reporting.',
+      'Data Dissemination: AMR team will primarily use Tableau for their data dissemination to have interactive visualization. Additionally, with Azure Active Directory (AAD) enabled, users will be able to access other data sources available on the National Surveillance Platform.'
+    ],
     images: [],
     tools: ['DevOps', 'Tableau', 'Azure Cloud']
   },
