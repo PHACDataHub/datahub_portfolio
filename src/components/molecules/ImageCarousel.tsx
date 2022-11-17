@@ -7,10 +7,7 @@ export function ImageCarousel({ images }: { images: string[] }) {
     <Box w="100%">
       <Swiper
         loop
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false
-        }}
+        autoplay={false}
         navigation={true}
         pagination={{
           clickable: true
