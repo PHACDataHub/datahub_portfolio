@@ -49,24 +49,6 @@ export const toolInventoryList: InventoryTool[] = [
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/512px-R_logo.svg.png'
   },
   {
-    name: 'Power BI',
-    categories: ['Data Visualization'],
-    cost: 'Per user/month fee',
-    protected_b_data: true,
-    url: 'https://powerbi.microsoft.com/en-us/',
-    self_hosted_version: true,
-    teams: [
-      'Data Management, Innovation and Analytics (DMIA)',
-      'Compliance Enforcement'
-    ],
-    projects: [
-      'Border Measures',
-      'Dashboard for Immunization Related Diseases (DIRD)'
-    ],
-    image:
-      'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg'
-  },
-  {
     name: 'Python',
     categories: [
       'Data Analysis',

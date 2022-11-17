@@ -70,5 +70,17 @@ export const productList: Product[] = [
     images: [],
     color: '#d97c3f',
     comingSoon: true
+  },
+  {
+    name: 'PowerBI',
+    cardImage:
+      'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg',
+    slogan: 'Bring Your Data to Life',
+    description: ['Information incoming...'],
+    categories: ['Data Analysis', 'Data Visualization'],
+    url: 'https://powerbi.microsoft.com/en-us/',
+    images: [],
+    color: '#efb53e',
+    comingSoon: false
   }
 ];
