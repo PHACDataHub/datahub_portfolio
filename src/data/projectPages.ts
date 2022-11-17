@@ -94,7 +94,7 @@ export const projectPageList: ProjectPage[] = [
       'Azure Data',
       'Factory',
       'Azure SQL Database',
-      'Azure Blob Storag',
+      'Azure Blob Storage',
       'Power BI'
     ]
   },
