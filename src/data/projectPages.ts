@@ -3,7 +3,7 @@ import { ProjectPage } from '../utils/types';
 export const projectPageList: ProjectPage[] = [
   {
     id: '0',
-    name: 'Data Catalogue',
+    name: '(PLACEHOLDER) Data Catalogue',
     status: 'active',
     description: 'Placeholder for Data Catalogue...',
     images: [],
