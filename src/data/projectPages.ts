@@ -37,24 +37,24 @@ export const projectPageList: ProjectPage[] = [
       'GitHub'
     ]
   },
-  {
-    id: '2',
-    name: 'NACI Databricks Analysis',
-    status: 'active',
-    description:
-      'A cloud computing platform to support NACI analysis and model training of vaccine simulations',
-    background: [
-      'The National Advisory Committee on Immunization (NACI) Secretariat will be developing a series of infections disease and health economic models to conduct cost-effectiveness analyses of vaccination programs in support of national vaccine recommendations by NACI. This forms a core piece of the operational work performed by the NACI Secretariat on an ongoing basis.'
-    ],
-    problem:
-      'The models will simulate various scenarios of infections from vaccine-preventable diseases, the health consequences of those infections, and the effects of vaccination over long periods. As many of these models will carry a significant computational burden, the NACI Secretariat is requesting the use of a cloud server(s) to run these simulations.',
-    goal: 'Provide NACI a high performance computing environment and storage capacity to carry out infectious disease modeling and analytical work.',
-    solution:
-      'A combination of an Azure Virtual Machine, Azure Databricks, and Azure Blob Storage',
-    images: [],
-    cardImage: 'projects/cloud_computer_stock.jpg',
-    tools: ['Azure Virtual Machine', 'Azure Databricks', 'Azure Blob Storage']
-  },
+  // {
+  //   id: '2',
+  //   name: 'NACI Databricks Analysis',
+  //   status: 'active',
+  //   description:
+  //     'A cloud computing platform to support NACI analysis and model training of vaccine simulations',
+  //   background: [
+  //     'The National Advisory Committee on Immunization (NACI) Secretariat will be developing a series of infections disease and health economic models to conduct cost-effectiveness analyses of vaccination programs in support of national vaccine recommendations by NACI. This forms a core piece of the operational work performed by the NACI Secretariat on an ongoing basis.'
+  //   ],
+  //   problem:
+  //     'The models will simulate various scenarios of infections from vaccine-preventable diseases, the health consequences of those infections, and the effects of vaccination over long periods. As many of these models will carry a significant computational burden, the NACI Secretariat is requesting the use of a cloud server(s) to run these simulations.',
+  //   goal: 'Provide NACI a high performance computing environment and storage capacity to carry out infectious disease modeling and analytical work.',
+  //   solution:
+  //     'A combination of an Azure Virtual Machine, Azure Databricks, and Azure Blob Storage',
+  //   images: [],
+  //   cardImage: 'projects/cloud_computer_stock.jpg',
+  //   tools: ['Azure Virtual Machine', 'Azure Databricks', 'Azure Blob Storage']
+  // },
   {
     id: '3',
     name: 'Opioid Modelling Project',
