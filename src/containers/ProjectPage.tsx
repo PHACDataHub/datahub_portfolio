@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Center,
+  Divider,
   Heading,
   HStack,
   Image,
@@ -93,19 +94,34 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
             <Center {...titleStyle}>
               <Heading fontSize={22}>Problem</Heading>
             </Center>
-            <Text>{problem}</Text>
+            {problem.map((paragraph, idx) => (
+              <>
+                <Text key={idx}>{paragraph}</Text>
+                {idx !== problem.length - 1 && <Divider />}
+              </>
+            ))}
           </VStack>
           <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
               <Heading fontSize={22}>Goal</Heading>
             </Center>
-            <Text>{goal}</Text>
+            {goal.map((paragraph, idx) => (
+              <>
+                <Text key={idx}>{paragraph}</Text>
+                {idx !== goal.length - 1 && <Divider />}
+              </>
+            ))}
           </VStack>
           <VStack w={isSmallScreen ? '100%' : '33%'}>
             <Center {...titleStyle}>
               <Heading fontSize={22}>Solution</Heading>
             </Center>
-            <Text>{solution}</Text>
+            {solution.map((paragraph, idx) => (
+              <>
+                <Text key={idx}>{paragraph}</Text>
+                {idx !== solution.length - 1 && <Divider />}
+              </>
+            ))}
           </VStack>
         </Stack>
         {successMetrics && (

@@ -27,9 +27,9 @@ export type ProjectPage = {
   description: string;
   importantLink?: Link;
   background: string[];
-  problem: string;
-  goal: string;
-  solution: string;
+  problem: string[];
+  goal: string[];
+  solution: string[];
   images: string[];
   cardImage: string;
   tools: string[];
