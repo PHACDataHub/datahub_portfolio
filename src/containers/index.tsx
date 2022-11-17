@@ -15,11 +15,11 @@ export function Portfolio(): JSX.Element {
           Portfolio
         </Heading>
       </Center>
-      <ProjectPortfolio />
+      <ProductPortfolio />
       <Center>
         <Divider w="80%" />
       </Center>
-      <ProductPortfolio />
+      <ProjectPortfolio />
       <ToolInventory />
       <OtherUsefulTools />
       <Footer />
