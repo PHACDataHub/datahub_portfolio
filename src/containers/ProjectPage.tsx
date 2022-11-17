@@ -81,48 +81,58 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           </a>
         )}
         <TagList tags={tools} />
-        <Center {...titleStyle}>
-          <Heading fontSize={22}>Background</Heading>
-        </Center>
-        {background.map((paragraph, idx) => (
-          <Text alignSelf="start" key={idx}>
-            {paragraph}
-          </Text>
-        ))}
+        {background && (
+          <>
+            <Center {...titleStyle}>
+              <Heading fontSize={22}>Background</Heading>
+            </Center>
+            {background.map((paragraph, idx) => (
+              <Text alignSelf="start" key={idx}>
+                {paragraph}
+              </Text>
+            ))}
+          </>
+        )}
         <Stack direction={isSmallScreen ? 'column' : 'row'} spacing={8}>
-          <VStack w={isSmallScreen ? '100%' : '33%'}>
-            <Center {...titleStyle}>
-              <Heading fontSize={22}>Problem</Heading>
-            </Center>
-            {problem.map((paragraph, idx) => (
-              <>
-                <Text key={idx}>{paragraph}</Text>
-                {idx !== problem.length - 1 && <Divider />}
-              </>
-            ))}
-          </VStack>
-          <VStack w={isSmallScreen ? '100%' : '33%'}>
-            <Center {...titleStyle}>
-              <Heading fontSize={22}>Goal</Heading>
-            </Center>
-            {goal.map((paragraph, idx) => (
-              <>
-                <Text key={idx}>{paragraph}</Text>
-                {idx !== goal.length - 1 && <Divider />}
-              </>
-            ))}
-          </VStack>
-          <VStack w={isSmallScreen ? '100%' : '33%'}>
-            <Center {...titleStyle}>
-              <Heading fontSize={22}>Solution</Heading>
-            </Center>
-            {solution.map((paragraph, idx) => (
-              <>
-                <Text key={idx}>{paragraph}</Text>
-                {idx !== solution.length - 1 && <Divider />}
-              </>
-            ))}
-          </VStack>
+          {problem && (
+            <VStack flexGrow={1} flexBasis={0}>
+              <Center {...titleStyle}>
+                <Heading fontSize={22}>Problem</Heading>
+              </Center>
+              {problem.map((paragraph, idx) => (
+                <>
+                  <Text key={idx}>{paragraph}</Text>
+                  {idx !== problem.length - 1 && <Divider />}
+                </>
+              ))}
+            </VStack>
+          )}
+          {goal && (
+            <VStack flexGrow={1} flexBasis={0}>
+              <Center {...titleStyle}>
+                <Heading fontSize={22}>Goal</Heading>
+              </Center>
+              {goal.map((paragraph, idx) => (
+                <>
+                  <Text key={idx}>{paragraph}</Text>
+                  {idx !== goal.length - 1 && <Divider />}
+                </>
+              ))}
+            </VStack>
+          )}
+          {solution && (
+            <VStack flexGrow={1} flexBasis={0}>
+              <Center {...titleStyle}>
+                <Heading fontSize={22}>Solution</Heading>
+              </Center>
+              {solution.map((paragraph, idx) => (
+                <>
+                  <Text key={idx}>{paragraph}</Text>
+                  {idx !== solution.length - 1 && <Divider />}
+                </>
+              ))}
+            </VStack>
+          )}
         </Stack>
         {successMetrics && (
           <>

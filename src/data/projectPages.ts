@@ -2,6 +2,15 @@ import { ProjectPage } from '../utils/types';
 
 export const projectPageList: ProjectPage[] = [
   {
+    id: '0',
+    name: 'Data Catalogue',
+    status: 'active',
+    description: 'Placeholder for Data Catalogue...',
+    images: [],
+    cardImage: '',
+    tools: []
+  },
+  {
     id: '1',
     name: 'National Wastewater Surveillance Platform',
     status: 'active',
@@ -284,32 +293,28 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '10',
-    name: 'COVID-19 Confirmed Cases Report',
+    name: 'COVIDTrends',
     status: 'closed',
     description:
-      'The report provides data on the COVID-19 cases to help monitor outbreaks and support the analysis of and response to the pandemic.',
-    background: [
-      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.'
-    ],
+      'COVID Trends is a tool that provides summary data about COVID-19 in your area.',
     problem: [
-      'The provinces and territories need cleaned, standardized and aggregate data of the key COVID-19 variables to analyze the impact of the COVID-19 confirmed cases.'
+      'Canadians need to be empowered with knowledge and tools to support informed decision-making on public health matters relevant to them and that promote healthy behaviour change.'
     ],
     goal: [
-      "The goal is a report that shares the data and data visualizations of the respective province's or territory's COVID-19 confirmed cases."
+      'The goal of the COVIDTrends project was to provite Canadians with access to timely public health information from trusted sources based on their community health dynamics.'
     ],
     solution: [
-      'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting',
-      'This report provides additional insight of the province and territory data as compared to the national data.'
+      'A web application to deliver tailored local COVID-19 information to Canadians.',
+      'The tool plays a role in influencing behaviours and adherence to public health measures by providing Canadians with case/death count, trends, and vaccination rates broken down by health region.',
+      'It also helps Canadians identify and connect directly with local public health authorities for more detailed COVID-19 information in their geographical area of interest.'
     ],
     images: [],
-    cardImage: 'projects/covid_case/covidcasereport.jpg',
-    tools: [
-      'Azure Data',
-      'Factory',
-      'Azure SQL Database',
-      'Azure Blob Storage',
-      'Power BI'
-    ]
+    cardImage: 'projects/covidtrends/covidtrends_stock.webp',
+    tools: ['Node.js', 'Webpack', 'JavaScript', 'HTML', 'CSS', 'D3'],
+    importantLink: {
+      url: 'https://health-infobase.canada.ca/covid-19/covidtrends/?HR=1&mapOpen=false',
+      label: 'Check the tool out'
+    }
   },
   {
     id: '11',
@@ -357,5 +362,34 @@ export const projectPageList: ProjectPage[] = [
     cardImage: 'projects/SITIR.jpg',
     images: [],
     tools: []
+  },
+  {
+    id: '13',
+    name: 'COVID-19 Confirmed Cases Report',
+    status: 'closed',
+    description:
+      'The report provides data on the COVID-19 cases to help monitor outbreaks and support the analysis of and response to the pandemic.',
+    background: [
+      'Throughout the COVID-19 pandemic, provincial and territorial public health agencies collaborated with PHAC, providing data on the COVID-19 cases, in order to help monitor outbreaks and support the analysis of and response to the pandemic.'
+    ],
+    problem: [
+      'The provinces and territories need cleaned, standardized and aggregate data of the key COVID-19 variables to analyze the impact of the COVID-19 confirmed cases.'
+    ],
+    goal: [
+      "The goal is a report that shares the data and data visualizations of the respective province's or territory's COVID-19 confirmed cases."
+    ],
+    solution: [
+      'This report, which analyzes the COVID-19 confirmed case data and presents data visualizations on the key variables of interest, was made available to the provincial and territorial public health agencies to support their analysis and reporting',
+      'This report provides additional insight of the province and territory data as compared to the national data.'
+    ],
+    images: [],
+    cardImage: 'projects/covid_case/covidcasereport.jpg',
+    tools: [
+      'Azure Data',
+      'Factory',
+      'Azure SQL Database',
+      'Azure Blob Storage',
+      'Power BI'
+    ]
   }
 ];

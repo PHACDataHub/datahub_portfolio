@@ -26,10 +26,10 @@ export type ProjectPage = {
   status: 'active' | 'closed';
   description: string;
   importantLink?: Link;
-  background: string[];
-  problem: string[];
-  goal: string[];
-  solution: string[];
+  background?: string[];
+  problem?: string[];
+  goal?: string[];
+  solution?: string[];
   images: string[];
   cardImage: string;
   tools: string[];
