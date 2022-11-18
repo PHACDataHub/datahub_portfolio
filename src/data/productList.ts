@@ -67,7 +67,12 @@ export const productList: Product[] = [
     ],
     categories: ['Data Analysis', 'Data Visualization'],
     url: 'https://www.tableau.com/',
-    images: [],
+    images: [
+      'products/tableau04.png',
+      'products/tableau03.png',
+      'products/tableau01.png',
+      'products/tableau02.png'
+    ],
     color: '#d97c3f',
     comingSoon: true
   },
