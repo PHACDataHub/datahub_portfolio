@@ -48,7 +48,9 @@ export const projectPageList: ProjectPage[] = [
       'Azure SQL Database',
       'Azure API Management',
       'LiquidFiles',
-      'GitHub'
+      'GitHub',
+      'GraphQL',
+      'Apollo'
     ]
   },
   {
