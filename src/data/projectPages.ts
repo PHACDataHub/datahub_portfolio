@@ -88,7 +88,7 @@ export const projectPageList: ProjectPage[] = [
       'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
     background: [
       'The Chief Public Health Officer is mandated to report annually on the Health of Canadians (HoC), and the HoC initiative fulfills part of that mandate.',
-      'Previously, HoC reporting was done through an annual manual update of ~40 indicators in an appendix of the CPHO report.'
+      'Previously, HoC reporting was done through an annual manual update of 50-60 indicators in an appendix of the CPHO report.'
     ],
     problem: [
       'The manual process was time-consuming and error-prone, and the data was not always up-to-date.',
@@ -101,7 +101,12 @@ export const projectPageList: ProjectPage[] = [
       'A Django web application to collect, centralize, and standardize incoming data.',
       'The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.'
     ],
-    images: [],
+    images: [
+      'projects/cpho/cpho_1.png',
+      'projects/cpho/cpho_2.png',
+      'projects/cpho/cpho_3.png',
+      'projects/cpho/hoc_diagram.png'
+    ],
     cardImage: 'projects/cpho/cpho_stock.jpg',
     tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
     importantLink: {
@@ -308,7 +313,10 @@ export const projectPageList: ProjectPage[] = [
       'The tool plays a role in influencing behaviours and adherence to public health measures by providing Canadians with case/death count, trends, and vaccination rates broken down by health region.',
       'It also helps Canadians identify and connect directly with local public health authorities for more detailed COVID-19 information in their geographical area of interest.'
     ],
-    images: [],
+    images: [
+      'projects/covidtrends/covidtrends_1.png',
+      'projects/covidtrends/covidtrends_2.png'
+    ],
     cardImage: 'projects/covidtrends/covidtrends_stock.webp',
     tools: ['Node.js', 'Webpack', 'JavaScript', 'HTML', 'CSS', 'D3'],
     importantLink: {
