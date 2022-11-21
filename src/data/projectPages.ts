@@ -102,10 +102,10 @@ export const projectPageList: ProjectPage[] = [
       'The platform shall also make the data available to other teams that need it in the form of exports and API endpoints, in order to further automate the development of the HoC report.'
     ],
     images: [
+      'projects/cpho/hoc_diagram.png',
       'projects/cpho/cpho_1.png',
       'projects/cpho/cpho_2.png',
-      'projects/cpho/cpho_3.png',
-      'projects/cpho/hoc_diagram.png'
+      'projects/cpho/cpho_3.png'
     ],
     cardImage: 'projects/cpho/cpho_stock.jpg',
     tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
