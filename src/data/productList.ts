@@ -68,10 +68,10 @@ export const productList: Product[] = [
     categories: ['Data Analysis', 'Data Visualization'],
     url: 'https://www.tableau.com/',
     images: [
-      'products/tableau04.png',
-      'products/tableau03.png',
-      'products/tableau01.png',
-      'products/tableau02.png'
+      'products/tableau/tableau04.png',
+      'products/tableau/tableau03.png',
+      'products/tableau/tableau01.png',
+      'products/tableau/tableau02.png'
     ],
     color: '#d97c3f',
     comingSoon: true
@@ -81,10 +81,19 @@ export const productList: Product[] = [
     cardImage:
       'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg',
     slogan: 'Bring Your Data to Life',
-    description: ['Information incoming...'],
+    description: [
+      'DMIA procured PowerBI (PBI) in 2020 as a reporting tool in response to the need for internal facing centralized reporting due to the COVID-19 pandemic.',
+      "Since then, the Digital Transformation Branch (DTB) has taken over ownership of PBI as a product. DMIA is one of PHAC's primary users of PBI and leverages the tool to collaborate and train other program areas for their reporting needs. For example, the DMIA People and Culture team in collaboration with Health Canada's CDO offers training through With You With Me (WYWM) to other groups within PHAC and HC. We have collaborated with the National Microbiology Laboratory (NML), Canadian Border Services Agency (CBSA), and various program areas within the Health Security and Rgional Operations Branch (HSROB), such as Testing Directorate, Policy, and Compliance and Enforcement",
+      'Since PowerBI is a Microsoft product, it has great interoperability with the suite of Microsoft products that PHAC currently uses (SharePoint, blob storage, SQL databases), and it is also approved for Protected B data. PowerBI has a built in ETL with dataflows, and DMIA leveraged that along with relationship and measure functions in PowerBI to build sophisticated dashboards that can be edited on the fly contingent on constantly changing business requirements.',
+      "Examples of data that is being analyzed in PBI include but is not limited to DMIA's technical profile, COVID-19 at the borders, compliance and enforcement, wastewater surveillance, monkeypox, and COVID-19 cases."
+    ],
     categories: ['Data Analysis', 'Data Visualization'],
     url: 'https://powerbi.microsoft.com/en-us/',
-    images: [],
+    images: [
+      'products/powerbi/powerbi2.png',
+      'products/powerbi/powerbi1.png',
+      'projects/borders/border_measures_1.png'
+    ],
     color: '#efb53e',
     comingSoon: false
   }
