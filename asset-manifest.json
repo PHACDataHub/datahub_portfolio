@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/datahub_portfolio/static/css/main.a072849c.css",
-    "main.js": "/datahub_portfolio/static/js/main.a542e78f.js",
+    "main.js": "/datahub_portfolio/static/js/main.3b1b79d9.js",
     "static/js/377.2bf5b29e.chunk.js": "/datahub_portfolio/static/js/377.2bf5b29e.chunk.js",
     "index.html": "/datahub_portfolio/index.html",
     "main.a072849c.css.map": "/datahub_portfolio/static/css/main.a072849c.css.map",
-    "main.a542e78f.js.map": "/datahub_portfolio/static/js/main.a542e78f.js.map",
+    "main.3b1b79d9.js.map": "/datahub_portfolio/static/js/main.3b1b79d9.js.map",
     "377.2bf5b29e.chunk.js.map": "/datahub_portfolio/static/js/377.2bf5b29e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a072849c.css",
-    "static/js/main.a542e78f.js"
+    "static/js/main.3b1b79d9.js"
   ]
 }
