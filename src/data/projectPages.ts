@@ -116,7 +116,7 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '4',
-    name: 'Centre for Integrated Risk Assessment (CIRA)',
+    name: 'Integrated Threat Assessment Platform (ITAP)',
     status: 'active',
     description:
       'A data platform to support agency-wide integration to collect, store, transform, update, analyze, and disseminate public health signals/threats as they are detected.',
