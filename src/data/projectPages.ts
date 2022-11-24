@@ -135,12 +135,7 @@ export const projectPageList: ProjectPage[] = [
       'Hosted in the National Surveillance Platform, the platform will allow for authorized PHAC users to access the frontend and enter data on signals and threats, which can then be shared between internal users in HC/PHAC.',
       'Furthermore, the tool will also allow for the creation and dissemination of Weekly Threat Reports to subject matter experts and senior management, including the Chief Public Health Officer, as well as allowing for robus data management and documentation for fturue analytic and auditing needs.'
     ],
-    images: [
-      'projects/cira/cira_1.png',
-      'projects/cira/cira_2.png',
-      'projects/cira/cira_3.png',
-      'projects/cira/cira_4.png'
-    ],
+    images: ['projects/cira/cira_1.png'],
     cardImage: 'projects/cira/cira_stock.jpg',
     tools: [
       'Python',
