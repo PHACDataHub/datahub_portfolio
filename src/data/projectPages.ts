@@ -180,6 +180,15 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '6',
+    name: '(PLACEHOLDER) Outbreak Management Database',
+    status: 'active',
+    description: 'Placeholder for Outbreak Management Project...',
+    images: [],
+    cardImage: '',
+    tools: []
+  },
+  {
+    id: '7',
     name: 'Biosecurity Dashboard',
     status: 'active',
     description:
@@ -210,7 +219,7 @@ export const projectPageList: ProjectPage[] = [
     tools: ['PowerBI', 'Excel']
   },
   {
-    id: '7',
+    id: '8',
     name: 'Border Measures Analytics',
     status: 'closed',
     description:
@@ -238,7 +247,7 @@ export const projectPageList: ProjectPage[] = [
     ]
   },
   {
-    id: '8',
+    id: '9',
     name: 'Opioid Modelling Project',
     status: 'closed',
     description:
@@ -262,7 +271,7 @@ export const projectPageList: ProjectPage[] = [
     tools: ['R', 'RStudio']
   },
   {
-    id: '9',
+    id: '10',
     name: 'Daily Epidemiological Trend Report Automation',
     status: 'closed',
     description:
@@ -292,7 +301,7 @@ export const projectPageList: ProjectPage[] = [
     ]
   },
   {
-    id: '10',
+    id: '11',
     name: 'COVIDTrends',
     status: 'closed',
     description:
@@ -320,7 +329,7 @@ export const projectPageList: ProjectPage[] = [
     }
   },
   {
-    id: '11',
+    id: '12',
     name: 'Dashboard for Immunization Related Diseases (DIRD)',
     status: 'closed',
     description:
@@ -344,7 +353,7 @@ export const projectPageList: ProjectPage[] = [
     tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
   },
   {
-    id: '12',
+    id: '13',
     name: 'Surveillance IT Infrastructure Renewal (SITIR)',
     status: 'active',
     description:
@@ -367,7 +376,7 @@ export const projectPageList: ProjectPage[] = [
     tools: []
   },
   {
-    id: '13',
+    id: '14',
     name: 'COVID-19 Confirmed Cases Report',
     status: 'closed',
     description:
