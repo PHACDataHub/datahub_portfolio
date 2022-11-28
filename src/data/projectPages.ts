@@ -3,12 +3,13 @@ import { ProjectPage } from '../utils/types';
 export const projectPageList: ProjectPage[] = [
   {
     id: '0',
-    name: '(PLACEHOLDER) Data Catalogue',
+    name: 'Data Catalogue',
     status: 'active',
-    description: 'Placeholder for Data Catalogue...',
+    description: '',
     images: [],
-    cardImage: '',
-    tools: []
+    cardImage: 'projects/data_catalogue/data_catalogue_stock.jpg',
+    tools: [],
+    comingSoon: true
   },
   {
     id: '1',
@@ -180,12 +181,13 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '6',
-    name: '(PLACEHOLDER) Outbreak Management Database',
+    name: 'Outbreak Management Database',
     status: 'active',
-    description: 'Placeholder for Outbreak Management Project...',
+    description: '',
     images: [],
-    cardImage: '',
-    tools: []
+    cardImage: 'projects/outbreak/outbreak_stock.jpg',
+    tools: [],
+    comingSoon: true
   },
   {
     id: '7',

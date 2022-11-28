@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { ProjectPage } from '../../utils/types';
 
 export function ProjectCard({ project }: { project: ProjectPage }) {
-  const { id, name, cardImage, description } = project;
+  const { id, name, cardImage, description, comingSoon } = project;
 
   const navigate = useNavigate();
   const handleOnClick = useCallback(
@@ -38,8 +38,8 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
         }
       }}
       boxShadow="lg"
-      onClick={handleOnClick}
-      cursor="pointer"
+      onClick={() => !comingSoon && handleOnClick}
+      cursor={comingSoon ? 'default' : 'pointer'}
       position="relative"
     >
       <Box overflow="hidden">
@@ -55,7 +55,18 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
       <VStack p={4} flexGrow={1} align="start" spacing={4}>
         <Heading size="md">{name}</Heading>
         <Divider borderColor="gray.200" />
-        <Text size="sm">{description}</Text>
+        {comingSoon && (
+          <Box
+            bgColor="brand.canada"
+            color="white"
+            py={1}
+            px={2}
+            borderRadius="md"
+          >
+            <Heading size="xs">COMING SOON</Heading>
+          </Box>
+        )}
+        {description && <Text size="sm">{description}</Text>}
       </VStack>
     </Box>
   );

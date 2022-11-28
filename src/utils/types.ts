@@ -34,6 +34,7 @@ export type ProjectPage = {
   cardImage: string;
   tools: string[];
   successMetrics?: string[];
+  comingSoon?: boolean;
 };
 
 export type TagType = {
