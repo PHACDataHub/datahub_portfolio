@@ -38,7 +38,7 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
         }
       }}
       boxShadow="lg"
-      onClick={() => !comingSoon && handleOnClick}
+      onClick={() => !comingSoon && handleOnClick()}
       cursor={comingSoon ? 'default' : 'pointer'}
       position="relative"
     >
