@@ -83,7 +83,7 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '3',
-    name: 'Health of Canadians Report Automation',
+    name: 'Health of Canadians Report Modernization',
     status: 'active',
     description:
       'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
