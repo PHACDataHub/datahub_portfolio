@@ -122,7 +122,7 @@ export const projectPageList: ProjectPage[] = [
     description:
       'A data platform to support agency-wide integration to collect, store, transform, update, analyze, and disseminate public health signals/threats as they are detected.',
     background: [
-      'The Centre for Integrated Risk Assessment (CIRA) was creatred to integrate public health risk assessment activities (from risk identification to risk mitication) across the Agency.',
+      'The Centre for Integrated Risk Assessment (CIRA) was created to integrate public health risk assessment activities (from risk identification to risk mitigation) across the Agency.',
       "The integration of signals and threats will optimize PHAC's ability to anticipate, understand, and act on public health risks to protect the health of Canadians.",
       'To achieve this, CIRA is collaborating the Data Management, Innovation, and Analytics (DMIA) team to develop an online platform that will support their goals.'
     ],
@@ -133,11 +133,16 @@ export const projectPageList: ProjectPage[] = [
       'The goal is to develop a data platform to support agency-wide integration to collect, store, transform, update, analyze, and disseminate public health signals/threats as they are detected.'
     ],
     solution: [
-      'Hosted in the National Surveillance Platform, the platform will allow for authorized PHAC users to access the frontend and enter data on signals and threats, which can then be shared between internal users in HC/PHAC.',
-      'Furthermore, the tool will also allow for the creation and dissemination of Weekly Threat Reports to subject matter experts and senior management, including the Chief Public Health Officer, as well as allowing for robus data management and documentation for fturue analytic and auditing needs.'
+      'Hosted in the National Surveillance Platform, the platform will allow for authorized PHAC users to access the front-end and enter data on signals and threats, which can then be shared between internal users in HC/PHAC.',
+      'Furthermore, the tool will also allow for the creation and dissemination of Weekly Threat Reports to subject matter experts and senior management, including the Chief Public Health Officer. As well, allowing for robust data management and documentation for future analytic and auditing needs.'
     ],
-    images: ['projects/cira/cira_1.png'],
-    cardImage: 'projects/cira/cira_stock.jpg',
+    images: [
+      'projects/itap/itap_1.png',
+      'projects/itap/itap_2.png',
+      'projects/itap/itap_3.png',
+      'projects/itap/itap_4.png'
+    ],
+    cardImage: 'projects/itap/itap_stock.jpg',
     tools: [
       'Python',
       'GitHub',
