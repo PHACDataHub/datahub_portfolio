@@ -186,12 +186,25 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '6',
-    name: 'Outbreak Management Database',
+    name: 'Outbreak Data Management',
     status: 'active',
     description: '',
+    background: [
+      'The Outbreak Management Division (OMD) assesses, detects, and coordinates investigations of enteric (i.e., gastro-intestinal) illness outbreaks.',
+      "They compile data on food exposures and individuals experiencing enteric illness that is used to inform an outbreak event. They connect this data to laboratory data provided by the National Microbiology Laboratory (NML)."
+    ],
+    problem: [
+      'Currently, the OMD is faced with several issues: 1) multiple Access databases, one for each outbreak; 2) multiple data file retrieval locations; 3) reliance on NML for receipt of laboratory data; and 4) manual data entry/reporting.'
+    ],
+    goal: [
+      'Co-develop a single cloud-based Outbreak Database where OMD can collect, consolidate, and store food exposure data, individual data, and outbreak event data.'
+    ],
+    solution: [
+      'To be determined.'
+    ],
     images: [],
     cardImage: 'projects/outbreak/outbreak_stock.jpg',
-    tools: [],
+    tools: ['Django', 'Azure Cloud', 'DevOps', 'GitHub', 'Python', 'LiquidFiles'],
     comingSoon: true
   },
   {
