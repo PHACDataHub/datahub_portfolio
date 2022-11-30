@@ -188,7 +188,8 @@ export const projectPageList: ProjectPage[] = [
     id: '6',
     name: 'Outbreak Data Management',
     status: 'active',
-    description: '',
+    description:
+      'A cloud-based database to collect, consolidate, and store food exposure, individual, and outbreak event data.',
     background: [
       'The Outbreak Management Division (OMD) assesses, detects, and coordinates investigations of enteric (i.e., gastro-intestinal) illness outbreaks.',
       'They compile data on food exposures and individuals experiencing enteric illness that is used to inform an outbreak event. They connect this data to laboratory data provided by the National Microbiology Laboratory (NML).'
@@ -209,8 +210,7 @@ export const projectPageList: ProjectPage[] = [
       'GitHub',
       'Python',
       'LiquidFiles'
-    ],
-    comingSoon: true
+    ]
   },
   {
     id: '7',
