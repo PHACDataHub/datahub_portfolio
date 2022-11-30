@@ -5,3 +5,6 @@ test-utils.tsx
 setupTests.ts
 serviceWorker.ts
 reportWebVitals.ts
+scripts
+config
+react-app-env.d.ts
