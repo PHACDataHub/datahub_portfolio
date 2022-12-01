@@ -136,7 +136,7 @@ export const toolInventoryList: InventoryTool[] = [
       'Dashboard for Immunization Related Diseases (DIRD)',
       'Border Measures'
     ],
-    image: process.env.PUBLIC_URL + '/images/tools/sql_database.png'
+    image: 'https://i.imgur.com/hFUS7r5.png'
   },
   {
     name: 'Django',
@@ -147,7 +147,7 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ['Data Management, Innovation and Analytics (DMIA)'],
     projects: [],
-    image: process.env.PUBLIC_URL + '/images/tools/django_logo.png'
+    image: 'https://i.imgur.com/pOuydxY.png'
   },
   {
     name: 'D3',
@@ -174,6 +174,6 @@ export const toolInventoryList: InventoryTool[] = [
     self_hosted_version: true,
     teams: ['Data Management, Innovation and Analytics (DMIA)'],
     projects: ['Border Measures'],
-    image: process.env.PUBLIC_URL + '/images/tools/adf_logo.png'
+    image: 'https://i.imgur.com/fapC104.png'
   }
 ];
