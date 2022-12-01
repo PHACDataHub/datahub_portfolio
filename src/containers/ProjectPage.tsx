@@ -54,7 +54,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         h={isSmallScreen ? '80px' : '120px'}
         w="100%"
         objectFit="cover"
-        src={process.env.PUBLIC_URL + '/images/' + cardImage}
+        src={cardImage}
         transition="all 0.5s ease"
       />
       <Box
@@ -115,10 +115,10 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
                 <Heading fontSize={22}>Problem</Heading>
               </Center>
               {problem.map((paragraph, idx) => (
-                <>
-                  <Text key={idx}>{paragraph}</Text>
+                <div key={idx}>
+                  <Text>{paragraph}</Text>
                   {idx !== problem.length - 1 && <Divider />}
-                </>
+                </div>
               ))}
             </VStack>
           )}
@@ -128,10 +128,10 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
                 <Heading fontSize={22}>Goal</Heading>
               </Center>
               {goal.map((paragraph, idx) => (
-                <>
-                  <Text key={idx}>{paragraph}</Text>
+                <div key={idx}>
+                  <Text>{paragraph}</Text>
                   {idx !== goal.length - 1 && <Divider />}
-                </>
+                </div>
               ))}
             </VStack>
           )}
@@ -141,10 +141,10 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
                 <Heading fontSize={22}>Solution</Heading>
               </Center>
               {solution.map((paragraph, idx) => (
-                <>
-                  <Text key={idx}>{paragraph}</Text>
+                <div key={idx}>
+                  <Text>{paragraph}</Text>
                   {idx !== solution.length - 1 && <Divider />}
-                </>
+                </div>
               ))}
             </VStack>
           )}
@@ -170,7 +170,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         {images.length > 1 ? (
           <ImageCarousel images={images} />
         ) : images.length > 0 ? (
-          <Image src={process.env.PUBLIC_URL + '/images/' + images[0]} />
+          <Image src={images[0]} />
         ) : null}
       </VStack>
     </>

@@ -44,7 +44,7 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
     >
       <Box overflow="hidden">
         <Image
-          src={process.env.PUBLIC_URL + '/images/' + cardImage}
+          src={cardImage}
           ref={cardImg}
           w="100%"
           h={140}
