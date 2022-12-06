@@ -8,13 +8,12 @@ import {
   Image,
   Spacer,
   Stack,
-  Tag,
   Text,
   VStack
 } from '@chakra-ui/react';
 import { Link, useParams } from 'react-router-dom';
 import { projectPageList } from '../data/projectPages';
-import { useRandomColors, useSmallScreen } from '../utils/hooks';
+import { useRandomColors } from '../utils/hooks';
 import { ProjectPage } from '../utils/types';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -36,152 +35,16 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     cardImage,
     importantLink
   } = project;
-  const isSmallScreen = useSmallScreen();
-
-  const titleStyle = {
-    bgColor: 'rgb(244, 247, 250)',
-    w: '100%',
-    p: 3,
-    borderRadius: 'xl'
-  };
 
   const metricColors = useRandomColors(
     successMetrics ? successMetrics.length : 0
   );
 
+  const imagesPresent = images && images.length > 0;
+
   return (
-    // <>
-    //   <Image
-    //     h={isSmallScreen ? '80px' : '120px'}
-    //     w="100%"
-    //     objectFit="cover"
-    //     src={process.env.PUBLIC_URL + '/images/' + cardImage}
-    //     transition="all 0.5s ease"
-    //   />
-    // <Box
-    //   w="100%"
-    //   p={isSmallScreen ? 4 : 6}
-    //   position={isSmallScreen ? 'relative' : 'absolute'}
-    // >
-    //   <Link to="/">
-    //     <Button size="lg" px={4} py={1}>
-    //       Back
-    //     </Button>
-    //   </Link>
-    // </Box>
-    //   <VStack
-    //     spacing={6}
-    //     w={isSmallScreen ? '95%' : '70%'}
-    //     m="auto"
-    //     mb={8}
-    //     mt={isSmallScreen ? 0 : 12}
-    //   >
-    //     <Heading fontSize={32} textAlign="center">
-    //       {name}
-    //     </Heading>
-    // {importantLink && (
-    //   <a target="_blank" href={importantLink.url}>
-    //     <HStack
-    //       backgroundColor="gray.200"
-    //       py={2}
-    //       px={3}
-    //       borderRadius="md"
-    //       transition="all 0.2s ease-in-out"
-    //       _hover={{
-    //         backgroundColor: 'gray.300'
-    //       }}
-    //     >
-    //       <Heading size="sm">{importantLink.label}</Heading>
-    //       <ExternalLinkIcon fontSize="md" />
-    //     </HStack>
-    //   </a>
-    // )}
-    //     <TagList tags={tools} />
-    //     {background && (
-    //       <>
-    //         <Center {...titleStyle}>
-    //           <Heading fontSize={22}>Background</Heading>
-    //         </Center>
-    //         {background.map((paragraph, idx) => (
-    //           <Text alignSelf="start" key={idx}>
-    //             {paragraph}
-    //           </Text>
-    //         ))}
-    //       </>
-    //     )}
-    //     <Stack direction={isSmallScreen ? 'column' : 'row'} spacing={8}>
-    //       {problem && (
-    //         <VStack flexGrow={1} flexBasis={0}>
-    //           <Center {...titleStyle}>
-    //             <Heading fontSize={22}>Problem</Heading>
-    //           </Center>
-    //           {problem.map((paragraph, idx) => (
-    //             <>
-    //               <Text key={idx}>{paragraph}</Text>
-    //               {idx !== problem.length - 1 && <Divider />}
-    //             </>
-    //           ))}
-    //         </VStack>
-    //       )}
-    //       {goal && (
-    //         <VStack flexGrow={1} flexBasis={0}>
-    //           <Center {...titleStyle}>
-    //             <Heading fontSize={22}>Goal</Heading>
-    //           </Center>
-    //           {goal.map((paragraph, idx) => (
-    //             <>
-    //               <Text key={idx}>{paragraph}</Text>
-    //               {idx !== goal.length - 1 && <Divider />}
-    //             </>
-    //           ))}
-    //         </VStack>
-    //       )}
-    //       {solution && (
-    //         <VStack flexGrow={1} flexBasis={0}>
-    //           <Center {...titleStyle}>
-    //             <Heading fontSize={22}>Solution</Heading>
-    //           </Center>
-    //           {solution.map((paragraph, idx) => (
-    //             <>
-    //               <Text key={idx}>{paragraph}</Text>
-    //               {idx !== solution.length - 1 && <Divider />}
-    //             </>
-    //           ))}
-    //         </VStack>
-    //       )}
-    //     </Stack>
-    //     {successMetrics && (
-    //       <>
-    //         <Center {...titleStyle}>
-    //           <Heading size="lg">Success Metrics</Heading>
-    //         </Center>
-    //         {successMetrics.map((metric, idx) => (
-    //           <Tag
-    //             key={idx}
-    //             fontWeight="bold"
-    //             bgColor={metricColors[idx]}
-    //             size="lg"
-    //             fontSize="xl"
-    //           >
-    //             {metric}
-    //           </Tag>
-    //         ))}
-    //       </>
-    //     )}
-    //     {images.length > 1 ? (
-    //       <ImageCarousel images={images} />
-    //     ) : images.length > 0 ? (
-    //       <Image src={process.env.PUBLIC_URL + '/images/' + images[0]} />
-    //     ) : null}
-    //   </VStack>
-    // </>
     <Box>
-      <Box
-        // filter="blur(30px)"
-        // p={isSmallScreen ? 2 : 4}
-        position="relative"
-        overflow="hidden"
-      >
+      <Box position="relative" overflow="hidden">
         <Box
           bgImage={process.env.PUBLIC_URL + '/images/' + cardImage}
           bgSize="cover"
@@ -193,13 +56,29 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           filter="blur(5px) brightness(0.75)"
         />
         <VStack align="start" spacing={5} p={[4, 6, 8]}>
-          <Link to="/">
-            <Button size={['sm', 'md', 'lg']} px={4} py={1}>
-              Back
-            </Button>
-          </Link>
+          <HStack w="100%">
+            <Link to="/">
+              <Button size={['sm', 'md', 'lg']} px={4} py={1}>
+                Back
+              </Button>
+            </Link>
+            <Spacer />
+            {importantLink && (
+              <Button
+                as="a"
+                href={importantLink.url}
+                target="blank"
+                leftIcon={<ExternalLinkIcon />}
+                size={['sm', 'md', 'lg']}
+                px={4}
+                py={1}
+              >
+                {importantLink.label}
+              </Button>
+            )}
+          </HStack>
           <Heading
-            bgColor="blackAlpha.400"
+            bgColor="blackAlpha.600"
             fontSize={['2xl', '3xl', '4xl']}
             py={2}
             px={4}
@@ -210,51 +89,82 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
           </Heading>
           <Stack w="100%" direction={['column', 'column', 'row']}>
             <TagList tags={tools} textColor="white" />
-            <Spacer />
-            {importantLink && (
-              <a target="_blank" href={importantLink.url}>
-                <HStack
-                  backgroundColor="gray.200"
-                  py={2}
-                  px={3}
-                  borderRadius="md"
-                  transition="all 0.2s ease-in-out"
-                  _hover={{
-                    backgroundColor: 'gray.300'
-                  }}
-                >
-                  <Heading size="sm">{importantLink.label}</Heading>
-                  <ExternalLinkIcon fontSize="md" />
-                </HStack>
-              </a>
-            )}
           </Stack>
         </VStack>
       </Box>
-      <HStack p={[4, 6, 8]}>
-        <VStack>
-          <Heading size="lg">Background</Heading>
+      <HStack p={[4, 6, 8]} align="start">
+        <VStack w="100%" px={[0, 2, 4, 6, 8]}>
+          {background && (
+            <Heading size="lg" alignSelf={imagesPresent ? 'start' : 'center'}>
+              Background
+            </Heading>
+          )}
           {background?.map((paragraph, idx) => (
             <Text alignSelf="start" key={idx}>
               {paragraph}
             </Text>
           ))}
-          <Heading size="lg">Problem</Heading>
+          {background && <Divider my={2} />}
+          {problem && (
+            <Heading size="lg" alignSelf={imagesPresent ? 'start' : 'center'}>
+              Problem
+            </Heading>
+          )}
           {problem?.map((paragraph, idx) => (
             <Text alignSelf="start" key={idx}>
               {paragraph}
             </Text>
           ))}
-          <Heading size="lg">Goal</Heading>
+          {problem && <Divider />}
+          {goal && (
+            <Heading size="lg" alignSelf={imagesPresent ? 'start' : 'center'}>
+              Goal
+            </Heading>
+          )}
           {goal?.map((paragraph, idx) => (
             <Text alignSelf="start" key={idx}>
               {paragraph}
             </Text>
           ))}
+          {goal && <Divider />}
+          {solution && (
+            <Heading size="lg" alignSelf={imagesPresent ? 'start' : 'center'}>
+              Solution
+            </Heading>
+          )}
+          {solution?.map((paragraph, idx) => (
+            <Text alignSelf="start" key={idx}>
+              {paragraph}
+            </Text>
+          ))}
+          {solution && <Divider />}
+          {successMetrics && (
+            <Heading size="lg" alignSelf={imagesPresent ? 'start' : 'center'}>
+              Success Metrics
+            </Heading>
+          )}
+          {successMetrics?.map((metric, idx) => (
+            <HStack key={idx} w="100%" align="start">
+              <Center
+                w="1rem"
+                h="1rem"
+                borderRadius="full"
+                bgColor={metricColors[idx]}
+              />
+              <Text alignSelf="start">{metric}</Text>
+            </HStack>
+          ))}
         </VStack>
-        <Box w="50%">
-          <ImageCarousel images={images} />
-        </Box>
+        {imagesPresent && images.length > 1 ? (
+          <Box p={2} w={'50%'}>
+            <ImageCarousel images={images} />
+          </Box>
+        ) : images.length > 0 ? (
+          <Image
+            src={process.env.PUBLIC_URL + '/images/' + images[0]}
+            w="50%"
+          />
+        ) : null}
       </HStack>
     </Box>
   );

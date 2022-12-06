@@ -1,4 +1,4 @@
-import { Box, Image } from '@chakra-ui/react';
+import { Image } from '@chakra-ui/react';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,22 +14,7 @@ export function ImageCarousel({ images }: { images: string[] }) {
       modules={[Navigation, Pagination, Autoplay]}
     >
       {images.map((image, idx) => (
-        <SwiperSlide
-          key={idx}
-          style={{
-            backgroundColor: 'green'
-          }}
-        >
-          {/* <Box
-            bgImage={process.env.PUBLIC_URL + '/images/' + image}
-            bgSize="contain"
-            bgPosition="center"
-            bgRepeat={'no-repeat'}
-            minH={300}
-            maxH={720}
-            flex={1}
-            w="100%"
-          /> */}
+        <SwiperSlide key={idx}>
           <Image
             src={process.env.PUBLIC_URL + '/images/' + image}
             objectFit="contain"
