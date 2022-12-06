@@ -264,7 +264,9 @@ export const projectPageList: ProjectPage[] = [
     solution: [
       'A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.'
     ],
-    images: ['projects/borders/border_measures_1.png'],
+    images: [
+      process.env.PUBLIC_URL + '/images/projects/borders/border_measures_1.png'
+    ],
     cardImage: 'https://i.imgur.com/UrT8z60.jpg',
     tools: [
       'Power BI Dashboard',
@@ -375,7 +377,7 @@ export const projectPageList: ProjectPage[] = [
       'Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources.',
       'Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.'
     ],
-    images: ['projects/dird/dird_1.gif'],
+    images: [process.env.PUBLIC_URL + '/images/projects/dird/dird_1.gif'],
     cardImage: 'https://i.imgur.com/PNplMSL.jpg',
     tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
   },
