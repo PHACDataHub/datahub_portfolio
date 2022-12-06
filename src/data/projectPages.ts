@@ -7,7 +7,7 @@ export const projectPageList: ProjectPage[] = [
     status: 'active',
     description: '',
     images: [],
-    cardImage: 'https://i.imgur.com/RRFMV5R.jpg',
+    cardImage: 'projects/data_catalogue/data_catalogue_stock.jpg',
     tools: [],
     comingSoon: true
   },
@@ -40,7 +40,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/wastewater/wastewater_1.png',
       'projects/wastewater/wastewater_2.png'
     ],
-    cardImage: 'https://i.imgur.com/L8PspUf.jpg',
+    cardImage: 'projects/wastewater/wastewater_stock.jpg',
     tools: [
       'Power Apps',
       'Power BI',
@@ -58,7 +58,7 @@ export const projectPageList: ProjectPage[] = [
     id: '2',
     name: 'Anti-microbial Resistance (AMR)',
     status: 'active',
-    cardImage: 'https://i.imgur.com/BYaxkfa.jpg',
+    cardImage: 'projects/Antimicrobial.jpg',
     description:
       'DMIA aims to partner with CFEZID and other Antimicrobial Resistance (AMR) or Antimicrobial Use (AMU) surveillance programs to improve public health outcomes by leveraging modern data tools',
     background: [
@@ -110,7 +110,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/cpho/cpho_2.png',
       'projects/cpho/cpho_3.png'
     ],
-    cardImage: 'https://i.imgur.com/xZgSxQk.jpg',
+    cardImage: 'projects/cpho/cpho_stock.jpg',
     tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
     importantLink: {
       label: 'See past reports',
@@ -144,7 +144,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/itap/itap_3.png',
       'projects/itap/itap_4.png'
     ],
-    cardImage: 'https://i.imgur.com/27yaBZ2.jpg',
+    cardImage: 'projects/itap/itap_stock.jpg',
     tools: [
       'Python',
       'GitHub',
@@ -176,7 +176,7 @@ export const projectPageList: ProjectPage[] = [
       'The monkeypox project aims to build an integrated national surveillance system that analyzes and monitors the number of monkeypox cases, detects any trends or patterns, and informs effective public health actions through reports and dashboards.'
     ],
     images: [],
-    cardImage: 'https://i.imgur.com/l8oG8GN.jpg',
+    cardImage: 'projects/monkeypox_stock.jpg',
     tools: [
       'Power BI',
       'Azure Databricks',
@@ -204,7 +204,7 @@ export const projectPageList: ProjectPage[] = [
     ],
     solution: ['To be determined.'],
     images: [],
-    cardImage: 'https://i.imgur.com/X6psFlT.jpg',
+    cardImage: 'projects/outbreak/outbreak_stock.jpg',
     tools: [
       'Django',
       'Azure Cloud',
@@ -242,7 +242,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/biosecurity/biosecurity_6.png',
       'projects/biosecurity/biosecurity_7.png'
     ],
-    cardImage: 'https://i.imgur.com/wJtwH5W.jpg',
+    cardImage: 'projects/biosecurity/biosecurity_stock.jpeg',
     tools: ['PowerBI', 'Excel']
   },
   {
@@ -264,10 +264,8 @@ export const projectPageList: ProjectPage[] = [
     solution: [
       'A mostly automated Power BI dashboard showing trends on all the analytics required by the teams at PHAC.'
     ],
-    images: [
-      process.env.PUBLIC_URL + '/images/projects/borders/border_measures_1.png'
-    ],
-    cardImage: 'https://i.imgur.com/UrT8z60.jpg',
+    images: ['projects/borders/border_measures_1.png'],
+    cardImage: 'projects/borders/border_measures_stock.jpg',
     tools: [
       'Power BI Dashboard',
       'Power BI Dataflow',
@@ -296,7 +294,7 @@ export const projectPageList: ProjectPage[] = [
       'Model verification was done in Excel calculating error values between duplicate model and original model, and rectifying significant differences by adjusting parameter values and re-writing ODEs.'
     ],
     images: [],
-    cardImage: 'https://i.imgur.com/49FLkxz.jpg',
+    cardImage: 'projects/Opioid_Modelling.jpg',
     tools: ['R', 'RStudio']
   },
   {
@@ -322,7 +320,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/epi_trend/epi_trend_1.png',
       'projects/epi_trend/epi_trend_2.png'
     ],
-    cardImage: 'https://i.imgur.com/4o9m9xG.jpg',
+    cardImage: 'projects/epi_trend/epi_trend_stock.jpg',
     tools: ['R', 'R Markdown', 'Python', 'Github'],
     successMetrics: [
       '2-3 hour daily process reduced to a few minutes',
@@ -350,7 +348,7 @@ export const projectPageList: ProjectPage[] = [
       'projects/covidtrends/covidtrends_1.png',
       'projects/covidtrends/covidtrends_2.png'
     ],
-    cardImage: 'https://i.imgur.com/odzPQ5n.jpg',
+    cardImage: 'projects/covidtrends/covidtrends_stock.webp',
     tools: ['Node.js', 'Webpack', 'JavaScript', 'HTML', 'CSS', 'D3'],
     importantLink: {
       url: 'https://health-infobase.canada.ca/covid-19/covidtrends/?HR=1&mapOpen=false',
@@ -377,8 +375,8 @@ export const projectPageList: ProjectPage[] = [
       'Develop a dashboard that would encompass information about vaccines, interventions, and antivirals, from various news, scientific, and social media sources.',
       'Leverage natural language processing (NLP) techniques to automate current scanning processed done at PHAC.'
     ],
-    images: [process.env.PUBLIC_URL + '/images/projects/dird/dird_1.gif'],
-    cardImage: 'https://i.imgur.com/PNplMSL.jpg',
+    images: ['projects/dird/dird_1.gif'],
+    cardImage: 'projects/dird/dird_stock.jpg',
     tools: ['Power BI', 'Python', 'Databricks', 'Azure DevOps', 'GitHub', 'SQL']
   },
   {
@@ -400,7 +398,7 @@ export const projectPageList: ProjectPage[] = [
     solution: [
       'The project will produce a Conceptual Architecture Proposal, IT Support and Transition Plan recommendation documents after a detailed evaluation of public health surveillance operational needs, and corresponding system infrastructure inefficiencies and gaps is conducted.'
     ],
-    cardImage: 'https://i.imgur.com/rgkqPng.jpg',
+    cardImage: 'projects/SITIR.jpg',
     images: [],
     tools: []
   },
@@ -424,7 +422,7 @@ export const projectPageList: ProjectPage[] = [
       'This report provides additional insight of the province and territory data as compared to the national data.'
     ],
     images: [],
-    cardImage: 'https://i.imgur.com/quUs8Zs.jpg',
+    cardImage: 'projects/covid_case/covidcasereport.jpg',
     tools: [
       'Azure Data',
       'Factory',
