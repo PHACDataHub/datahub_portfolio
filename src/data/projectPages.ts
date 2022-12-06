@@ -106,6 +106,7 @@ export const projectPageList: ProjectPage[] = [
     ],
     images: [
       'projects/cpho/hoc_diagram.png',
+      'projects/cpho/cpho_4.png',
       'projects/cpho/cpho_1.png',
       'projects/cpho/cpho_2.png',
       'projects/cpho/cpho_3.png'
