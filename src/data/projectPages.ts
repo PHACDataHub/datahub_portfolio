@@ -17,10 +17,16 @@ export const projectPageList: ProjectPage[] = [
     status: 'active',
     description:
       'Development of a Protected B cloud-based data platform to support COVID-19 case surveillance',
-    importantLink: {
-      label: 'Access the public dashboard',
-      url: 'https://health-infobase.canada.ca/covid-19/wastewater/'
-    },
+    importantLinks: [
+      {
+        label: 'Access the public dashboard',
+        url: 'https://health-infobase.canada.ca/covid-19/wastewater/'
+      },
+      {
+        label: 'Open Data Model (ODM) GitHub',
+        url: 'https://github.com/Big-Life-Lab/PHES-ODM'
+      }
+    ],
     background: [
       'The virus that causes COVID-19 infection can be detected by testing and monitoring wastewater (sewage) of infected people, without the need for individual testing.',
       'Wastewater surveillance can also be used to monitor the circulation of variants of concern and can be used as an early indicator for the presence of COVID-19 infections not yet detected by traditional clinical surveillance.',
@@ -37,6 +43,7 @@ export const projectPageList: ProjectPage[] = [
       'The waster surveillance project includes: a data collection tool that enables edit/validation rules to get a structured and consistent data, a national wastewater SQL database with a secure API endpoint, dashboards to visualize data for external and internal clients, and data sharing agreements and dissemination processes to control the risk of disclosure when publishing data.'
     ],
     images: [
+      'projects/wastewater/wastewater_erd.png',
       'projects/wastewater/wastewater_1.png',
       'projects/wastewater/wastewater_2.png'
     ],
@@ -113,10 +120,12 @@ export const projectPageList: ProjectPage[] = [
     ],
     cardImage: 'projects/cpho/cpho_stock.jpg',
     tools: ['Python', 'GitHub', 'Django', 'React', 'GraphQL', 'SQLite'],
-    importantLink: {
-      label: 'See past reports',
-      url: 'https://www.canada.ca/en/public-health/corporate/publications/chief-public-health-officer-reports-state-public-health-canada.html'
-    }
+    importantLinks: [
+      {
+        label: 'See past reports',
+        url: 'https://www.canada.ca/en/public-health/corporate/publications/chief-public-health-officer-reports-state-public-health-canada.html'
+      }
+    ]
   },
   {
     id: '4',
@@ -189,7 +198,7 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '6',
-    name: 'Outbreak Data Management',
+    name: 'Outbreak Database',
     status: 'active',
     description:
       'A cloud-based database to collect, consolidate, and store food exposure, individual, and outbreak event data.',
@@ -351,10 +360,12 @@ export const projectPageList: ProjectPage[] = [
     ],
     cardImage: 'projects/covidtrends/covidtrends_stock.webp',
     tools: ['Node.js', 'Webpack', 'JavaScript', 'HTML', 'CSS', 'D3'],
-    importantLink: {
-      url: 'https://health-infobase.canada.ca/covid-19/covidtrends/?HR=1&mapOpen=false',
-      label: 'Check the tool out'
-    }
+    importantLinks: [
+      {
+        url: 'https://health-infobase.canada.ca/covid-19/covidtrends/?HR=1&mapOpen=false',
+        label: 'Check the tool out'
+      }
+    ]
   },
   {
     id: '12',

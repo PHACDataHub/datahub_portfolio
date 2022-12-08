@@ -25,7 +25,7 @@ export type ProjectPage = {
   name: string;
   status: 'active' | 'closed';
   description: string;
-  importantLink?: Link;
+  importantLinks?: Link[];
   background?: string[];
   problem?: string[];
   goal?: string[];

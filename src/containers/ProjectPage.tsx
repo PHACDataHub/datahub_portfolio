@@ -33,7 +33,7 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
     tools,
     successMetrics,
     cardImage,
-    importantLink
+    importantLinks
   } = project;
   const isSmallScreen = useSmallScreen();
 
@@ -78,22 +78,26 @@ const ProjectDetails = ({ project }: { project: ProjectPage }) => {
         <Heading fontSize={32} textAlign="center">
           {name}
         </Heading>
-        {importantLink && (
-          <a target="_blank" href={importantLink.url}>
-            <HStack
-              backgroundColor="gray.200"
-              py={2}
-              px={3}
-              borderRadius="md"
-              transition="all 0.2s ease-in-out"
-              _hover={{
-                backgroundColor: 'gray.300'
-              }}
-            >
-              <Heading size="sm">{importantLink.label}</Heading>
-              <ExternalLinkIcon fontSize="md" />
-            </HStack>
-          </a>
+        {importantLinks && (
+          <HStack spacing={4}>
+            {importantLinks.map((importantLink, idx) => (
+              <a target="_blank" href={importantLink.url} key={idx}>
+                <HStack
+                  backgroundColor="gray.200"
+                  py={2}
+                  px={3}
+                  borderRadius="md"
+                  transition="all 0.2s ease-in-out"
+                  _hover={{
+                    backgroundColor: 'gray.300'
+                  }}
+                >
+                  <Heading size="sm">{importantLink.label}</Heading>
+                  <ExternalLinkIcon fontSize="md" />
+                </HStack>
+              </a>
+            ))}
+          </HStack>
         )}
         <TagList tags={tools} />
         {background && (
