@@ -8,7 +8,7 @@ export function ProjectCard({ project }: { project: ProjectPage }) {
 
   const navigate = useNavigate();
   const handleOnClick = useCallback(
-    () => navigate(`/project/${id}`, { replace: true }),
+    () => navigate(`/project/${id}`),
     [navigate]
   );
 
