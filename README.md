@@ -10,4 +10,4 @@ In order to run locally, you must have [Node](https://nodejs.org/en/) installed.
 
 # How to make updates
 
-To Come Soon
+To Come Soon.
