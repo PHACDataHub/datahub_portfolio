@@ -92,17 +92,17 @@ export const projectPageList: ProjectPage[] = [
   },
   {
     id: '3',
-    name: 'Health of Canadians Report Modernization',
+    name: 'Health of People in Canada Report Modernization',
     status: 'active',
     description:
-      'An advanced and automated platform to support the annual Health of Canadians report by the Chief Public Health Officer (CPHO)',
+      'An advanced and automated platform to support the annual Health of People in Canada report by the Chief Public Health Officer (CPHO)',
     background: [
-      'The Chief Public Health Officer is mandated to report annually on the Health of Canadians (HoC), and the HoC initiative fulfills part of that mandate.',
+      'The Chief Public Health Officer is mandated to report annually on the Health of People in Canada (HoPiC), and the initiative fulfills part of that mandate.',
       'Previously, HoC reporting was done through an annual manual update of 50-60 indicators in an appendix of the CPHO report.'
     ],
     problem: [
       'The manual process was time-consuming and error-prone, and the data was not always up-to-date.',
-      'The CPHO wanted to have a more advanced and automated platform to support the annual HoC report.'
+      'The CPHO wanted to have a more advanced and automated platform to support the annual HoPiC report.'
     ],
     goal: [
       'While split in different phases, the overall goal is to develop a data platform and pipeline to collect, standardize, and maintain incoming data from surveillance programs to serve as the foundation for an interfactive dashboard.'
