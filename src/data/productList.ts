@@ -4,7 +4,7 @@ export const productList: Product[] = [
   {
     name: 'LiquidFiles',
     cardImage:
-      'https://man.liquidfiles.com/assets/images/logo_144x144-362aae5506940de69ed13cf4f518a9d20ca5271f4e82934de4e31cb04f03a37a.png',
+      'https://www.liquidfiles.com/assets/images/logo_144x144-d98c0ac3d4357ea5b7ab89eab17e16e47f220ca5c56f1272d40745e78eb094c3c16b2fc7d9e0a03a9244a49e25a6964a1f6f64d8187cd55e2a37285c8dac7aac.png',
     slogan: 'Send Large Files: Fast, Easy, Secure and Affordable',
     description: [
       'LiquidFiles is a virtual application that allows for the electronic exchange of files of any size with both internal and external parties. DMIA has version 3.6.7 installed on our HC/PHAC private Azure cloud, which means we can send files up to Protected B.',
